@@ -1,0 +1,16 @@
+{
+	"data":  
+        [
+            {"word" : "Nghe", "begin" : "0.00", "dur" : "0.7", "tabindex":"0", "dataindex":"0"},
+            {"word" : "Véo", "begin" : "0.7", "dur" : "0.3", "tabindex":"1", "dataindex":"1"},
+            {"word" : "Von", "begin" : "1", "dur" : "0.6", "tabindex":"2", "dataindex":"2"},
+            {"word" : "Trong", "begin" : "1.6", "dur" : "0.3", "tabindex":"3", "dataindex":"3"},
+            {"word" : "Vòm", "begin" : "2", "dur" : "0.3", "tabindex":"4", "dataindex":"4"},
+            {"word" : "Cây", "begin" : "2.3", "dur" : "0.6", "tabindex":"5", "dataindex":"5"},
+            {"word" : "Họa", "begin" : "2.9", "dur" : "0.3", "tabindex":"6", "dataindex":"6"},
+            {"word" : "Mi", "begin" : "3.2", "dur" : "0.3", "tabindex":"7", "dataindex":"7"},
+            {"word" : "Với", "begin" : "3.5", "dur" : "0.3", "tabindex":"8", "dataindex":"8"},
+            {"word" : "Chim", "begin" : "3.8", "dur" : "0.3", "tabindex":"9", "dataindex":"9"},
+            {"word" : "Oanh", "begin" : "4.1", "dur" : "0.6", "tabindex":"10", "dataindex":"10"}
+        ]
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tiết 2</title>
+        <link href="assets/css/style.css" rel="stylesheet">
+        <script type="text/javascript" src="../../../../assets/js/jquery-3.1.1.min.js"></script>
+        <script text="text/javascript" src="assets/json/2.t2.cabai.json"></script>
+    </head>
+    <body>
+            <h3>THẬT LÀ HAY</h3>
+            <img src="images/h1.jpg" style="width: 100%"/>
+            <span id="startAudio">Giai điệu bài hát</span>
+            <span id="ngheCau1">Câu 1</span>
+            <span id="ngheCau2">Câu 2</span>
+            <span id="ngheCau3">Câu 3</span>
+            <span id="ngheCau4">Câu 4</span>
+            <span id="hatVoTay">Hát & vỗ tay</span>
+             <p class="passage-audio">
+                <audio id="passage-audio" class="passage">
+                    <!-- @todo WebM? -->
+                    <source src="" type="audio/mp3">
+                    <em class="error"><strong>Error:</strong> Your browser doesn't appear to support HTML5 Audio.</em>
+                </audio>
+            </p>
+            <p class="passage-audio-unavailable" hidden>
+                <em class="error"><strong>Error:</strong> You will not be able to do the read-along audio because your browser is not able to play MP3, Ogg, or WAV audio formats.</em>
+            </p>
+            <noscript>
+                <p class="error"><em><strong>Notice:</strong> You must have JavaScript enabled/available to try this HTML5 Audio read along.</em></p>
+            </noscript>
+            <div class="sheet">
+                
+                <div id="passage-text">
+                    <div class="doan1">
+                        <img class="khungnhac1" src="images/1.jpg"/>
+                        <p class="cau1"></p>
+                    </div>
+                    <div class="doan2">
+                        <img class="khungnhac2" src="images/2.jpg"/>
+                        <p class="cau2"></p>
+                    </div>
+                    <div class="doan3">
+                        <img class="khungnhac3" src="images/3.jpg"/>
+                        <p class="cau3"></p>
+                    </div>
+                    <div class="doan4">
+                        <img class="khungnhac4" src="images/4.jpg"/>
+                        <p class="cau4"></p>
+                    </div>
+                </div>
+
+            </div>
+        
+        <script src="../../../../assets/js/readalong.js"></script>
+        <script>
+            $(document).ready(function() {
+                    var audioBaiHat = $('#passage-audio')[0];
+                    var spanTag = ["","","",""];
+				    
+                    var count = 0, i = 0;
+                    $.each(data, function(index, obj) {
+                        if(count == 11){
+                            i++;
+                            spanTag[i] += '<span data-end="' + obj.end + '" data-begin="' + obj.begin + '" tabindex= "0" data-index="' + index + '" class="">' + obj.word + '</span>\n';
+                            count = 1;
+
+                        } else{
+                            spanTag[i] += '<span data-end="' + obj.end + '" data-begin="' + obj.begin + '" tabindex= "0" data-index="' + index + '" class="">' + obj.word + '</span>\n';
+                            count++;
+                        }
+                    });
+
+                    $("#passage-text").find(".cau1").append(spanTag[0]);
+                    $("#passage-text").find(".cau2").append(spanTag[1]);
+                    $("#passage-text").find(".cau3").append(spanTag[2]);
+                    $("#passage-text").find(".cau4").append(spanTag[3]);
+                 
+                    var args = {
+                    text_element: $('#passage-text')[0],
+                    audio_element: audioBaiHat,
+                    hightLightClassName: 'redBg'//,
+                    //autofocus_current_word: document.getElementById('autofocus-current-word').checked
+                    };
+                    document.body.classList.add('initialized');
+                    ReadAlong.init(args);   
+                    
+                    $("#startAudio").on("click",function(){
+                        
+                        if (audioBaiHat.paused) {
+                            audioBaiHat.src = "media/2.t2.cabai.mp3";
+                            $("#passage-text").find("span").removeClass("underline");
+                            audioBaiHat.play();
+                            $(this).html("Dừng phát");
+                        }
+                        else {
+                            audioBaiHat.pause();
+                            $(this).html("Giai điệu bài hát");
+                        }
+                    });
+                    $("#ngheCau1").on("click",function(){
+                        audioBaiHat.src = "media/2.t2.cabai.mp3";
+                        $("#passage-text").find("span").removeClass("underline");
+                        audioBaiHat.currentTime = 0;
+                        audioBaiHat.play();
+                        setTimeout(function(){
+                            audioBaiHat.pause();
+                            audioBaiHat.currentTime = 0;
+                        }, data[10].end * 1000);
+                    });
+                    $("#ngheCau2").on("click",function(){
+                        audioBaiHat.src = "media/2.t2.cabai.mp3";
+                        $("#passage-text").find("span").removeClass("underline");
+                        audioBaiHat.currentTime = data[11].begin;
+                        audioBaiHat.play();
+                        setTimeout(function(){
+                            audioBaiHat.pause();
+                            audioBaiHat.currentTime = 0;
+                        }, (data[21].end - data[11].begin) * 1000);
+                    });
+                    $("#ngheCau3").on("click",function(){
+                        audioBaiHat.src = "media/2.t2.cabai.mp3";
+                        $("#passage-text").find("span").removeClass("underline");
+                        audioBaiHat.currentTime = data[22].begin;
+                        audioBaiHat.play();
+                        setTimeout(function(){
+                            audioBaiHat.pause();
+                            audioBaiHat.currentTime = 0;
+                        }, (data[32].end - data[22].begin) * 1000);
+                    });
+                    $("#ngheCau4").on("click",function(){
+                        audioBaiHat.src = "media/2.t2.cabai.mp3";
+                        $("#passage-text").find("span").removeClass("underline");
+                        audioBaiHat.currentTime = data[33].begin;
+                        audioBaiHat.play();
+                        setTimeout(function(){
+                            audioBaiHat.pause();
+                            audioBaiHat.currentTime = 0;
+                        }, (data[43].end - data[33].begin) * 1000);
+                    });
+                    $("#hatVoTay").on("click",function(){
+                        audioBaiHat.src = "media/2.t2.2.mp3";
+                      
+                        audioBaiHat.play();
+                        var spanArray = $("#passage-text").find("span");
+                        for(var i = 0; i < spanArray.length; i += 2){
+                            spanArray[i].classList.add("underline");
+                        }
+                    });
+            });
+        </script>
+    </body>
+</html>

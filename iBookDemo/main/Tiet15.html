@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IseeBooks</title>
+    <script type="text/javascript" charset="utf-8" src="../assets/js/jquery-3.1.1.min.js"></script>
+
+ <!-- Bootstrap -->
+    <link href="../assets/libs/bootstrap-3.3.7/css/bootstrap.css" rel="stylesheet">
+    <script type="text/javascript" charset="utf-8" src="../assets/libs/bootstrap-3.3.7/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="../assets/js/unit.js"></script>
+    <script type="text/javascript" src="../assets/libs/fancybox/jquery.fancybox.js"></script>
+    <link rel="stylesheet" href="../assets/libs/fancybox/jquery.fancybox.css" type="text/css" />
+    <link href="../assets/css/iseebooks.css" rel="stylesheet">
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        var checkTabA = false;
+        var clickedTabA = false;
+        var clickBtnExercise1 = false;
+        $('div#menuUnitFix ul li').click(
+            function(e)
+            {            
+                $('div#menuUnitFix ul li').removeClass('active');
+                $(e.currentTarget).addClass('active');
+
+                if ($(e.currentTarget).get(0).id.substring(0, 12) != 'btnExercise1') {
+                        var findfirst = $(e.currentTarget).get(0).id + '_1';
+                    $('li#'+findfirst).addClass('active');
+
+                    var findsecond = $(e.currentTarget).get(0).id.outerHTML;
+                    $('li#'+findsecond).addClass('active');
+
+                    var parentId = $(e.currentTarget).get(0).id.substring(0, 12);
+                    $('li#'+parentId).addClass('active');
+                    };
+
+                if (checkTabA == false) {                 
+                    var findfirst = $(e.currentTarget).get(0).id + '_1';
+                    $('li#'+findfirst).addClass('active');
+
+                    var findsecond = $(e.currentTarget).get(0).id.outerHTML;
+                    $('li#'+findsecond).addClass('active');
+
+                    var parentId = $(e.currentTarget).get(0).id.substring(0, 12);
+                    $('li#'+parentId).addClass('active');
+                    //console.log(checkTabA);
+
+                    if (clickedTabA == true) {
+                        makeExercise1Active();
+                    };
+                }else{
+                    if ($(e.currentTarget).get(0).id.substring(0, 12) == 'btnExercise1') {
+                        makeExercise1Active();
+                    };
+                    
+                };
+                
+            }
+            
+        );
+
+
+        $('a[role="tab"]').click(
+            function(e)
+            {
+                clickedTabA = $(e.currentTarget).context.hasAttribute('id');
+                checkTabA = clickedTabA;
+            }
+        );
+
+        function makeExercise1Active(){
+            $('li#btnExercise1').addClass('active');
+        }
+
+        $('li#btnExercise1').click(
+            function(e)
+            {
+                if (clickedTabA == true) {
+                    $('div#menuUnitFix ul li ul li').removeClass('active');
+                };
+                
+                
+            }
+        );
+        
+        $('a#tabA').click(
+            function(e)
+            {   
+                checkTabA = true;
+                    
+            }
+        );
+
+
+        $('div#menuUnitFix ul li ul li').click(
+            function(e)
+            {
+                if (clickedTabA == true) {
+                    $(e.currentTarget).addClass('active');
+                }else{
+                    $('div#menuUnitFix ul li ul li').removeClass('active');
+                    $(e.currentTarget).addClass('active');
+                    
+                }               
+            }
+        );
+
+        $('div#Content ul li a').click(
+            function(e)
+            {
+                $('div#menuUnitFix ul li').removeClass('active');
+                $('div#menuUnitFix ul li ul li').removeClass('active');
+                
+            }
+        );
+
+        });
+    </script>
+
+
+</head>
+<body class="container" style="background-color:rgb(247, 203, 90);; height: 760px !important; width: 1080px !important; overflow-y: hidden">
+
+    <div id="StageUnit1" style="width:100%">
+
+    <div class="btn-group menuUnitDropDownFix">
+        <button type="button" class="btn btn-danger" style="font-size: 13px !important;width: 69px;">Tiết 15</button>
+            <button type="button" class="btn btn-danger dropdown-toggle" style="font-size: 13px !important;" data-toggle="dropdown">
+                <span class="caret"></span>
+                <span class="sr-only">Toggle Unit 1</span>
+            </button>
+           <ul class="dropdown-menu" role="menu" style="width: 100px; min-width: 100px;heigh: 600px;max-height:600px;top: 30px; position: absolute;overflow-y: scroll;">
+                <li class="divider"></li>
+                <li><a href="../index.html">Tiết 1</a></li>
+                <li><a href="Tiet2.html">Tiết 2</a></li>
+                <li><a href="Tiet3.html">Tiết 3</a></li>
+                <li><a href="Tiet4.html">Tiết 4</a></li>
+                <li><a href="Tiet5.html">Tiết 5</a></li>
+                <li><a href="Tiet6.html">Tiết 6</a></li>
+                <li><a href="Tiet7.html">Tiết 7</a></li>
+                <li><a href="Tiet8.html">Tiết 8</a></li>
+                <li><a href="Tiet9.html">Tiết 9</a></li>
+                <li><a href="Tiet10.html">Tiết 10</a></li>
+                <li><a href="Tiet11.html">Tiết 11</a></li>
+                <li><a href="Tiet12.html">Tiết 12</a></li>
+                <li><a href="Tiet13.html">Tiết 13</a></li>
+                <li><a href="Tiet14.html">Tiết 14</a></li>
+                <li><a href="Tiet16.html">Tiết 16</a></li>
+                <li><a href="Tiet17.html">Tiết 17</a></li>
+				<li><a href="Tiet18.html">Tiết 18</a></li>
+                <li><a href="Tiet19.html">Tiết 19</a></li>
+				<li><a href="Tiet20.html">Tiết 20</a></li>
+				<li><a href="Tiet21.html">Tiết 21</a></li>
+				<li><a href="Tiet22.html">Tiết 22</a></li>
+				<li><a href="Tiet23.html">Tiết 23</a></li>
+				<li><a href="Tiet24.html">Tiết 24</a></li>
+				<li><a href="Tiet25.html">Tiết 25</a></li>
+				<li><a href="Tiet26.html">Tiết 26</a></li>
+				<li><a href="Tiet27.html">Tiết 27</a></li>
+				<li><a href="Tiet28.html">Tiết 28</a></li>
+				<li><a href="Tiet29.html">Tiết 29</a></li>
+				<li><a href="Tiet30.html">Tiết 30</a></li>
+				<li><a href="Tiet31.html">Tiết 31</a></li>
+				<li><a href="Tiet32.html">Tiết 32</a></li>
+				<li><a href="Tiet33.html">Tiết 33</a></li>
+				<li><a href="Tiet34-35.html">Tiết 34,35</a></li>
+
+            </ul>
+
+            <div class="col-md-1" id="menuUnitFix">
+                <ul class="list-group">
+                    <li id="btnExercise1" class="list-group-item ButtonExerciseFix">
+                        <span class="glyphicon glyphicon-music"></span> HỌC HÁT
+                    </li>
+                   <ul class="list-group ListChild" id="ListChild1">
+                        <li id="btnExercise1_1" class="list-group-item ButtonExerciseChildFix">
+                            <span class="glyphicon glyphicon-star-empty"></span> Bài 1
+                        </li>
+                        <li id="btnExercise1_2" class="list-group-item ButtonExerciseChildFix">
+                            <span class="glyphicon glyphicon-star-empty"></span> Bài 2
+                        </li>
+                        <li id="btnExercise1_3" class="list-group-item ButtonExerciseChildFix">
+                            <span class="glyphicon glyphicon-star-empty"></span> Bài 3
+                        </li>
+                        <li id="btnExercise1_4" class="list-group-item ButtonExerciseChildFix">
+                            <span class="glyphicon glyphicon-star-empty"></span> Bài 4
+                        </li>
+                    </ul>
+                   <li id="btnExercise2" class="list-group-item ButtonExerciseFix">
+                        <span class="glyphicon glyphicon-music"></span> BÀI TẬP
+                    </li>
+                   <ul class="list-group ListChild" id="ListChild2">
+                        <li id="btnExercise2_1" class="list-group-item ButtonExerciseChildFix">
+                            <span class="glyphicon glyphicon-star-empty"></span> Bài 1
+                        </li>
+                        <li id="btnExercise2_2" class="list-group-item ButtonExerciseChildFix">
+                            <span class="glyphicon glyphicon-star-empty"></span> Bài 2
+                        </li>
+                        <li id="btnExercise2_3" class="list-group-item ButtonExerciseChildFix">
+                            <span class="glyphicon glyphicon-star-empty"></span> Bài 3
+                        </li>
+                        <li id="btnExercise2_4" class="list-group-item ButtonExerciseChildFix">
+                            <span class="glyphicon glyphicon-star-empty"></span> Bài 4
+                        </li>
+                    </ul>
+                </ul>
+            </div>
+    </div>
+
+
+
+    
+     <div class="containerFix">
+        <div class="col-md-11" id="Content" style="top: 11.7%; width: 920px;">
+
+             
+                <div class="tab-content">
+                    <iframe id="frameContentUnit" src="Unit.html"></iframe>
+				</div>
+
+				<a class="buttonFunction" id="buttonHome" href="http://online.iseebooks.vn">
+					<img src="../images/Home.png" />
+				</a>
+
+				<a class="buttonFunction" id="buttonTableContent" href="tablecontent.html">
+					<img src="../images/TableContent.png" />
+				</a>
+
+				<div class='buttonFunction' id='buttonBack'></div>
+				<div class='buttonFunction' id='buttonNext'></div>
+
+            </div>
+        </div>
+     </div>
+
+
+
+    <img id="iconMarkUnit" src="../images/mark.png" />
+	
+</body>
+</html>
