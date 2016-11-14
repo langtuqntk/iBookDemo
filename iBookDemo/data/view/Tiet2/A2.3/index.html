@@ -6,62 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Tiết 2</title>
         <link href="assets/css/style.css" rel="stylesheet">
+        <link href="../../../../assets/css/iseebooks.css" rel="stylesheet">
+        <link href="../../../../assets/libs/bootstrap-3.3.7/css/bootstrap.css" rel="stylesheet">
         <script type="text/javascript" src="../../../../assets/js/jquery-3.1.1.min.js"></script>
         <script text="text/javascript" src="assets/json/2.t2.cabai.json"></script>
     </head>
     <body>
-            <h3>THẬT LÀ HAY</h3>
-            <img src="images/h1.jpg" style="width: 100%"/>
-            <span id="startAudio">Giai điệu bài hát</span>
-             <p class="passage-audio">
-                <audio id="passage-audio" class="passage" controls>
-                    <!-- @todo WebM? -->
-                    <source src="media/2.t2.cabai.mp3" type="audio/mp3">
-                    <em class="error"><strong>Error:</strong> Your browser doesn't appear to support HTML5 Audio.</em>
-                </audio>
-            </p>
-            <p class="passage-audio-unavailable" hidden>
-                <em class="error"><strong>Error:</strong> You will not be able to do the read-along audio because your browser is not able to play MP3, Ogg, or WAV audio formats.</em>
-            </p>
+            <p class="title"><span>3. </span>Em hát và kết hợp thực hiện các động tác minh họa theo gợi ý ở câu 3, trang 4.</p>
+            <div style="text-align:center;padding-top:25px">
+                <iframe width="660" height="515" src="https://www.youtube.com/embed/txqH17KZh2Y" frameborder="0" allowfullscreen></iframe>
+            </div>
+            
             <noscript>
                 <p class="error"><em><strong>Notice:</strong> You must have JavaScript enabled/available to try this HTML5 Audio read along.</em></p>
             </noscript>
             <div class="sheet">
-                <img class="not-nhac" src="images/1.jpg"/>
-                <div id="passage-text" class="passage">
-                    
+                
+                <div id="passage-text">
                 </div>
-                <img class="not-nhac" src="images/2.jpg"/>
-                    <p></p>
-                <img class="not-nhac" src="images/3.jpg"/>
-                    <p></p>
-                <img class="not-nhac" src="images/4.jpg"/>
-                    <p></p>
-                <img class="not-nhac" src="images/5.jpg"/>
-                    <p></p>
-            </div>
-        
-        <script src="assets/js/readalong.js"></script>
-        <script>
-            $(document).ready(function() {
-                    var spanTag = "";
-				
-                    // data is data object in json file
-                    $.each(data, function(index, obj) {
-                        spanTag += '<span data-end="' + obj.end + '" data-begin="' + obj.begin + '" tabindex= "0" data-index="' + index + '" class="">' + obj.word + '</span>\n';
-                    });
 
-                    $("#passage-text").html(spanTag);
-                 
-                    var args = {
-                    text_element: $('#passage-text')[0],
-                    audio_element: $('#passage-audio')[0],
-                    hightLightClassName: 'redBg'//,
-                    //autofocus_current_word: document.getElementById('autofocus-current-word').checked
-                    };
-                    document.body.classList.add('initialized');
-                    ReadAlong.init(args);        
-            });
-        </script>
+            </div>
     </body>
 </html>

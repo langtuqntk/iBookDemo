@@ -1,4 +1,20 @@
+.underline{
+    border-bottom: solid 3px red;
+}
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0099FF;
+    font-size: 20px;
+    font-weight: bold;
+}
+.title span{
+    color: #FF3399;
+}
 
+#passage-text span{
+    display: inline-block;
+    width:3em;
+}
 .frame{
     width: 1000px;
     margin: 0 auto;
@@ -9,13 +25,17 @@ h3{
     text-align: center;
     color:darkturquoise;
 }
+.sheet{
+    text-align: center;
+    padding-top: 30px;
+}
 
-#startAudio{
+#hatVoTay{
     padding:5px;
     background:red;
     color:#fff;
 }
-#startAudio:hover{
+#hatVoTay:hover{
     cursor: pointer;
 }
 .not-nhac{

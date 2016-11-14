@@ -55,6 +55,7 @@
             </div>
         
         <script src="../../../../assets/js/readalong.js"></script>
+        <script src="assets/js/xulynut.js"></script>
         <script>
             $(document).ready(function() {
                     var audioBaiHat = $('#passage-audio')[0];
@@ -64,11 +65,11 @@
                     $.each(data, function(index, obj) {
                         if(count == 11){
                             i++;
-                            spanTag[i] += '<span data-end="' + obj.end + '" data-begin="' + obj.begin + '" tabindex= "0" data-index="' + index + '" class="">' + obj.word + '</span>\n';
+                            spanTag[i] += '<span danh-phach="'+obj.danhphach+'" data-end="' + obj.end + '" data-begin="' + obj.begin + '" tabindex= "0" data-index="' + index + '" class="">' + obj.word + '</span>\n';
                             count = 1;
 
                         } else{
-                            spanTag[i] += '<span data-end="' + obj.end + '" data-begin="' + obj.begin + '" tabindex= "0" data-index="' + index + '" class="">' + obj.word + '</span>\n';
+                            spanTag[i] += '<span danh-phach="'+obj.danhphach+'" data-end="' + obj.end + '" data-begin="' + obj.begin + '" tabindex= "0" data-index="' + index + '" class="">' + obj.word + '</span>\n';
                             count++;
                         }
                     });
@@ -85,69 +86,11 @@
                     //autofocus_current_word: document.getElementById('autofocus-current-word').checked
                     };
                     document.body.classList.add('initialized');
-                    ReadAlong.init(args);   
-                    
-                    $("#startAudio").on("click",function(){
-                        
-                        if (audioBaiHat.paused) {
-                            audioBaiHat.src = "media/2.t2.cabai.mp3";
-                            $("#passage-text").find("span").removeClass("underline");
-                            audioBaiHat.play();
-                            $(this).html("Dừng phát");
-                        }
-                        else {
-                            audioBaiHat.pause();
-                            $(this).html("Giai điệu bài hát");
-                        }
-                    });
-                    $("#ngheCau1").on("click",function(){
-                        audioBaiHat.src = "media/2.t2.cabai.mp3";
-                        $("#passage-text").find("span").removeClass("underline");
-                        audioBaiHat.currentTime = 0;
-                        audioBaiHat.play();
-                        setTimeout(function(){
-                            audioBaiHat.pause();
-                            audioBaiHat.currentTime = 0;
-                        }, data[10].end * 1000);
-                    });
-                    $("#ngheCau2").on("click",function(){
-                        audioBaiHat.src = "media/2.t2.cabai.mp3";
-                        $("#passage-text").find("span").removeClass("underline");
-                        audioBaiHat.currentTime = data[11].begin;
-                        audioBaiHat.play();
-                        setTimeout(function(){
-                            audioBaiHat.pause();
-                            audioBaiHat.currentTime = 0;
-                        }, (data[21].end - data[11].begin) * 1000);
-                    });
-                    $("#ngheCau3").on("click",function(){
-                        audioBaiHat.src = "media/2.t2.cabai.mp3";
-                        $("#passage-text").find("span").removeClass("underline");
-                        audioBaiHat.currentTime = data[22].begin;
-                        audioBaiHat.play();
-                        setTimeout(function(){
-                            audioBaiHat.pause();
-                            audioBaiHat.currentTime = 0;
-                        }, (data[32].end - data[22].begin) * 1000);
-                    });
-                    $("#ngheCau4").on("click",function(){
-                        audioBaiHat.src = "media/2.t2.cabai.mp3";
-                        $("#passage-text").find("span").removeClass("underline");
-                        audioBaiHat.currentTime = data[33].begin;
-                        audioBaiHat.play();
-                        setTimeout(function(){
-                            audioBaiHat.pause();
-                            audioBaiHat.currentTime = 0;
-                        }, (data[43].end - data[33].begin) * 1000);
-                    });
-                    $("#hatVoTay").on("click",function(){
-                        audioBaiHat.src = "media/2.t2.2.mp3";
-                      
-                        audioBaiHat.play();
-                        var spanArray = $("#passage-text").find("span");
-                        for(var i = 0; i < spanArray.length; i += 2){
-                            spanArray[i].classList.add("underline");
-                        }
+                    ReadAlong.init(args);
+                    BtnProcess.init(audioBaiHat);
+                
+                    $('#passage-audio').on("ended", function(){
+                        $("#startAudio").html("Giai điệu bài hát");
                     });
             });
         </script>

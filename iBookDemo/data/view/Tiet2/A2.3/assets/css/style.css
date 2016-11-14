@@ -1,4 +1,12 @@
-
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0099FF;
+    font-size: 20px;
+    font-weight: bold;
+}
+.title span{
+    color: #FF3399;
+}
 .frame{
     width: 1000px;
     margin: 0 auto;
