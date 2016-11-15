@@ -92,14 +92,14 @@
                     <div class="tab-content">
                         <iframe id="frameContentUnit" src="Unit.html"></iframe>
                     </div>
-                    <a class="buttonFunction" id="buttonHome" href="http://online.iseebooks.vn">
+                    <a data-toggle="tooltip" data-placement="left" title="Về trang chủ" class="buttonFunction" id="buttonHome" href="http://online.iseebooks.vn">
                         <img src="../images/home.png" />
                     </a>
-                    <a class="buttonFunction" id="buttonTableContent" href="tablecontent.html">
+                    <a data-toggle="tooltip" data-placement="left" title="Danh mục bài học" class="buttonFunction" id="buttonTableContent" href="tablecontent.html">
                         <img src="../images/TableContent.png" />
                     </a>
-                    <div class='buttonFunction' id='buttonBack'></div>
-                    <div class='buttonFunction' id='buttonNext'></div>
+                    <div data-toggle="tooltip" data-placement="left" title="Bài trước" class='buttonFunction' id='buttonBack'></div>
+                    <div data-toggle="tooltip" data-placement="left" title="Bài tiếp theo" class='buttonFunction' id='buttonNext'></div>
 
                 </div>
          </div>
@@ -132,6 +132,8 @@
                     $('li#'+parentId).addClass('active');
                 }
             });
+          
+          $('[data-toggle="tooltip"]').tooltip(); //enable tooltip bootstrap
         });
     </script>
 </body>
