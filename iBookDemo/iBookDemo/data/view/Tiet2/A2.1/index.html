@@ -88,6 +88,7 @@
                         $("#btn-repeat").removeAttr("disabled");
                     });
                     $('#btn-repeat').on("click", function(){
+                        $("#button-play").find("span").attr("class","glyphicon glyphicon-pause");
                         audioBaiHat.pause();
                         audioBaiHat.currentTime = 0;
                         audioBaiHat.play();

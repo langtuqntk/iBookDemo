@@ -4,7 +4,9 @@ var BtnProcess = {
         this.addEventListeners(audio);
     },
     addEventListeners: function(audioBaiHat){
-        $("#startAudio").on("click",function(){ 
+        var myTime;
+        $("#startAudio").on("click",function(){
+                        clearTimeout(myTime);
                         if (audioBaiHat.paused) {
                             audioBaiHat.src = "media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
@@ -17,7 +19,6 @@ var BtnProcess = {
                         }
         });
         
-        var myTime;
         $("#ngheCau1").on("click",function(){    
                         if(audioBaiHat.paused){
                             audioBaiHat.src = "media/2.t2.cabai.mp3";
