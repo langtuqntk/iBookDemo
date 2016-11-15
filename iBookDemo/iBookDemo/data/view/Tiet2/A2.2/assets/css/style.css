@@ -1,0 +1,97 @@
+.underline{
+    border-bottom: solid 3px red;
+}
+td{
+    padding: 0 5px !important;
+}
+.btn-group{
+    left:400px !important;
+}
+table{
+    font-weight: bold;
+    font-size: 15pt;
+}
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0099FF;
+    font-size: 20px;
+    font-weight: bold;
+}
+.title span{
+    color: #FF3399;
+}
+
+#passage-text span{
+    display: inline-block;
+    width:3em;
+}
+.frame{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 50px;
+    background: #fff;
+}
+h3{
+    text-align: center;
+    color:darkturquoise;
+}
+.sheet{
+    text-align: center;
+    padding-top: 30px;
+}
+
+#hatVoTay{
+    padding:5px;
+    background:red;
+    color:#fff;
+}
+#hatVoTay:hover{
+    cursor: pointer;
+}
+.not-nhac{
+    width:100%;
+}
+
+.passage-audio {
+    height: 2em;
+}
+#passage-audio {
+    width: 100%;
+    max-height: 2em;
+}
+#passage-text.speaking {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+q {
+    quotes: "“" "”" "‘" "’";
+}
+.section-heading {
+    display: none;
+}
+.passage p {
+    line-height: 1.4em;
+}
+.verse-start {
+    line-height: 0;
+}
+.initialized span[data-begin]:focus,
+.initialized span[data-begin]:hover {
+    background-color: #FFFFCA;
+    box-shadow: 0px 0px 4px #FFFFCA;
+}
+.initialized span[data-begin].speaking {
+    background-color: yellow;
+    box-shadow: 0px 0px 4px yellow;
+}
+.initialized span[data-begin] {
+    cursor: pointer;
+    padding:0 5px;
+    font-weight: bold;
+}
+.error {
+    color: red;
+}

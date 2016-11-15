@@ -1,0 +1,44 @@
+
+.frame{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 50px;
+    background: #fff;
+}
+h3{
+    text-align: center;
+    color:darkturquoise;
+}
+.buttonAudio{
+    padding: 10px 11%;
+}
+
+#startAudio:hover, #ngheCau1:hover, #ngheCau2:hover, #ngheCau3:hover, #ngheCau4:hover, #hatVoTay:hover, #ngheCau1va2:hover, #ngheCau3va4:hover{
+    cursor: pointer;
+}
+.khungnhac1, .khungnhac2, .khungnhac3, .khungnhac4{
+    width: 90%;
+    margin: 0 4%;
+}
+.cau1, .cau2, .cau3, .cau4{
+    font-size: 15px;
+    padding: 10px 75px;
+}
+.cau1 span, .cau2 span, .cau3 span, .cau4 span{
+    margin: 0 10px;
+}
+.underline{
+    border-bottom: solid 3px red;
+}
+
+.initialized span[data-begin].speaking {
+    color: red;
+}
+.initialized span[data-begin] {
+    cursor: pointer;
+    padding:0 5px;
+    font-weight: bold;
+}
+.error {
+    color: red;
+}

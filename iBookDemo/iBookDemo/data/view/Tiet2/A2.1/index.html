@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tiết 2</title>
+        <link href="assets/css/style.css" rel="stylesheet">
+        <link href="../../../../assets/css/iseebooks.css" rel="stylesheet">
+        <link href="../../../../assets/libs/bootstrap-3.3.7/css/bootstrap.css" rel="stylesheet">
+        <script type="text/javascript" src="../../../../assets/js/jquery-3.1.1.min.js"></script>
+        <script text="text/javascript" src="assets/json/2.t2.1.json"></script>
+    </head>
+    <body>
+            <p class="title"><span>1. </span>Em nghe âm hình tiết tấu sau để đọc và vỗ tay cho đúng khi đọc với âm a, âm i.</p>
+             <div class="btn-group" style="position: absolute; top: 56px; left: 323px">
+                        <button id="button-play" class="btn btn-info"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
+                        <button id="btn-repeat" class="btn btn-info" disabled="false"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span></button>
+                    </div>
+             <p class="passage-audio">
+                <audio id="passage-audio" class="passage">
+                    <!-- @todo WebM? -->
+                   
+                    <source src="media/2.t2.1.mp3" type="audio/mp3">
+                    <em class="error"><strong>Error:</strong> Your browser doesn't appear to support HTML5 Audio.</em>
+                </audio>
+            </p>
+            <p class="passage-audio-unavailable" hidden>
+                <em class="error"><strong>Error:</strong> You will not be able to do the read-along audio because your browser is not able to play MP3, Ogg, or WAV audio formats.</em>
+            </p>
+            <noscript>
+                <p class="error"><em><strong>Notice:</strong> You must have JavaScript enabled/available to try this HTML5 Audio read along.</em></p>
+            </noscript>
+            <div class="sheet">
+                <div id="passage-text">
+                    <div class="doan1">
+                        <img class="khungnhac1" src="images/1.jpg"/>
+                        <p class="cau1">
+                            <span data-end="" data-begin="" tabindex="0" data-index="0" class=""></span>
+                            <span data-end="" data-begin="" tabindex="0" data-index="1" class=""></span>
+                            <span data-end="" data-begin="" tabindex="0" data-index="2" class=""></span>
+                            <span data-end="" data-begin="" tabindex="0" data-index="3" class=""></span>
+                            <span data-end="" data-begin="" tabindex="0" data-index="4" class="" style="padding-left:9px"></span>
+                            <span data-end="" data-begin="" tabindex="0" data-index="5" class="" style="padding-left:6px"></span>
+                            <span data-end="" data-begin="" tabindex="0" data-index="6" class="" style="padding-left:28px"></span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        
+        <script src="assets/js/readalong.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                    var audioBaiHat = $('#passage-audio')[0];
+                    var spanTag = $("#passage-text").find(".cau1").find('span');
+                    $.each(data, function(index, obj) {
+                        spanTag[index].setAttribute('data-end',obj.end);
+                        spanTag[index].setAttribute('data-begin',obj.begin);
+                        spanTag[index].innerHTML = obj.word;
+                    });
+                 
+                    var args = {
+                    text_element: $('#passage-text')[0],
+                    audio_element: audioBaiHat,
+                    hightLightClassName: 'redBg'//,
+                    //autofocus_current_word: document.getElementById('autofocus-current-word').checked
+                    };
+                    document.body.classList.add('initialized');
+                    ReadAlong.init(args);
+                    $("#button-play").on("click",function(){
+                        if(audioBaiHat.paused){
+                            audioBaiHat.play();
+                            $(this).find("span").attr("class","glyphicon glyphicon-pause");
+                        }
+                        else {
+                            audioBaiHat.pause();
+                            $(this).find("span").attr("class","glyphicon glyphicon-play");
+                        }
+                    });
+                    $('#passage-audio').on("ended", function(){
+                        $("#button-play").find("span").attr("class","glyphicon glyphicon-play");
+                        $("#btn-repeat").attr("disabled","");
+                    });
+                    $('#passage-audio').on("playing", function(){
+                        $("#btn-repeat").removeAttr("disabled");
+                    });
+                    $('#btn-repeat').on("click", function(){
+                        audioBaiHat.pause();
+                        audioBaiHat.currentTime = 0;
+                        audioBaiHat.play();
+                    });
+            });
+        </script>
+    </body>
+</html>
