@@ -42,3 +42,6 @@ h3{
 .error {
     color: red;
 }
+span:focus {
+    outline: none !important;
+}

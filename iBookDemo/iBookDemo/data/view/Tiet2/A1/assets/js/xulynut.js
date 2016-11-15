@@ -18,11 +18,10 @@ var BtnProcess = {
         });
         
         var myTime;
-        $("#ngheCau1").on("click",function(){
-                        
+        $("#ngheCau1").on("click",function(){    
                         if(audioBaiHat.paused){
                             audioBaiHat.src = "media/2.t2.cabai.mp3";
-                            $("#passage-text").find("span").removeClass("underline");
+                            $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
                             audioBaiHat.currentTime = 0;
@@ -34,6 +33,8 @@ var BtnProcess = {
                         }
                         else{
                             clearTimeout(myTime);
+                            $('#startAudio').html("Giai điệu bài hát");
+                            $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
                             audioBaiHat.pause();
@@ -49,7 +50,7 @@ var BtnProcess = {
         $("#ngheCau2").on("click",function(){
                         if(audioBaiHat.paused){
                             audioBaiHat.src = "media/2.t2.cabai.mp3";
-                            $("#passage-text").find("span").removeClass("underline");
+                            $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
                             audioBaiHat.currentTime = data[11].begin;
@@ -61,6 +62,8 @@ var BtnProcess = {
                         }
                         else{
                             clearTimeout(myTime);
+                            $('#startAudio').html("Giai điệu bài hát");
+                            $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
                             audioBaiHat.pause();
@@ -75,7 +78,7 @@ var BtnProcess = {
         $("#ngheCau3").on("click",function(){
                         if(audioBaiHat.paused){
                             audioBaiHat.src = "media/2.t2.cabai.mp3";
-                            $("#passage-text").find("span").removeClass("underline");
+                            $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
                             audioBaiHat.currentTime = data[22].begin;
@@ -87,6 +90,8 @@ var BtnProcess = {
                         }
                         else{
                             clearTimeout(myTime);
+                            $('#startAudio').html("Giai điệu bài hát");
+                            $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
                             audioBaiHat.pause();
@@ -101,7 +106,7 @@ var BtnProcess = {
         $("#ngheCau4").on("click",function(){
                         if(audioBaiHat.paused){
                             audioBaiHat.src = "media/2.t2.cabai.mp3";
-                            $("#passage-text").find("span").removeClass("underline");
+                            $("#passage-text").find("span").removeClass("underline speaking");
                             audioBaiHat.currentTime = data[33].begin;
                             audioBaiHat.play();
                             myTime = setTimeout(function(){
@@ -111,6 +116,8 @@ var BtnProcess = {
                         }
                         else{
                             clearTimeout(myTime);
+                            $('#startAudio').html("Giai điệu bài hát");
+                            $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
                             audioBaiHat.pause();
@@ -126,7 +133,7 @@ var BtnProcess = {
         $("#ngheCau1va2").on("click",function(){
                         if(audioBaiHat.paused){
                             audioBaiHat.src = "media/2.t2.cabai.mp3";
-                            $("#passage-text").find("span").removeClass("underline");
+                            $("#passage-text").find("span").removeClass("underline speaking");
                             audioBaiHat.currentTime = 0;
                             audioBaiHat.play();
                             myTime = setTimeout(function(){
@@ -136,6 +143,8 @@ var BtnProcess = {
                         }
                         else{
                             clearTimeout(myTime);
+                            $('#startAudio').html("Giai điệu bài hát");
+                            $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
                             audioBaiHat.pause();
@@ -151,7 +160,7 @@ var BtnProcess = {
         $("#ngheCau3va4").on("click",function(){
                         if(audioBaiHat.paused){
                             audioBaiHat.src = "media/2.t2.cabai.mp3";
-                            $("#passage-text").find("span").removeClass("underline");
+                            $("#passage-text").find("span").removeClass("underline speaking");
                             audioBaiHat.currentTime = data[22].begin;
                             audioBaiHat.play();
                             myTime = setTimeout(function(){
@@ -161,6 +170,8 @@ var BtnProcess = {
                         }
                         else{
                             clearTimeout(myTime);
+                            $('#startAudio').html("Giai điệu bài hát");
+                            $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
                             audioBaiHat.pause();
@@ -175,6 +186,7 @@ var BtnProcess = {
         });
         $("#hatVoTay").on("click",function(){
                         clearTimeout(myTime);
+                        $('#startAudio').html("Giai điệu bài hát");
                         audioBaiHat.src = "media/2.t2.2.mp3";
                         audioBaiHat.play();
                         var spanArray = $("#passage-text").find("span");

@@ -61,7 +61,7 @@ function initUnit() {
         {
             currentIndexInList--;
 
-            $("#frameContentUnit").attr("src", "../"+currentUnit+"/" + ListLesson[currentIndexInList] + "/index.html");
+            $("#frameContentUnit").attr("src", "../data/view/"+currentUnit+"/" + ListLesson[currentIndexInList] + "/index.html");
 
             var oldMenu = ListLesson[currentIndexInList + 1].substr(0, 1);
             var newMenu = ListLesson[currentIndexInList].substr(0, 1);
@@ -82,7 +82,7 @@ function initUnit() {
         {
             currentIndexInList ++;
 
-            $("#frameContentUnit").attr("src", "../"+currentUnit+"/" + ListLesson[currentIndexInList] + "/index.html");
+            $("#frameContentUnit").attr("src", "../data/view/"+currentUnit+"/" + ListLesson[currentIndexInList] + "/index.html");
 
             var oldMenu = ListLesson[currentIndexInList - 1].substr(0, 1);
             var newMenu = ListLesson[currentIndexInList].substr(0, 1);

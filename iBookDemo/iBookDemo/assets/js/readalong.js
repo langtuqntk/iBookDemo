@@ -12,7 +12,7 @@ var ReadAlong = {
         }
         this.generateWordList();
         this.addEventListeners();
-        this.selectCurrentWord();
+        //this.selectCurrentWord();
     },
 
     /**
