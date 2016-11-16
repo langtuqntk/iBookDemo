@@ -18,6 +18,32 @@ var BtnProcess = {
                             $(this).html("Giai điệu bài hát");
                         }
         });
+        $("#ngheNhacDem").on("click",function(){
+                        clearTimeout(myTime);
+                        if (audioBaiHat.paused) {
+                            audioBaiHat.src = "media/NhacDem_ThatLaHay.mp3";
+                            $("#passage-text").find("span").removeClass("underline speaking");
+                            audioBaiHat.play();
+                        }
+                        else {
+                            audioBaiHat.pause();
+                        }
+        });
+        $("#ngheNhacVaLoi").on("click",function(){
+                        clearTimeout(myTime);
+                        if (audioBaiHat.paused) {
+                            audioBaiHat.src = "media/NhacVaLoi_ThatLaHay.mp3";
+                            $("#passage-text").find("span").removeClass("underline speaking");
+                            audioBaiHat.play();
+                            myTime = setTimeout(function(){
+                                $(".loi2").attr("style","display:block;")
+                                $(".loi1").attr("style","display:none;")
+                            }, data[43].end * 1000);
+                        }
+                        else {
+                            audioBaiHat.pause();
+                        }
+        });
         
         $("#ngheCau1").on("click",function(){    
                         if(audioBaiHat.paused){

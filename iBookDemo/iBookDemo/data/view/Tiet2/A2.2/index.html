@@ -5,20 +5,18 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Tiết 2</title>
+        
+        <link href="../../../../assets/libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../../../../assets/css/font-awesome.min.css">
+        <!-- -->
         <link href="assets/css/style.css" rel="stylesheet">
-        <link href="../../../../assets/css/iseebooks.css" rel="stylesheet">
-        <link href="../../../../assets/libs/bootstrap-3.3.7/css/bootstrap.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <script type="text/javascript" src="../../../../assets/js/jquery-3.1.1.min.js"></script>
-        <script text="text/javascript" src="assets/json/2.t2.cabai.json"></script>
+        
     </head>
     <body>
-            <p class="title"><span>2. </span>Em nghe giai điệu để hát và vỗ tay đệm theo đúng chỗ đánh dấu (x) trên bài hát Thật là hay. </p>
-            <div class="btn-group" style="position: absolute; top: 56px; left: 323px">
-                        <button id="button-play" class="btn btn-info"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
-                        <button id="btn-repeat" class="btn btn-info" disabled="false"><span class="glyphicon glyphicon-repeat" aria-hidden="true"></span></button>
-            </div>
-             <p class="passage-audio">
+        <div class="frame">
+            <p class="title"><span>2.</span> Em hãy hát bài <em>Thật là hay</em> và vỗ tay vào những lời ca có đánh dấu (x) ở dưới.</p>
+            <p class="passage-audio">
                 <audio id="passage-audio" class="passage">
                     <!-- @todo WebM? -->
                     <source src="media/2.t2.2.mp3" type="audio/mp3">
@@ -32,101 +30,164 @@
                 <p class="error"><em><strong>Notice:</strong> You must have JavaScript enabled/available to try this HTML5 Audio read along.</em></p>
             </noscript>
             <div class="sheet">
-                
                 <div id="passage-text">
-                    <table align="center">
-                        <tr class="cau1"></tr>
-                        <tr>
-                            <td>x</td><td>&nbsp;</td><td>x</td><td>x</td><td>&nbsp;</td><td>x</td>
-                        </tr>
-                        <tr class="cau2"></tr>
-                        <tr>
-                            <td>x</td><td>&nbsp;</td><td>x</td><td>&nbsp;</td><td>xx</td>
-                        </tr>
-                        <tr class="cau3"></tr>
-                        <tr>
-                            <td>x</td><td>&nbsp;</td><td>x</td><td>x</td><td>&nbsp;</td><td>x</td>
-                        </tr>
-                        <tr class="cau4"></tr>
-                        <tr>
-                            <td>x</td><td>&nbsp;</td><td>x</td><td>&nbsp;</td><td>xx</td>
-                        </tr>
-                        <tr class="cau5"></tr>
-                        <tr>
-                            <td>x</td><td>&nbsp;</td><td>x</td><td>x</td><td>&nbsp;</td><td>x</td>
-                        </tr>
-                        <tr class="cau6"></tr>
-                        <tr>
-                            <td>x</td><td>&nbsp;</td><td>x</td><td>&nbsp;</td><td>xx</td>
-                        </tr>
-                        <tr class="cau7"></tr>
-                        <tr>
-                            <td>x</td><td>&nbsp;</td><td>x</td><td>x</td><td>&nbsp;</td><td>x</td>
-                        </tr>
-                        <tr class="cau8"></tr>
-                        <tr>
-                            <td>x</td><td>&nbsp;</td><td>x</td><td>&nbsp;</td><td>xx</td>
-                        </tr>
-                    </table>
-                </div>
+                    <!-- loi bai hat -->
+                    <div class="row-baihat">
+                         <div class="reading-img">
+                             <img src="images/content1.png" />
+                         </div>
+                         <div id="reading1" class="row-text">
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="0" class="" id="reading-text-1-1">Nghe
+                                    <i class="fa fa-fw fa-close fa-new fa-1-1"></i>
+                                </span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="1" class="" id="reading-text-1-2">véo</span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="2" class="" id="reading-text-1-3">von
+                                   <i class="fa fa-fw fa-close fa-new fa-1-3"></i>
+                               </span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="3" class="" id="reading-text-1-4">trong
+                                   <i class="fa fa-fw fa-close fa-new fa-1-4"></i>
+                               </span>
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="4" class="" id="reading-text-1-5">vòm</span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="5" class="" id="reading-text-1-6">cây.
+                                   <i class="fa fa-fw fa-close fa-new fa-1-6"></i>
+                               </span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="6" class="" id="reading-text-2-1">Họa<i class="fa fa-fw fa-close fa-new fa-2-1"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="7" class="" id="reading-text-2-2">mi</span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="8" class="" id="reading-text-2-3">với<i class="fa fa-fw fa-close fa-new fa-2-3"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="9" class="" id="reading-text-2-4">chim</span>
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="10" class="" id="reading-text-2-5">oanh.<i class="fa fa-fw fa-close fa-new fa-2-5"></i></span> 
+                         </div>
 
+                         <div class="reading-img">
+                             <img src="images/content2.png" />
+                         </div>
+                         <div id="reading2" class="row-text">
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="11" class="" id="reading-text-3-1">Hai<i class="fa fa-fw fa-close fa-new fa-3-1"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="12" class="" id="reading-text-3-2">chú</span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="13" class="" id="reading-text-3-3">chim<i class="fa fa-fw fa-close fa-new fa-3-3"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="14" class="" id="reading-text-3-4">cao<i class="fa fa-fw fa-close fa-new fa-3-4"></i></span>
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="15" class="" id="reading-text-3-5">giọng</span>
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="16" class="" id="reading-text-3-6">hót.<i class="fa fa-fw fa-close fa-new fa-3-6"></i></span>
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="17" class="" id="reading-text-4-1">Hót<i class="fa fa-fw fa-close fa-new fa-4-1"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="18" class="" id="reading-text-4-2">líu</span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="19" class="" id="reading-text-4-3">lo<i class="fa fa-fw fa-close fa-new fa-4-3"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="20" class="" id="reading-text-4-4">vang</span>
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="21" class="" id="reading-text-4-5">lừng.<i class="fa fa-fw fa-close fa-new fa-4-5"></i></span> 
+                         </div>
+                          <div class="reading-img">
+                             <img src="images/content3.png" />
+                         </div>
+                         <div id="reading5" class="row-text">
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="22" class="" id="reading-text-5-1">Vui<i class="fa fa-fw fa-close fa-new fa-5-1"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="23" class="" id="reading-text-5-2">rất</span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="24" class="" id="reading-text-5-3">vui<i class="fa fa-fw fa-close fa-new fa-5-3"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="25" class="" id="reading-text-5-4">bay<i class="fa fa-fw fa-close fa-new fa-5-4"></i></span>
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="26" class="" id="reading-text-5-5">từ</span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="27" class="" id="reading-text-5-6">xa.<i class="fa fa-fw fa-close fa-new fa-5-6"></i></span>
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="28" class="" id="reading-text-6-1">Chim<i class="fa fa-fw fa-close fa-new fa-6-1"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="29" class="" id="reading-text-6-2">khuyên</span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="30" class="" id="reading-text-6-3">tới<i class="fa fa-fw fa-close fa-new fa-6-3"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="31" class="" id="reading-text-6-4">hót</span>
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="32" class="" id="reading-text-6-5">theo<i class="fa fa-fw fa-close fa-new fa-6-5"></i></span> 					   
+                         </div>
+
+                          <div class="reading-img">
+                             <img src="images/content4.png" />
+                         </div>
+                         <div id="reading7" class="row-text">
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="33" class="" id="reading-text-7-1">Li<i class="fa fa-fw fa-close fa-new fa-7-1"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="34" class="" id="reading-text-7-2">lí</span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="35" class="" id="reading-text-7-3">li,<i class="fa fa-fw fa-close fa-new fa-7-3"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="36" class="" id="reading-text-7-4">lí<i class="fa fa-fw fa-close fa-new fa-7-4"></i></span>
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="37" class="" id="reading-text-7-5">lì</span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="38" class="" id="reading-text-7-5">li.<i class="fa fa-fw fa-close fa-new fa-7-6"></i></span>
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="39" class="" id="reading-text-8-1">Thật<i class="fa fa-fw fa-close fa-new fa-8-1"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="40" class="" id="reading-text-8-2">là</span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="41" class="" id="reading-text-8-3">hay<i class="fa fa-fw fa-close fa-new fa-8-3"></i></span> 
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="42" class="" id="reading-text-8-4">hay</span>
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="43" class="" id="reading-text-8-5">hay<i class="fa fa-fw fa-close fa-new fa-8-5"></i></span>					   
+                         </div>
+                    </div> 
+                </div>
             </div>
-        
+            <!--chim minh hoa -->
+			  <div class="minhhoa"><img src="images/minhhoa1.png" class="img-left"/><img src="images/minhhoa.png" class="img-right" /></div>
+			 <!-- nut bam -->
+		   <div class="row-button">
+		        <div class="btn-playstop">
+				   <div style="display:inline-block;" data-toggle="tooltip" title="Hướng dẫn">
+				   <button data-toggle="modal" data-target="#myModal" class="btn btn-success" onclick="" id="">
+					<i aria-hidden="true" class="fa fa-fw fa-info font-size"></i>Hướng dẫn
+				   </button>
+				   </div>
+				   <button class="btn btn-info"  id="btnPlay" data-toggle="tooltip" title="Nghe bài hát">
+					<i aria-hidden="true" class="fa fa-fw fa-play font-size"></i>Chơi nhạc
+				   </button>
+				   <button class="btn btn-info" id="btnRepeat" data-toggle="tooltip" title="Nghe lại bài hát">
+					<i aria-hidden="true" class="fa fa-fw fa-repeat font-size"></i>Nghe lại
+				   </button>
+			       <button class="btn btn-danger" id="btnRecord" data-toggle="tooltip" title="Thu âm lời hát">
+					<i aria-hidden="true" class="fa fa-fw fa-microphone font-size color-1"></i>Thu âm
+				   </button>
+				    <button class="btn btn-danger" id="btnStopRecord" data-toggle="tooltip" title="Dừng thu âm">
+					<i aria-hidden="true" class="fa fa-fw fa-stop font-size color-1"></i>Dừng thu âm
+				   </button>	   
+			   </div>
+		   </div>
+	      
+		 <!-- modal dialog-->
+		 <div id="myModal" class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Hướng dẫn</h4>
+                  </div>
+                  <div class="modal-body">
+				     <div class="noidung">
+							<img class="hinhdong" src="images/chim.gif" />
+							<p class="text">Các em hãy hát lại bài hát và vỗ tay 1 nhịp vào các từ có dấu <strong style="font-size:24px;color:red">(x)</strong> và vỗ tay hai nhịp và từ có hai dấu <strong style="font-size:24px;color:red">(xx)</strong>.</p>
+                     </div>
+				  </div>
+                  <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Đóng cửa sổ</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div>
+        </div>
+                
+        <script type="text/javascript" charset="utf-8" src="../../../../assets/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="../../../../assets/libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script text="text/javascript" src="assets/json/2.t2.cabai.json"></script>
         <script src="assets/js/readalong.js"></script>
         <script>
             $(document).ready(function() {
                     var audioBaiHat = $('#passage-audio')[0];
-                    var spanTag = ["","","","","","","",""];
-				    
-                    var count = 0,
-                        i = 0,
-                        isSoChan = true; // biến dùng để xác định số từ trong câu chẵn hay lẻ
+                    var spanTag = $("#passage-text").find('span');
                     $.each(data, function(index, obj) {
-                        if(isSoChan){
-                            if(count == 6){
-                                i++;
-                                spanTag[i] += '<td><span danh-phach="'+obj.danhphach+'" data-end="' + obj.end + '" data-begin="' + obj.begin + '" tabindex= "0" data-index="' + index + '" class="">' + obj.word + '</span></td>';
-                                count = 1;
-                                isSoChan = false;
-                            } else{
-                                spanTag[i] += '<td><span danh-phach="'+obj.danhphach+'" data-end="' + obj.end + '" data-begin="' + obj.begin + '" tabindex= "0" data-index="' + index + '" class="">' + obj.word + '</span></td>';
-                                count++;
-                            }
-                        }
-                        else{
-                            if(count == 5){
-                                i++;
-                                spanTag[i] += '<td><span danh-phach="'+obj.danhphach+'" data-end="' + obj.end + '" data-begin="' + obj.begin + '" tabindex= "0" data-index="' + index + '" class="">' + obj.word + '</span></td>';
-                                count = 1;
-                                isSoChan = true;
-                            } else{
-                                spanTag[i] += '<td><span danh-phach="'+obj.danhphach+'" data-end="' + obj.end + '" data-begin="' + obj.begin + '" tabindex= "0" data-index="' + index + '" class="">' + obj.word + '</span></td>';
-                                count++;
-                            }
-                        }
-                        console.log(count + ":" +spanTag[i]);
+                        spanTag[index].setAttribute('danh-phach',obj.danhphach);
+                        spanTag[index].setAttribute('data-end',obj.end);
+                        spanTag[index].setAttribute('data-begin',obj.begin);
                     });
-                    $("#passage-text").find(".cau1").append(spanTag[0]);
-                    $("#passage-text").find(".cau2").append(spanTag[1]);
-                    $("#passage-text").find(".cau3").append(spanTag[2]);
-                    $("#passage-text").find(".cau4").append(spanTag[3]);
-                    $("#passage-text").find(".cau5").append(spanTag[4]);
-                    $("#passage-text").find(".cau6").append(spanTag[5]);
-                    $("#passage-text").find(".cau7").append(spanTag[6]);
-                    $("#passage-text").find(".cau8").append(spanTag[7]);
-                                        console.log(($('table').find('td')[1].innerHTML == ""));
+                 
                     var args = {
                     text_element: $('#passage-text')[0],
                     audio_element: audioBaiHat,
-                    hightLightClassName: 'redBg'//,
-                    //autofocus_current_word: document.getElementById('autofocus-current-word').checked
+                    hightLightClassName: 'redBg',
+                    autofocus_current_word: true
                     };
                     document.body.classList.add('initialized');
                     ReadAlong.init(args);
-                    $("#button-play").on("click",function(){
+                
+                    $('#passage-audio').on("ended", function(){
+                        $("#startAudio").html("Giai điệu bài hát");
+                    });
+                
+                    $("#btnPlay").on("click",function(){
                         if(audioBaiHat.paused){
                             audioBaiHat.play();
-                            $(this).find("span").attr("class","glyphicon glyphicon-pause");
+                            $(this).find('i').attr("class","fa fa-fw fa-stop font-size");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
                             for(var i = 0; i < spanArray.length; i++){
@@ -137,18 +198,12 @@
                         }
                         else {
                             audioBaiHat.pause();
-                            $(this).find("span").attr("class","glyphicon glyphicon-play");
+                            $(this).find('i').attr("class","fa fa-fw fa-play font-size");
                         }
                     });
-                    $('#passage-audio').on("ended", function(){
-                        $("#button-play").find("span").attr("class","glyphicon glyphicon-play");
-                        $("#btn-repeat").attr("disabled","");
-                    });
-                    $('#passage-audio').on("playing", function(){
-                        $("#btn-repeat").removeAttr("disabled");
-                    });
-                    $('#btn-repeat').on("click", function(){
-                        $("#button-play").find("span").attr("class","glyphicon glyphicon-pause");
+
+                    $('#btnRepeat').on("click", function(){
+                        $("#btnPlay").find('i').attr("class","fa fa-fw fa-stop font-size");
                         var spanArray = $("#passage-text").find("span");
                         spanArray.removeClass("speaking");
                         audioBaiHat.pause();
@@ -158,5 +213,6 @@
                     
             });
         </script>
+
     </body>
 </html>

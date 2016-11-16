@@ -1,90 +1,8 @@
-.underline{
-    border-bottom: solid 3px red;
-}
-td{
-    padding: 0 5px !important;
-}
-.btn-group{
-    left:400px !important;
-}
-table{
-    font-weight: bold;
-    font-size: 15pt;
-}
-.title{
-    font-family: Arial, Helvetica, sans-serif;
-    color: #0099FF;
-    font-size: 20px;
-    font-weight: bold;
-}
-.title span{
-    color: #FF3399;
-}
-
-#passage-text span{
-    display: inline-block;
-    width:3em;
-}
-.frame{
-    width: 1000px;
-    margin: 0 auto;
-    padding: 0 50px;
-    background: #fff;
-}
-h3{
-    text-align: center;
-    color:darkturquoise;
-}
-.sheet{
-    text-align: center;
-    padding-top: 30px;
-}
-
-#hatVoTay{
-    padding:5px;
-    background:red;
-    color:#fff;
-}
-#hatVoTay:hover{
-    cursor: pointer;
-}
-.not-nhac{
-    width:100%;
-}
-
-.passage-audio {
-    height: 2em;
-}
-#passage-audio {
-    width: 100%;
-    max-height: 2em;
-}
-#passage-text.speaking {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-q {
-    quotes: "“" "”" "‘" "’";
-}
-.section-heading {
-    display: none;
-}
-.passage p {
-    line-height: 1.4em;
-}
-.verse-start {
-    line-height: 0;
-}
 .initialized span[data-begin].speaking {
     color: red;
 }
 .initialized span[data-begin] {
     cursor: pointer;
-    padding:0 5px;
-    font-weight: bold;
 }
 .error {
     color: red;
@@ -92,3 +10,311 @@ q {
 span:focus {
     outline: none !important;
 }
+* {margin:0;padding:0}
+body {
+    font-family: Arial,Helvetica,sans-serif;
+    background:#fff
+}
+.frame {margin-top: 24px; margin-left: 40px; padding: 0; width:860px; height: 560px; float: left; overflow: auto; position: relative;}
+.modal-dialog {width:860px} 
+.title {
+    color: #0099ff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+	 margin: 0 0 10px;
+}
+.title span, em {
+    color: #ff3399;
+}
+/*** row button ***/
+.row-button {width:100%;position:fixed;bottom:5px;left:auto;right:auto;text-align:Center;max-width:800px;margin:0 auto}
+.font-size {font-size:20px;}
+.color-1 {color:#720d0f}
+.row-button .btn {font-size:15px;font-weight:bold;}
+.row-button .btn i {vertical-align:middle}
+/***/
+.row-baihat {width:100%;margin:20px auto;  font-family: Verdana;font-size: 12pt;font-weight: bold;z-index:10;position:absolute}
+.reading-img {width:800px;height:66px;float:left;text-align:Center}
+.reading-img img {width:650px;height:66px;}
+.row-text {width:650px;float:left;margin-left:157.5px;margin-top:-3px}
+.fa-new {display:block;margin-top:-3px;} 
+#reading-text-1-1 {
+    float: left;
+    margin-left: -17px;
+}
+.fa-1-1 {
+    margin-left: 19px;
+}
+#reading-text-1-2 {
+    float: left;
+    margin-left: 16px;
+}
+#reading-text-1-3 {
+    float: left;
+    margin-left: 17px;
+}
+.fa-1-3 {
+    margin-left: 7px;
+}
+#reading-text-1-4 {
+    float: left;
+    margin-left: 15px;
+}
+.fa-1-4 {
+    margin-left: 15px;
+}
+#reading-text-1-5 {
+    float: left;
+    margin-left: 12px;
+}
+#reading-text-1-6 {
+    float: left;
+    margin-left: 20px;
+}
+.fa-1-6 {
+    margin-left: 7px;
+}
+#reading-text-2-1 {
+    float: left;
+    margin-left: 11px;
+}
+.fa-2-1 {
+    margin-left: 7px;
+}
+#reading-text-2-2 {
+    float: left;
+    margin-left: 19px;
+}
+#reading-text-2-3 {
+    float: left;
+    margin-left: 26px;
+}
+.fa-2-3 {
+    margin-left: 7px;
+}
+#reading-text-2-4 {
+    float: left;
+    margin-left: 13px;
+}
+#reading-text-2-5 {
+    float: left;
+    margin-left: 12px;
+}
+.fa-2-5 {
+    margin-left: 7px;
+}
+.fa-2-5::after {
+    content: "\f00d";
+}
+#reading-text-3-1 {
+    float: left;
+    margin-left: -51px;
+}
+.fa-3-1 {
+    margin-left: 7px;
+}
+#reading-text-3-2 {
+    float: left;
+    margin-left: 1px;
+}
+#reading-text-3-3 {
+    float: left;
+    margin-left: 24px;
+}
+.fa-3-3 {
+    margin-left: 12px;
+}
+#reading-text-3-4 {
+    float: left;
+    margin-left: 23px;
+}
+.fa-3-4 {
+    margin-left: 7px;
+}
+#reading-text-3-5 {
+    float: left;
+    margin-left: 21px;
+}
+#reading-text-3-6 {
+    float: left;
+    margin-left: 16px;
+}
+.fa-3-6 {
+    margin-left: 7px;
+}
+#reading-text-4-1 {
+    float: left;
+    margin-left: 20px;
+}
+.fa-4-1 {
+    margin-left: 7px;
+}
+#reading-text-4-2 {
+    float: left;
+    margin-left: 26px;
+}
+#reading-text-4-3 {
+    float: left;
+    margin-left: 27px;
+}
+.fa-4-3 {
+    margin-left: -2px;
+}
+#reading-text-4-4 {
+    float: left;
+    margin-left: 13px;
+}
+#reading-text-4-5 {
+    float: left;
+    margin-left: 24px;
+}
+.fa-4-5 {
+    margin-left: 7px;
+}
+.fa-4-5::after {
+    content: "\f00d";
+}
+#reading-text-5-1 {
+    float: left;
+    margin-left: -51px;
+}
+.fa-5-1 {
+    margin-left: 7px;
+}
+#reading-text-5-2 {
+    float: left;
+    margin-left: -1px;
+}
+#reading-text-5-3 {
+    float: left;
+    margin-left: 22px;
+}
+.fa-5-3 {
+    margin-left: 7px;
+}
+#reading-text-5-4 {
+    float: left;
+    margin-left: 33px;
+}
+.fa-5-4 {
+    margin-left: 7px;
+}
+#reading-text-5-5 {
+    float: left;
+    margin-left: 26px;
+}
+#reading-text-5-6 {
+    float: left;
+    margin-left: 31px;
+}
+.fa-5-6 {
+    margin-left: 3px;
+}
+#reading-text-6-1 {
+    float: left;
+    margin-left: 14px;
+}
+.fa-6-1 {
+    margin-left: 15px;
+}
+#reading-text-6-2 {
+    float: left;
+    margin-left: 13px;
+}
+#reading-text-6-3 {
+    float: left;
+    margin-left: 14px;
+}
+.fa-6-3 {
+    margin-left: 1px;
+}
+#reading-text-6-4 {
+    float: left;
+    margin-left: 23px;
+}
+#reading-text-6-5 {
+    float: left;
+    margin-left: 22px;
+}
+.fa-6-5 {
+    margin-left: 9px;
+}
+.fa-6-5::after {
+    content: "\f00d";
+}
+#reading-text-7-1 {
+    float: left;
+    margin-left: -42px;
+}
+.fa-7-1 {
+    margin-left: -5px;
+}
+#reading-text-7-2 {
+    float: left;
+    margin-left: 9px;
+}
+#reading-text-7-3 {
+    float: left;
+    margin-left: 44px;
+}
+.fa-7-3 {
+    margin-left: -5px;
+}
+#reading-text-7-4 {
+    float: left;
+    margin-left: 35px;
+}
+.fa-7-4 {
+    margin-left: -6px;
+}
+#reading-text-7-5 {
+    float: left;
+    margin-left: 42px;
+}
+#reading-text-7-6 {
+    float: left;
+    margin-left: 14px;
+}
+.fa-7-6 {
+    margin-left: -5px;
+}
+#reading-text-8-1 {
+    float: left;
+    margin-left: 23px;
+}
+.fa-8-1 {
+    margin-left: 15px;
+}
+#reading-text-8-2 {
+    float: left;
+    margin-left: 30px;
+}
+#reading-text-8-3 {
+    float: left;
+    margin-left: 28px;
+}
+.fa-8-3 {
+    margin-left: 5px;
+}
+#reading-text-8-4 {
+    float: left;
+    margin-left: 22px;
+}
+#reading-text-8-5 {
+    float: left;
+    margin-left: 27px;
+}
+.fa-8-5 {
+    margin-left: 3px;
+}
+.fa-8-5::after {
+    content: "\f00d";
+}
+/*****************/
+.noidung {width:100%;display:inline-block}
+.minhhoa {width:100%}
+ .img-left {position:fixed;bottom:84px;left:-70px;z-index:11;}
+  .img-right {position:fixed;bottom:84px;right:-40px;z-index:11;}
+.text {font-size:20px;padding-left:180px;padding-top:20px;}
+ img.hinhdong {width:150px;height:150px;float:left}

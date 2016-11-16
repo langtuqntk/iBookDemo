@@ -1,5 +1,3 @@
-
-
 #StageUnit1
 {
     background-image: url("../../images/tiet1.png");
@@ -383,7 +381,7 @@ input[type=text] {
     width: 34px;
     height: 34px;
     position: relative;
-    top: 561px;
+    top: 571px;
     left: 3px;
 }
 
@@ -393,8 +391,8 @@ input[type=text] {
     width: 34px;
     height: 34px;
     position: relative;
-    top: 527px;
-    left: 867px;
+    top: 537px;
+    left: 883px;
 }
 
 .buttonFunction
@@ -556,8 +554,6 @@ input[type=text] {
     margin-bottom: 10px;
     display: none;
 }
-
-
 
 /*Thoai edited*/
 .menuUnitDropDownFix
