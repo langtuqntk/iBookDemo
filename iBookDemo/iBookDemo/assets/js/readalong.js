@@ -84,9 +84,10 @@ var ReadAlong = {
             return;
         }
         var is_playing = !this.audio_element.paused;
-
         if (!current_word.element.classList.contains('speaking')) {
-            current_word.element.classList.add('speaking');
+            if(that.audio_element.currentTime >= this.words[0].begin - 3){
+                current_word.element.classList.add('speaking');
+            }
             if (this.autofocus_current_word) {
                 current_word.element.focus();
             }
@@ -132,7 +133,6 @@ var ReadAlong = {
     removeWordSelection: function() {
         // There should only be one element with .speaking, but selecting all for good measure
         var spoken_word_els = this.text_element.querySelectorAll('span[data-begin].speaking');
-        console.log(spoken_word_els);
         Array.prototype.forEach.call(spoken_word_els, function (spoken_word_el) {
             spoken_word_el.classList.remove('speaking');
         });
@@ -147,7 +147,7 @@ var ReadAlong = {
          */
         that.audio_element.addEventListener('play', function (e) {
             that.selectCurrentWord();
-            that.text_element.classList.add('speaking');
+            //that.text_element.classList.add('speaking');
         }, false);
 
         /**
@@ -162,6 +162,7 @@ var ReadAlong = {
          * Seek by selecting a word (event delegation)
          */
         function on_select_word_el(e) {
+            clearTimeout(myTime);
             if (!e.target.dataset.begin) {
                 return;
             }
@@ -174,6 +175,7 @@ var ReadAlong = {
         }
         that.text_element.addEventListener('click', on_select_word_el, false);
         that.text_element.addEventListener('keypress', function (e) {
+            clearTimeout(myTime);
             if ( (e.charCode || e.keyCode) === 13 /*Enter*/) {
                 on_select_word_el.call(this, e);
             }
@@ -183,6 +185,7 @@ var ReadAlong = {
          * Spacebar toggles playback
          */
         document.addEventListener('keypress', function (e) {
+            clearTimeout(myTime);
             if ( (e.charCode || e.keyCode) === 32 /*Space*/) {
                 e.preventDefault();
                 if (that.audio_element.paused) {
@@ -200,6 +203,7 @@ var ReadAlong = {
          * @todo Should it stop playing once the duration is over?
          */
         that.text_element.addEventListener('dblclick', function (e) {
+            clearTimeout(myTime);
             e.preventDefault();
             that.audio_element.play();
         }, false);

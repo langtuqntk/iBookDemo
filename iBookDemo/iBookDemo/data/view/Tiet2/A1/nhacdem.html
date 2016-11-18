@@ -8,15 +8,15 @@
         <link href="../../../../assets/libs/bootstrap-3.3.7/css/bootstrap.css" rel="stylesheet">;
         <link href="assets/css/style.css" rel="stylesheet">
         <script type="text/javascript" src="../../../../assets/js/jquery-3.1.1.min.js"></script>
-        <script text="text/javascript" src="assets/json/2.t2.cabai.json"></script>
+        <script text="text/javascript" src="assets/json/nhacdem.json"></script>
     </head>
     <body>
         <div class="frame">
-             <p class="title-baihat">Thật là hay<br><em>Nhạc và lời: Hoàng Lân</em></p>
+            <p class="title-baihat">Thật là hay<br><em>Nhạc và lời: Hoàng Lân</em></p>
              <p class="passage-audio">
-                <audio id="passage-audio" class="passage">
+                <audio id="passage-audio" class="passage" autoplay>
                     <!-- @todo WebM? -->
-                    <source src="" type="audio/mp3">
+                    <source src="media/NhacDem_ThatLaHay.mp3" type="audio/mp3">
                     <em class="error"><strong>Error:</strong> Your browser doesn't appear to support HTML5 Audio.</em>
                 </audio>
             </p>
@@ -28,8 +28,7 @@
             </noscript>
             <div class="sheet"> 
                 <div id="passage-text">
-                        <!-- loi bai hat -->
-                    <div class="row-baihat">
+                        <div class="row-baihat">
                          <div class="reading-img">
                              <img src="images/1.png" />
                          </div>
@@ -94,45 +93,32 @@
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="40" class="" id="reading-text-8-2"></span> 
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="41" class="" id="reading-text-8-3"></span> 
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="42" class="" id="reading-text-8-4"></span>
-                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="43" class="" id="reading-text-8-5"></span>					   
+                               <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="43" class="" id="reading-text-8-5"></span>
                          </div>
-                    </div> 
+                        </div> 
                     </div>    
                 </div>
-            <!-- cau hat ---->
-			<div class="row-cauhat">
-			    <button class="btn btn-primary" id="ngheCau1" >Câu 1</button>
-				<button class="btn btn-primary" id="ngheCau2" >Câu 2</button>
-				<button class="btn btn-primary" id="ngheCau1va2" >Câu 1 và 2</button>
-				<button class="btn btn-primary" id="ngheCau3" >Câu 3</button>
-				<button class="btn btn-primary" id="ngheCau4" >Câu 4</button>
-                <button class="btn btn-primary" id="ngheCau3va4" >Câu 3 và 4</button>
-			</div>
-			<!--chim minh hoa -->
+            <!--chim minh hoa -->
 			  <div class="minhhoa"><img src="images/minhhoa1.png" class="img-left"/><img src="images/minhhoa.png" class="img-right" /></div>
 			 <!-- nut bam -->
 		   <div class="row-button">
 		        <div class="btn-playstop">
 				   <button class="btn btn-info" id="startAudio" data-toggle="tooltip" title="Nghe cả bài">
-					<i aria-hidden="true" class="fa fa-fw fa-play font-size"></i>Cả bài
+					<i aria-hidden="true" class="fa fa-fw fa-play font-size"></i>Giai điệu
 				   </button>
 				   <button class="btn btn-info" id="ngheNhacDem" data-toggle="tooltip" title="Nghe cả bài và nhạc">
 					<i aria-hidden="true" class="fa fa-fw fa-music font-size"></i>Cả bài & nhạc
-				   </button>
-			        <button class="btn btn-info" id="hatVoTay" data-toggle="tooltip" title="Nghe cả bài và nhạc kết hợp vỗ tay">
-					<i aria-hidden="true" class="fa fa-fw fa-music font-size"></i>Cả bài & nhạc & vỗ tay
 				   </button>
 				    <button class="btn btn-info" id="ngheNhacVaLoi" data-toggle="tooltip" title="Nghe bài hát mẫu">
 					<i aria-hidden="true" class="fa fa-fw fa-music font-size"></i>Bài hát mẫu
 				   </button>
 			   </div>
 		   </div>
-            
         </div>
+        
         <script src="../../../../assets/js/readalong.js"></script>
         <script src="assets/js/xulynut.js"></script>
         <script>
-            var myTime;
             $(document).ready(function() {
                 var audioBaiHat = $('#passage-audio')[0],
                     spanTag = $("#passage-text").find('span'),
@@ -142,7 +128,28 @@
                         hightLightClassName: 'redBg',
                         autofocus_current_word: true
                     };
-                    xuLyNut(audioBaiHat);
+                    
+                    $("#ngheNhacDem").click(function(){
+                        if (audioBaiHat.paused) {
+                            $("#passage-text").find("span").removeClass("underline speaking");
+                            audioBaiHat.play();
+                            myTime = setTimeout(function(){
+                                $(".loi2").attr("style","display:block;")
+                                $(".loi1").attr("style","display:none;")
+                            }, data[43].end * 1000);
+                        }
+                        else {
+                            audioBaiHat.pause();
+                            audioBaiHat.currentTime = 0;
+                        }
+                    });
+                    $("#ngheNhacVaLoi").click(function(){
+                        location.href = "nhacvaloi.html"; 
+                    });
+                    $("#startAudio").click(function(){
+                        location.href = "index.html"; 
+                    });
+                
                     $.each(data, function(index, obj) {
                         spanTag[index].setAttribute('danh-phach',obj.danhphach);
                         spanTag[index].setAttribute('data-end',obj.end);

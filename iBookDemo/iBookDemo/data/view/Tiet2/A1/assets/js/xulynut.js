@@ -1,61 +1,37 @@
-var BtnProcess = {
-    audioBaiHat: null,
-    init: function (audio) {
-        this.addEventListeners(audio);
-    },
-    addEventListeners: function(audioBaiHat){
-        var myTime;
+ function xuLyNut(audio){
         $("#startAudio").on("click",function(){
                         clearTimeout(myTime);
-                        if (audioBaiHat.paused) {
-                            audioBaiHat.src = "media/2.t2.cabai.mp3";
+                        if (audio.paused) {
+                            audio.src = "media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
-                            audioBaiHat.play();
+                            audio.play();
                             $(this).html("Dừng phát");
                         }
                         else {
-                            audioBaiHat.pause();
+                            audio.pause();
                             $(this).html("Giai điệu bài hát");
                         }
         });
         $("#ngheNhacDem").on("click",function(){
                         clearTimeout(myTime);
-                        if (audioBaiHat.paused) {
-                            audioBaiHat.src = "media/NhacDem_ThatLaHay.mp3";
-                            $("#passage-text").find("span").removeClass("underline speaking");
-                            audioBaiHat.play();
-                        }
-                        else {
-                            audioBaiHat.pause();
-                        }
+                        location.href = "nhacdem.html";
         });
         $("#ngheNhacVaLoi").on("click",function(){
                         clearTimeout(myTime);
-                        if (audioBaiHat.paused) {
-                            audioBaiHat.src = "media/NhacVaLoi_ThatLaHay.mp3";
-                            $("#passage-text").find("span").removeClass("underline speaking");
-                            audioBaiHat.play();
-                            myTime = setTimeout(function(){
-                                $(".loi2").attr("style","display:block;")
-                                $(".loi1").attr("style","display:none;")
-                            }, data[43].end * 1000);
-                        }
-                        else {
-                            audioBaiHat.pause();
-                        }
+                        location.href = "nhacvaloi.html";
         });
         
         $("#ngheCau1").on("click",function(){    
-                        if(audioBaiHat.paused){
-                            audioBaiHat.src = "media/2.t2.cabai.mp3";
+                        if(audio.paused){
+                            audio.src = "media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
-                            audioBaiHat.currentTime = 0;
-                            audioBaiHat.play();
+                            audio.currentTime = 0;
+                            audio.play();
                             myTime = setTimeout(function(){
-                                audioBaiHat.pause();
-                                audioBaiHat.currentTime = 0;
+                                audio.pause();
+                                audio.currentTime = 0;
                             }, data[10].end * 1000);
                         }
                         else{
@@ -64,27 +40,27 @@ var BtnProcess = {
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
-                            audioBaiHat.pause();
-                            audioBaiHat.currentTime = 0;
-                            audioBaiHat.play();
+                            audio.pause();
+                            audio.currentTime = 0;
+                            audio.play();
                             myTime = setTimeout(function(){
-                                audioBaiHat.pause();
-                                audioBaiHat.currentTime = 0;
+                                audio.pause();
+                                audio.currentTime = 0;
                             }, data[10].end * 1000);
                         }
                         
         });
         $("#ngheCau2").on("click",function(){
-                        if(audioBaiHat.paused){
-                            audioBaiHat.src = "media/2.t2.cabai.mp3";
+                        if(audio.paused){
+                            audio.src = "media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
-                            audioBaiHat.currentTime = data[11].begin;
-                            audioBaiHat.play();
+                            audio.currentTime = data[11].begin;
+                            audio.play();
                             myTime = setTimeout(function(){
-                                audioBaiHat.pause();
-                                audioBaiHat.currentTime = data[11].begin;
+                                audio.pause();
+                                audio.currentTime = data[11].begin;
                             }, (data[21].end - data[11].begin) * 1000);
                         }
                         else{
@@ -93,26 +69,26 @@ var BtnProcess = {
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
-                            audioBaiHat.pause();
-                            audioBaiHat.currentTime = data[11].begin;
-                            audioBaiHat.play();
+                            audio.pause();
+                            audio.currentTime = data[11].begin;
+                            audio.play();
                             myTime = setTimeout(function(){
-                                audioBaiHat.pause();
-                                audioBaiHat.currentTime = data[11].begin;
+                                audio.pause();
+                                audio.currentTime = data[11].begin;
                             }, (data[21].end - data[11].begin) * 1000);
                         }
         });
         $("#ngheCau3").on("click",function(){
-                        if(audioBaiHat.paused){
-                            audioBaiHat.src = "media/2.t2.cabai.mp3";
+                        if(audio.paused){
+                            audio.src = "media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
-                            audioBaiHat.currentTime = data[22].begin;
-                            audioBaiHat.play();
+                            audio.currentTime = data[22].begin;
+                            audio.play();
                             myTime = setTimeout(function(){
-                                audioBaiHat.pause();
-                                audioBaiHat.currentTime = data[22].begin;
+                                audio.pause();
+                                audio.currentTime = data[22].begin;
                             }, (data[32].end - data[22].begin) * 1000);
                         }
                         else{
@@ -121,24 +97,24 @@ var BtnProcess = {
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
-                            audioBaiHat.pause();
-                            audioBaiHat.currentTime = data[22].begin;
-                            audioBaiHat.play();
+                            audio.pause();
+                            audio.currentTime = data[22].begin;
+                            audio.play();
                             myTime = setTimeout(function(){
-                                audioBaiHat.pause();
-                                audioBaiHat.currentTime = data[22].begin;
+                                audio.pause();
+                                audio.currentTime = data[22].begin;
                             }, (data[32].end - data[22].begin) * 1000);
                         }
         });
         $("#ngheCau4").on("click",function(){
-                        if(audioBaiHat.paused){
-                            audioBaiHat.src = "media/2.t2.cabai.mp3";
+                        if(audio.paused){
+                            audio.src = "media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
-                            audioBaiHat.currentTime = data[33].begin;
-                            audioBaiHat.play();
+                            audio.currentTime = data[33].begin;
+                            audio.play();
                             myTime = setTimeout(function(){
-                                audioBaiHat.pause();
-                                audioBaiHat.currentTime = data[33].begin;
+                                audio.pause();
+                                audio.currentTime = data[33].begin;
                             }, (data[43].end - data[33].begin) * 1000);
                         }
                         else{
@@ -147,25 +123,25 @@ var BtnProcess = {
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
-                            audioBaiHat.pause();
-                            audioBaiHat.currentTime = data[33].begin;
-                            audioBaiHat.play();
+                            audio.pause();
+                            audio.currentTime = data[33].begin;
+                            audio.play();
                             myTime = setTimeout(function(){
-                                audioBaiHat.pause();
-                                audioBaiHat.currentTime = data[33].begin;
+                                audio.pause();
+                                audio.currentTime = data[33].begin;
                             }, (data[43].end - data[33].begin) * 1000);
                         }
                         
         });
         $("#ngheCau1va2").on("click",function(){
-                        if(audioBaiHat.paused){
-                            audioBaiHat.src = "media/2.t2.cabai.mp3";
+                        if(audio.paused){
+                            audio.src = "media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
-                            audioBaiHat.currentTime = 0;
-                            audioBaiHat.play();
+                            audio.currentTime = 0;
+                            audio.play();
                             myTime = setTimeout(function(){
-                                audioBaiHat.pause();
-                                audioBaiHat.currentTime = 0;
+                                audio.pause();
+                                audio.currentTime = 0;
                             }, (data[21].end) * 1000);
                         }
                         else{
@@ -174,25 +150,25 @@ var BtnProcess = {
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
-                            audioBaiHat.pause();
-                            audioBaiHat.currentTime = 0;
-                            audioBaiHat.play();
+                            audio.pause();
+                            audio.currentTime = 0;
+                            audio.play();
                             myTime = setTimeout(function(){
-                                audioBaiHat.pause();
-                                audioBaiHat.currentTime = 0;
+                                audio.pause();
+                                audio.currentTime = 0;
                             }, (data[21].end) * 1000);
                         }
                         
         });
         $("#ngheCau3va4").on("click",function(){
-                        if(audioBaiHat.paused){
-                            audioBaiHat.src = "media/2.t2.cabai.mp3";
+                        if(audio.paused){
+                            audio.src = "media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
-                            audioBaiHat.currentTime = data[22].begin;
-                            audioBaiHat.play();
+                            audio.currentTime = data[22].begin;
+                            audio.play();
                             myTime = setTimeout(function(){
-                                audioBaiHat.pause();
-                                audioBaiHat.currentTime = data[22].begin;
+                                audio.pause();
+                                audio.currentTime = data[22].begin;
                             }, (data[43].end - data[22].begin) * 1000);
                         }
                         else{
@@ -201,12 +177,12 @@ var BtnProcess = {
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
-                            audioBaiHat.pause();
-                            audioBaiHat.currentTime = data[22].begin;
-                            audioBaiHat.play();
+                            audio.pause();
+                            audio.currentTime = data[22].begin;
+                            audio.play();
                             myTime = setTimeout(function(){
-                                audioBaiHat.pause();
-                                audioBaiHat.currentTime = data[22].begin;
+                                audio.pause();
+                                audio.currentTime = data[22].begin;
                             }, (data[43].end - data[22].begin) * 1000);
                         }
                         
@@ -214,8 +190,8 @@ var BtnProcess = {
         $("#hatVoTay").on("click",function(){
                         clearTimeout(myTime);
                         $('#startAudio').html("Giai điệu bài hát");
-                        audioBaiHat.src = "media/2.t2.2.mp3";
-                        audioBaiHat.play();
+                        audio.src = "media/2.t2.2.mp3";
+                        audio.play();
                         var spanArray = $("#passage-text").find("span");
                         spanArray.removeClass("speaking");
                         for(var i = 0; i < spanArray.length; i++){
@@ -224,6 +200,10 @@ var BtnProcess = {
                             }
                         }
         });
-    }
-}
-    
+        
+        $('#passage-audio').on("ended", function(){
+                        $("#startAudio").html("Giai điệu bài hát");
+        });
+     
+ } 
+        
