@@ -1,0 +1,108 @@
+ul {list-style-type:0; margin:0; padding:0;}
+
+.Unit1 .cMain, .Unit1 .cHeader .container {
+	background: url("../../images/tiet1.png") top left no-repeat;
+    height: 760px;
+	padding-top: 112px;
+}
+
+.Unit2 .cMain, .Unit2 .cHeader .container {
+	background: url("../../images/tiet2.png") top left no-repeat;
+    height: 760px;
+	padding-top: 112px;
+}
+
+.Unit1 .cHeader .container , .Unit2 .cHeader .container {
+	height:112px !important;
+	padding-top:0px;
+}
+
+.rightSidebar {
+    position: fixed !important;
+	display:none;
+    top: 0px;
+    bottom: 0;
+    height: 648px;
+    width: 150px !important;
+    border-left: 1px solid #e0e0e0;
+    background: #fafafa;
+    z-index: 1199;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+	transform: translate(0px, 112px);
+}
+
+.rightSidebar ul li a {padding: 3px 10px; display:block; color:#333; font-weight:bold;}
+
+.rightSidebar ul li i {color:red !important;}
+
+.rightSidebar ul li a:hover {
+	text-decoration:none;
+	background-color:pink;
+	-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;
+	-webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}
+
+.nano-content {
+	padding: 10px 10px;
+}
+
+.rightSidebar, .menu-wrap {
+	opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+
+.mainContent {
+    height: 648px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.music.hvr-icon-bob:before {
+	content: "\f001";
+	left:1em;
+}
+
+.music.hvr-icon-bob {padding-left:2.2em;}
+
+.music.hvr-icon-forward:before {
+	content: "\f0a4";
+	left:2em;
+}
+
+.music.hvr-icon-forward {padding-left:3.5em;}
+
+/*custom style 4 off side bar left .content */
+.show-menu .content:before {
+	height: 648px;
+}
+
+.menuLeft {
+	height: 100%;
+	opacity: 0;
+	color: #ff6600;
+	padding: 15px 15px;
+	font-size:15px;
+}
+
+.menuLeft ul {list-style-type:none;}
+
+.menuLeft ul li a {padding: 8px 10px; display:block; color:#ff6600; font-weight:bold;}
+
+.menuLeft ul li a:hover {
+	text-decoration:none;
+	background-color:#ff6600;
+	color:#ffffff;
+	-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;
+	-webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;
+}
+
+.menuLeft ul li i {padding-right:10px;}
+
+.menuLeft ul ul li a {padding-left:25px;}
+
+#open-button i {color:red;}
+
