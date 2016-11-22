@@ -1,0 +1,65 @@
+* {margin:0;padding:0}
+body {
+    font-family: Arial,Helvetica,sans-serif;
+    background:url(../../images/background.png) repeat
+}
+.frame {margin-top: 24px; margin-left: 40px; padding: 0; width:860px; height: 560px; float: left; overflow: auto; position: relative;}
+.modal-dialog {width:860px} 
+.title {
+    color: #0099ff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+	 margin: 0 0 10px;
+}
+.title span, em {
+    color: #ff3399;
+}
+.title  em {font-style:normal}
+/*** row button ***/
+.row-button {width:100%;position:fixed;bottom:5px;left:auto;right:auto;text-align:Center;max-width:800px;margin:0 auto}
+.font-size {font-size:20px;}
+.color-1 {color:#720d0f}
+.row-button .btn {font-size:15px;font-weight:bold;}
+.row-button .btn i {vertical-align:middle}
+/***/
+.noidung {width:100%;display:inline-block}
+.minhhoa {width:100%}
+.img-left {position:fixed;bottom:84px;left:-70px;z-index:11;}
+.img-right {position:fixed;bottom:84px;right:-40px;z-index:11;}
+.text {font-size:20px;padding-left:180px;padding-top:20px;}
+ img.hinhdong {width:150px;height:150px;float:left}
+ .text span {color:#ff3399;padding-right:8px;}
+/*** custom *****/
+.row-bai2 {width:100%;margin-top:20px}
+/***/
+.col-baitap {width:100%;}
+.col-baitap p {font-size:20px;vertical-align:middle;padding-bottom:20px;width:400px;margin:0 auto}
+.ip-text {width:130px;border-left:0;border-right:0;border-top:0;border-bottom:1px dotted #333;background:none;padding:0 5px;text-align:Center;color:#0099ff}
+.w-1 {
+    width: 182px;
+}
+.w-2 {
+    width: 175px;
+}
+.w-3 {
+    width: 274px;
+}
+.w-4 {
+    width: 270px;
+}
+.w-5 {
+    width: 154px;
+}
+.w-6 {
+    width: 170px;
+}
+.w-7 {
+    width: 354px;
+}
+.w-8 {
+    width: 347px;
+}
+.w-9 {
+    width: 388px;
+}

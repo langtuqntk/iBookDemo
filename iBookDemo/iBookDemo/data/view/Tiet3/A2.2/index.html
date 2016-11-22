@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>bài 3 tiết 1</title>
+        <link href="assets/libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Font Awesome -->
+      <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	  <!-- -->
+        <link href="assets/css/style.css" rel="stylesheet">
+	 <!-- radio -->
+         <link href="assets/css/fm.checkator.jquery.css" rel="stylesheet">	 
+    </head>
+    <body>
+        <div class="frame">
+			 <p class="title"><span>2.</span>.Ngoài những chú chim oanh, chim khuyên có giọng hót hay trong bài hát, em còn biết loài chim nào có giọng hót hay nữa không ? Hãy kể tên ít nhất một loài. </p>
+			        <div class="col-baitap">
+					   <p><input class="ip-text w-9" type="text"></p>
+					</div>
+			<!--chim minh hoa -->
+			  <!-- nut bam -->
+		   <div class="row-button">
+		        <div class="btn-playstop">
+				   <div style="display:inline-block;" data-toggle="tooltip" title="Hướng dẫn">
+				   <button data-toggle="modal" data-target="#myModal" class="btn btn-success" onclick="" id="">
+					<i aria-hidden="true" class="fa fa-fw fa-info font-size"></i>Hướng dẫn
+				   </button>
+				   </div>
+				   <button class="btn btn-info" onclick="" id="" data-toggle="tooltip" title="Làm lại bài tập">
+					<i aria-hidden="true" class="fa fa-fw fa-repeat font-size"></i>Làm lại
+				   </button>
+				   <button class="btn btn-danger" onclick="" id="" data-toggle="tooltip" title="Kiểm tra kết quả">
+					<i aria-hidden="true" class="fa fa-fw fa-random font-size color-1"></i>Kiểm tra
+				   </button>
+			      
+				   
+				   
+			   </div>
+		   </div>
+	      
+		 <!-- modal dialog-->
+		 <div id="myModal" class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Hướng dẫn</h4>
+                  </div>
+                  <div class="modal-body">
+				     <div class="noidung">
+							<img class="hinhdong" src="images/chim.gif" />
+							<p class="text">Em nghe giai điệu của bài hát để nhớ và điền đúng các từ còn thiếu vào chỗ có dấu chấm (…).</p>
+						
+                     </div>
+				  </div>
+                  <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Đóng cửa sổ</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div>
+		
+		 <!-- -->
+	   </div>
+
+
+		<!-- -->
+        <script type="text/javascript" charset="utf-8" src="assets/js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="assets/libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="assets/js/app.js"></script>
+		<script type="text/javascript" charset="utf-8" src="assets/js/fm.checkator.jquery.js"></script>
+		<script>
+		$(function () {
+			$('.radio1').checkator();
+
+
+			$('#activate_checkator1').click(function () {
+				if ($('#radio1_1').data('checkator') === undefined) {
+					$('.radio1').checkator();
+					$('#activate_checkator1').val('destroy checkator');
+				} else {
+					$('.radio1').checkator('destroy');
+					$('#activate_checkator1').val('activate checkator');
+				}
+			});
+		});
+	</script>
+    </body>
+</html>
