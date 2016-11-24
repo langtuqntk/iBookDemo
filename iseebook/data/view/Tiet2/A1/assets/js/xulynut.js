@@ -2,7 +2,7 @@
         $("#startAudio").on("click",function(){
                         clearTimeout(myTime);
                         if (audio.paused) {
-                            audio.src = "../data/view/Tiet2/A1/media/2.t2.cabai.mp3";
+                            audio.src = "data/view/Tiet2/A1/media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
                             audio.play();
                             $(this).html("Dừng phát");
@@ -15,7 +15,7 @@
         
         $("#ngheCau1").on("click",function(){    
                         if(audio.paused){
-                            audio.src = "../data/view/Tiet2/A1/media/2.t2.cabai.mp3";
+                            audio.src = "data/view/Tiet2/A1/media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
@@ -44,7 +44,7 @@
         });
         $("#ngheCau2").on("click",function(){
                         if(audio.paused){
-                            audio.src = "../data/view/Tiet2/A1/media/2.t2.cabai.mp3";
+                            audio.src = "data/view/Tiet2/A1/media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
@@ -72,7 +72,7 @@
         });
         $("#ngheCau3").on("click",function(){
                         if(audio.paused){
-                            audio.src = "../data/view/Tiet2/A1/media/2.t2.cabai.mp3";
+                            audio.src = "data/view/Tiet2/A1/media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
@@ -100,7 +100,7 @@
         });
         $("#ngheCau4").on("click",function(){
                         if(audio.paused){
-                            audio.src = "../data/view/Tiet2/A1/media/2.t2.cabai.mp3";
+                            audio.src = "data/view/Tiet2/A1/media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
                             audio.currentTime = data[33].begin;
                             audio.play();
@@ -127,7 +127,7 @@
         });
         $("#ngheCau1va2").on("click",function(){
                         if(audio.paused){
-                            audio.src = "../data/view/Tiet2/A1/media/2.t2.cabai.mp3";
+                            audio.src = "data/view/Tiet2/A1/media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
                             audio.currentTime = 0;
                             audio.play();
@@ -154,7 +154,7 @@
         });
         $("#ngheCau3va4").on("click",function(){
                         if(audio.paused){
-                            audio.src = "../data/view/Tiet2/A1/media/2.t2.cabai.mp3";
+                            audio.src = "data/view/Tiet2/A1/media/2.t2.cabai.mp3";
                             $("#passage-text").find("span").removeClass("underline speaking");
                             audio.currentTime = data[22].begin;
                             audio.play();
@@ -182,7 +182,7 @@
         $("#hatVoTay").on("click",function(){
                         clearTimeout(myTime);
                         $('#startAudio').html("Giai điệu bài hát");
-                        audio.src = "../data/view/Tiet2/A1/media/2.t2.2.mp3";
+                        audio.src = "data/view/Tiet2/A1/media/2.t2.2.mp3";
                         audio.play();
                         var spanArray = $("#passage-text").find("span");
                         spanArray.removeClass("speaking");

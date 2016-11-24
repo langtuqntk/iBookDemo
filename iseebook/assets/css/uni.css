@@ -1,13 +1,19 @@
 ul {list-style-type:0; margin:0; padding:0;}
 
-.Unit1 .cMain, .Unit1 .cHeader .container {
-	background: url("../../images/tiet1.png") top left no-repeat;
+.Unit1 .cHeader .container {
+	background: url("../../images/bai1.png") top left no-repeat;
     height: 760px;
 	padding-top: 112px;
 }
 
-.Unit2 .cMain, .Unit2 .cHeader .container {
-	background: url("../../images/tiet2.png") top left no-repeat;
+.Unit2 .cHeader .container {
+	background: url("../../images/bai2.png") top left no-repeat;
+    height: 760px;
+	padding-top: 112px;
+}
+
+.Unit3 .cHeader .container {
+	background: url("../../images/bai3.PNG") top left no-repeat;
     height: 760px;
 	padding-top: 112px;
 }
@@ -54,7 +60,12 @@ ul {list-style-type:0; margin:0; padding:0;}
     filter: alpha(opacity=80); /* For IE8 and earlier */
 }
 
-.mainContent {
+.cMain{
+    padding-top: 110px;
+}
+.cMain .mainContent{
+    background: url("../../images/cMainBG.jpeg") no-repeat;
+    background-size: 100% 100%;
     height: 648px;
     margin: 0px;
     padding: 0px;

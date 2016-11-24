@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tiết 2</title>
-        <link href="../assets/libs/bootstrap984/css/bootstrap.css" rel="stylesheet">;
-        <link href="../data/view/Tiet2/A1/assets/css/style.css" rel="stylesheet">
-        <script type="text/javascript" src="../assets/js/jquery-3.1.1.min.js"></script>
-        <script text="text/javascript" src="../data/view/Tiet2/A1/assets/json/2.t2.cabai.json"></script>
-    </head>
-    <body>
+        <link href="data/view/Tiet2/A1/assets/css/style.css" rel="stylesheet">
+
         <div class="frame">
              <p class="title-baihat">Thật là hay<br><em>Nhạc và lời: Hoàng Lân</em></p>
              <p class="passage-audio">
@@ -31,7 +20,7 @@
                         <!-- loi bai hat -->
                     <div class="row-baihat">
                          <div class="reading-img">
-                             <img src="../data/view/Tiet2/A1/images/1.png" />
+                             <img src="data/view/Tiet2/A1/images/1.png" />
                          </div>
                          <div id="reading1" class="row-text">
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="0" class="" id="reading-text-1-1"></span> 
@@ -48,7 +37,7 @@
                          </div>
 
                          <div class="reading-img">
-                             <img src="../data/view/Tiet2/A1/images/2.png" />
+                             <img src="data/view/Tiet2/A1/images/2.png" />
                          </div>
                          <div id="reading2" class="row-text">
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="11" class="" id="reading-text-3-1"></span> 
@@ -64,7 +53,7 @@
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="21" class="" id="reading-text-4-5"></span> 
                          </div>
                           <div class="reading-img">
-                             <img src="../data/view/Tiet2/A1/images/3.png" />
+                             <img src="data/view/Tiet2/A1/images/3.png" />
                          </div>
                          <div id="reading5" class="row-text">
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="22" class="" id="reading-text-5-1"></span> 
@@ -81,7 +70,7 @@
                          </div>
 
                           <div class="reading-img">
-                             <img src="../data/view/Tiet2/A1/images/4.png" />
+                             <img src="data/view/Tiet2/A1/images/4.png" />
                          </div>
                          <div id="reading7" class="row-text">
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="33" class="" id="reading-text-7-1"></span>
@@ -109,28 +98,29 @@
                 <button class="btn btn-primary" id="ngheCau3va4" >Câu 3 và 4</button>
 			</div>
 			<!--chim minh hoa -->
-			  <div class="minhhoa"><img src="../data/view/Tiet2/A1/images/minhhoa1.png" class="img-left"/><img src="../data/view/Tiet2/A1/images/minhhoa.png" class="img-right" /></div>
+			  <div class="minhhoa"><img src="data/view/Tiet2/A1/images/minhhoa1.png" class="img-left"/><img src="data/view/Tiet2/A1/images/minhhoa.png" class="img-right" /></div>
 			 <!-- nut bam -->
 		   <div class="row-button">
 		        <div class="btn-playstop">
 				   <button class="btn btn-info" id="startAudio" data-toggle="tooltip" title="Nghe cả bài">
 					<i aria-hidden="true" class="fa fa-fw fa-play font-size"></i>Cả bài
 				   </button>
-				   <a class="btn btn-info" via-link via-href="ngheNhacDem" data-toggle="tooltip" title="Nghe cả bài và nhạc">
+				   <a class="btn btn-info" via-link via-href="Tiet2_ngheNhacDem" data-toggle="tooltip" title="Nghe cả bài và nhạc">
 					<i aria-hidden="true" class="fa fa-fw fa-music font-size"></i>Cả bài & nhạc
 				   </a>
 			        <button class="btn btn-info" id="hatVoTay" data-toggle="tooltip" title="Nghe cả bài và nhạc kết hợp vỗ tay">
 					<i aria-hidden="true" class="fa fa-fw fa-music font-size"></i>Cả bài & nhạc & vỗ tay
 				   </button>
-				    <a class="btn btn-info" via-link via-href="ngheNhacVaLoi" data-toggle="tooltip" title="Nghe bài hát mẫu">
+				    <a class="btn btn-info" via-link via-href="Tiet2_ngheNhacVaLoi" data-toggle="tooltip" title="Nghe bài hát mẫu">
 					<i aria-hidden="true" class="fa fa-fw fa-music font-size"></i>Bài hát mẫu
 				   </a>
 			   </div>
 		   </div>
             
         </div>
-        <script src="../assets/js/readalong.js"></script>
-        <script src="../data/view/Tiet2/A1/assets/js/xulynut.js"></script>
+        <script text="text/javascript" src="data/view/Tiet2/A1/assets/json/2.t2.cabai.json"></script>
+        <script src="assets/js/readalong.js"></script>
+        <script src="data/view/Tiet2/A1/assets/js/xulynut.js"></script>
         <script>
             var myTime;
             $(document).ready(function() {
@@ -153,5 +143,3 @@
                     ReadAlong.init(args);  
             });
         </script>
-    </body>
-</html>

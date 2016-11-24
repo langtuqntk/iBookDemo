@@ -1,5 +1,6 @@
 
-    <div style="background-color:#ffffff; height:100%">
+<link href="data/view/Tiet2/A2.1/assets/css/style.css" rel="stylesheet">
+<div class="frame">
             <p class="title"><span>1. </span>Em nghe âm hình tiết tấu sau để đọc và vỗ tay cho đúng khi đọc với âm a, âm i.</p>
              <div class="btn-group" style="position: absolute; top: 56px; left: 323px">
                         <button id="button-play" class="btn btn-info"><span class="glyphicon glyphicon-play" aria-hidden="true"></span></button>
@@ -9,7 +10,7 @@
                 <audio id="passage-audio" class="passage">
                     <!-- @todo WebM? -->
                    
-                    <source src="../data/view/Tiet2/A2.1/media/2.t2.1.mp3" type="audio/mp3">
+                    <source src="data/view/Tiet2/A2.1/media/2.t2.1.mp3" type="audio/mp3">
                     <em class="error"><strong>Error:</strong> Your browser doesn't appear to support HTML5 Audio.</em>
                 </audio>
             </p>
@@ -22,7 +23,7 @@
             <div class="sheet">
                 <div id="passage-text">
                     <div class="doan1">
-                        <img class="khungnhac1" src="../data/view/Tiet2/A2.1/images/1.jpg"/>
+                        <img class="khungnhac1" src="data/view/Tiet2/A2.1/images/1.jpg"/>
                         <p class="cau1">
                             <span data-end="" data-begin="" tabindex="0" data-index="0" class=""></span>
                             <span data-end="" data-begin="" tabindex="0" data-index="1" class=""></span>
@@ -36,9 +37,9 @@
                 </div>
 
             </div>
-        </div>
+    </div>
         <script src="assets/js/readalong.js"></script>
-        <script text="text/javascript" src="../data/view/Tiet2/A2.1/assets/json/2.t2.1.json"></script>
+        <script text="text/javascript" src="data/view/Tiet2/A2.1/assets/json/2.t2.1.json"></script>
         <script>
             $(document).ready(function() {
                     var audioBaiHat = $('#passage-audio')[0];
@@ -59,11 +60,14 @@
                     ReadAlong.init(args);
                     $("#button-play").on("click",function(){
                         if(audioBaiHat.paused){
+                            var spanArray = $("#passage-text").find("span");
+                            spanArray.removeClass("speaking");
                             audioBaiHat.play();
                             $(this).find("span").attr("class","glyphicon glyphicon-pause");
                         }
                         else {
                             audioBaiHat.pause();
+                            audioBaiHat.currentTime = 0;
                             $(this).find("span").attr("class","glyphicon glyphicon-play");
                         }
                     });
@@ -75,6 +79,8 @@
                         $("#btn-repeat").removeAttr("disabled");
                     });
                     $('#btn-repeat').on("click", function(){
+                        var spanArray = $("#passage-text").find("span");
+                        spanArray.removeClass("speaking");
                         $("#button-play").find("span").attr("class","glyphicon glyphicon-pause");
                         audioBaiHat.pause();
                         audioBaiHat.currentTime = 0;

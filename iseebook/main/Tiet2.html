@@ -1,18 +1,18 @@
 <div class="row Unit2">
-<div role="navigation" class="navbar-fixed-top cHeader"><div class="container"></div></div>
+<div role="navigation" class="navbar-fixed-top cHeader">
+    <div class="container"></div>
+</div>
 <div class="cMain">
 	<div class="menu-wrap">
 				<nav class="menuLeft">
 					<ul class="icon-list">
-						<li><a via-link via-href="HocHat" class="music hvr-icon-bob"> HỌC HÁT</a></li>
+						<li><a via-link via-href="Tiet2_HocHat" class="music hvr-icon-bob"> HỌC HÁT</a></li>
 						<li><a href="#" class="music hvr-icon-bob"> BÀI TẬP</a></li>
 						<li>
 							<ul>
-								<li><a via-link via-href="BaiTap1"  class="music hvr-icon-forward"> Bài tập 1</a></li>
-								<li><a via-link via-href="BaiTap2" class="music hvr-icon-forward"> Bài tập 2</a></li>
-								<li><a via-link via-href="BaiTap3" class="music hvr-icon-forward"> Bài tập 3</a></li>
-								<li><a href="#" class="music hvr-icon-forward"> Bài tập 4</a></li>
-								<li><a href="#" class="music hvr-icon-forward"> Bài tập n</a></li>
+								<li><a via-link via-href="Tiet2_BaiTap1"  class="music hvr-icon-forward"> Bài tập 1</a></li>
+								<li><a via-link via-href="Tiet2_BaiTap2" class="music hvr-icon-forward"> Bài tập 2</a></li>
+								<li><a via-link via-href="Tiet2_BaiTap3" class="music hvr-icon-forward"> Bài tập 3</a></li>
 							</ul>
 						</li>
 					</ul>
@@ -24,49 +24,49 @@
 	</div>
 </div>
 </div>
-<script>
 
+<script>
 $(document).ready(function(e){
 	loadMenuLeft();
 	   
 	    var views = {
-            home: [{
+            Tiet2_index: [{
                     selector: ".content",
-                    templateUrl: '../data/view/Tiet2/A1/index.html'
+                    templateUrl: 'data/view/Tiet2/A1/index.html'
                 },
             ],
-			HocHat: [{
+			Tiet2_HocHat: [{
                     selector: ".content",
-                    templateUrl: '../data/view/Tiet2/A1/index.html'
+                    templateUrl: 'data/view/Tiet2/A1/index.html'
                 },
             ],
-            BaiTap1: [{
+            Tiet2_BaiTap1: [{
                     selector: ".content",
-                    templateUrl: '../data/view/Tiet2/A2.1/index.html'
+                    templateUrl: 'data/view/Tiet2/A2.1/index.html'
                 },
             ],
-            BaiTap2: [{
+            Tiet2_BaiTap2: [{
                     selector: ".content",
-                    templateUrl: '../data/view/Tiet2/A2.2/index.html'
+                    templateUrl: 'data/view/Tiet2/A2.2/index.html'
                 },
             ],
-            BaiTap3: [{
+            Tiet2_BaiTap3: [{
                     selector: ".content",
-                    templateUrl: '../data/view/Tiet2/A2.3/index.html'
+                    templateUrl: 'data/view/Tiet2/A2.3/index.html'
                 },
             ],
-            ngheNhacVaLoi: [{
+            Tiet2_ngheNhacVaLoi: [{
                     selector: ".content",
-                    templateUrl: '../data/view/Tiet2/A1/nhacvaloi.html'
+                    templateUrl: 'data/view/Tiet2/A1/nhacvaloi.html'
                 },
             ],
-            ngheNhacDem: [{
+            Tiet2_ngheNhacDem: [{
                     selector: ".content",
-                    templateUrl: '../data/view/Tiet2/A1/nhacdem.html'
+                    templateUrl: 'data/view/Tiet2/A1/nhacdem.html'
                 },
             ],
             defaultView: {
-                view: 'home'
+                view: 'Tiet2_index'
             }
         };
 

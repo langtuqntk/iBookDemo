@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Tiết 2</title>
-        
-        <link href="../../../../assets/libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="../../../../assets/css/font-awesome.min.css">
-        <!-- -->
-        <link href="assets/css/style.css" rel="stylesheet">
-        
-    </head>
-    <body>
-        <div class="frame">
+
+    <link href="data/view/Tiet2/A2.2/assets/css/style.css" rel="stylesheet">
+
+    <div class="frame">
             <p class="title"><span>2.</span> Em hãy hát bài <em>Thật là hay</em> và vỗ tay vào những lời ca có đánh dấu (x) ở dưới.</p>
             <p class="passage-audio">
                 <audio id="passage-audio" class="passage">
                     <!-- @todo WebM? -->
-                    <source src="media/2.t2.2.mp3" type="audio/mp3">
+                    <source src="data/view/Tiet2/A2.2/media/2.t2.2.mp3" type="audio/mp3">
                     <em class="error"><strong>Error:</strong> Your browser doesn't appear to support HTML5 Audio.</em>
                 </audio>
             </p>
@@ -34,7 +21,7 @@
                     <!-- loi bai hat -->
                     <div class="row-baihat">
                          <div class="reading-img">
-                             <img src="images/content1.png" />
+                             <img src="data/view/Tiet2/A2.2/images/content1.png" />
                          </div>
                          <div id="reading1" class="row-text">
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="0" class="" id="reading-text-1-1">Nghe
@@ -59,7 +46,7 @@
                          </div>
 
                          <div class="reading-img">
-                             <img src="images/content2.png" />
+                             <img src="data/view/Tiet2/A2.2/images/content2.png" />
                          </div>
                          <div id="reading2" class="row-text">
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="11" class="" id="reading-text-3-1">Hai<i class="fa fa-fw fa-close fa-new fa-3-1"></i></span> 
@@ -75,7 +62,7 @@
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="21" class="" id="reading-text-4-5">lừng.<i class="fa fa-fw fa-close fa-new fa-4-5"></i></span> 
                          </div>
                           <div class="reading-img">
-                             <img src="images/content3.png" />
+                             <img src="data/view/Tiet2/A2.2/images/content3.png" />
                          </div>
                          <div id="reading5" class="row-text">
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="22" class="" id="reading-text-5-1">Vui<i class="fa fa-fw fa-close fa-new fa-5-1"></i></span> 
@@ -92,7 +79,7 @@
                          </div>
 
                           <div class="reading-img">
-                             <img src="images/content4.png" />
+                             <img src="data/view/Tiet2/A2.2/images/content4.png" />
                          </div>
                          <div id="reading7" class="row-text">
                                <span danh-phach="" data-end="" data-begin="0" tabindex="0" data-index="33" class="" id="reading-text-7-1">Li<i class="fa fa-fw fa-close fa-new fa-7-1"></i></span> 
@@ -111,7 +98,7 @@
                 </div>
             </div>
             <!--chim minh hoa -->
-			  <div class="minhhoa"><img src="images/minhhoa1.png" class="img-left"/><img src="images/minhhoa.png" class="img-right" /></div>
+			  <div class="minhhoa"><img src="data/view/Tiet2/A2.2/images/minhhoa1.png" class="img-left"/><img src="data/view/Tiet2/A2.2/images/minhhoa.png" class="img-right" /></div>
 			 <!-- nut bam -->
 		   <div class="row-button">
 		        <div class="btn-playstop">
@@ -145,7 +132,7 @@
                   </div>
                   <div class="modal-body">
 				     <div class="noidung">
-							<img class="hinhdong" src="images/chim.gif" />
+							<img class="hinhdong" src="data/view/Tiet2/A2.2/images/chim.gif" />
 							<p class="text">Các em hãy hát lại bài hát và vỗ tay 1 nhịp vào các từ có dấu <strong style="font-size:24px;color:red">(x)</strong> và vỗ tay hai nhịp và từ có hai dấu <strong style="font-size:24px;color:red">(xx)</strong>.</p>
                      </div>
 				  </div>
@@ -157,10 +144,8 @@
             </div>
         </div>
                 
-        <script type="text/javascript" charset="utf-8" src="../../../../assets/js/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" charset="utf-8" src="../../../../assets/libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
-        <script text="text/javascript" src="assets/json/2.t2.cabai.json"></script>
-        <script src="assets/js/readalong.js"></script>
+        <script text="text/javascript" src="data/view/Tiet2/A2.2/assets/json/2.t2.cabai.json"></script>
+        <script src="data/view/Tiet2/A2.2/assets/js/readalong.js"></script>
         <script>
             $(document).ready(function() {
                     var audioBaiHat = $('#passage-audio')[0];
@@ -213,6 +198,3 @@
                     
             });
         </script>
-
-    </body>
-</html>
