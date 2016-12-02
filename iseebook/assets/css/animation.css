@@ -51,7 +51,7 @@
 }
 div.animation1 {
     animation: 4s steps(8) 0s normal none infinite running play1;
-    background-image: url("../../images/logo.png");
+    background-image: url("../../images/logo-2.png");
     height: 90px;
     left: -2px;
     opacity: 1;
@@ -231,8 +231,6 @@ div.chim {
     z-index: 30;
 }
 /*** bai hat 2 ***/
-.Unit2 div.animation1 {
-    background-image: url("../../images/logo-2.png")}
 .Unit2 div.tiethoc {
     background-image: url("../../images/tiet-2.png")}
 .Unit2 .baihat {

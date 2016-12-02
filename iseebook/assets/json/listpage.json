@@ -8,5 +8,13 @@ var listPage = [
                 "Tiet2_HocHat",
                 "Tiet2_BaiTap1",
                 "Tiet2_BaiTap2",
-                "Tiet2_BaiTap3"
+                "Tiet2_BaiTap3",
+                "Tiet3_HocHat",
+                "Tiet3_BaiTap1",
+                "Tiet3_BaiTap2",
+                "Tiet3_BaiTap3",
+                "Tiet3_BaiTap4",
+                "Tiet4_HocHat",
+                "Tiet4_BaiTap1",
+                "Tiet4_BaiTap2"
                ];

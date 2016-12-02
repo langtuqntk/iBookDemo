@@ -3,6 +3,7 @@ function selectUnit(unit, menuBaiTap, hocHat){
         if($("li>a[via-href]").hasClass("active")){
            $("li>a[via-href]").removeClass("active");
         }
+        $('.next-prev').attr('style','display:none;');
         menuBaiTap.find('li').attr("style","display:none;");
         var soBaiTap = 5;                    
         var loadBaiTap = "";
@@ -31,6 +32,7 @@ function selectUnit(unit, menuBaiTap, hocHat){
         if($("li>a[via-href]").hasClass("active")){
            $("li>a[via-href]").removeClass("active");
         }
+        $('.next-prev').attr('style','display:none;');
         menuBaiTap.find('li').attr("style","display:none;");
         var soBaiTap = 3;
         var loadBaiTap = "";
@@ -90,6 +92,7 @@ function selectUnit(unit, menuBaiTap, hocHat){
         if($("li>a[via-href]").hasClass("active")){
            $("li>a[via-href]").removeClass("active");
         }
+        $('.next-prev').attr('style','display:none;');
         menuBaiTap.find('li').attr("style","display:none;");
         var soBaiTap = 4;                    
         var loadBaiTap = "";
@@ -118,6 +121,7 @@ function selectUnit(unit, menuBaiTap, hocHat){
         if($("li>a[via-href]").hasClass("active")){
            $("li>a[via-href]").removeClass("active");
         }
+        $('.next-prev').attr('style','display:none;');
         menuBaiTap.find('li').attr("style","display:none;");
         var soBaiTap = 2;                    
         var loadBaiTap = "";

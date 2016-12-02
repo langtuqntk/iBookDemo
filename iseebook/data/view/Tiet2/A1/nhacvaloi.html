@@ -167,8 +167,8 @@
 			 <!-- nut bam -->
 		   <div class="row-button">
 		        <div class="btn-playstop">
-				   <a class="btn btn-info" via-link via-href="Tiet2_index" data-toggle="tooltip" title="Nghe cả bài">
-					<i aria-hidden="true" class="fa fa-fw fa-play font-size"></i>Giai điệu
+				   <a class="btn btn-info" via-link via-href="Tiet2_HocHat" data-toggle="tooltip" title="Nghe cả bài">
+					<i aria-hidden="true" class="fa fa-fw fa-music font-size"></i>Giai điệu
 				   </a>
 				   <a class="btn btn-info" via-link via-href="Tiet2_ngheNhacDem" data-toggle="tooltip" title="Nghe cả bài và nhạc">
 					<i aria-hidden="true" class="fa fa-fw fa-music font-size"></i>Cả bài & nhạc
@@ -214,6 +214,11 @@
                             $(".loi1").attr("style","display:block;")
                             $(".loi2").attr("style","display:none;")
                         }
+                    });
+                
+                    $('#passage-audio').on("ended", function(){
+                        $(".loi1").attr("style","display:block;")
+                        $(".loi2").attr("style","display:none;")
                     });
                     
                     $.each(data, function(index, obj) {

@@ -57,6 +57,7 @@ function loadMenuLeft() {
                $("li>a[via-href]").removeClass("active");
             }
             $(this).addClass("active");
+            $('.next-prev').attr('style','display:block;');
 		});
         
         //Menu tiết
@@ -71,15 +72,27 @@ function loadMenuLeft() {
             var currentPage = $("#currentPage").val();
             var indexOfCurrent = listPage.indexOf(currentPage);
             var nextPage = listPage[indexOfCurrent + 1];
-            if (indexOfCurrent != -1){
+            var currenUnit = currentPage.split('_')[0];
+            var nextUnit = "";
+            
+            if (nextPage != undefined){
                 $(this).attr("via-href", nextPage);
                 var hiddenInput = "<input type='hidden' value="+ nextPage +" id='currentPage'/>";
                 $("div#hiddenValue").html(hiddenInput);
+                
+                nextUnit = nextPage.split('_')[0] //get next unit
+                if(currenUnit !== nextUnit){
+                     $('#'+nextUnit).triggerHandler('click');
+                     $('.next-prev').attr('style','display:block;');
+                }
             }
             else {
                 $(this).attr("via-href", listPage[0]);
                 var hiddenInput = "<input type='hidden' value="+ listPage[0] +" id='currentPage'/>";
                 $("div#hiddenValue").html(hiddenInput);
+                
+                $('#Tiet1').triggerHandler('click');
+                $('.next-prev').attr('style','display:block;');
             }
             
             //show menu BT
@@ -93,6 +106,8 @@ function loadMenuLeft() {
                 $("li>a[via-href]").removeClass("active");
             }
             $($("li>a[via-href="+nextPage+"]")).addClass("active");
+            
+            
         });
 
         prevbtn.click(function(){
@@ -100,15 +115,28 @@ function loadMenuLeft() {
             var indexOfCurrent = listPage.indexOf(currentPage);
             var prevPage = listPage[indexOfCurrent - 1];
             var lenghList = listPage.length;
-            if (indexOfCurrent != -1){
+            var currenUnit = currentPage.split('_')[0];
+            var prevUnit = "";
+            
+            if (prevPage != undefined){
                 $(this).attr("via-href", prevPage);
                 var hiddenInput = "<input type='hidden' value="+ prevPage +" id='currentPage'/>";
                 $("div#hiddenValue").html(hiddenInput);
+                
+                prevUnit = prevPage.split('_')[0] //get prev unit
+                if(currenUnit !== prevUnit){
+                     $('#'+prevUnit).triggerHandler('click');
+                     $('.next-prev').attr('style','display:block;');
+                }
             }
             else {
                 $(this).attr("via-href", listPage[lenghList - 1]);
                 var hiddenInput = "<input type='hidden' value="+ listPage[lenghList - 1] +" id='currentPage'/>";
                 $("div#hiddenValue").html(hiddenInput);
+                
+                $('#Tiet4').triggerHandler('click');
+                $('.next-prev').attr('style','display:block;');
+                $($("li>a[via-href="+listPage[lenghList - 1]+"]")).addClass("active");
             }
             
             //show menu BT
