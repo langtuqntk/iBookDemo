@@ -26,14 +26,20 @@ body {
     font-family: Arial,Helvetica,sans-serif;
     background:#fff
 }
-.frame {margin-top: 24px; margin-left: 40px; padding: 0; width:92%; height: 93%; float: left; overflow: auto; position: relative;background: #fff;}
-.modal-dialog {width:860px} 
+.frame {
+    min-height: 560px;
+    margin:0px auto 0;
+    padding: 0;
+    position: relative;
+    width: 730px;background:#fff;box-shadow:0 1px 2px #aeaeae}
+.modal-dialog {width:730px} 
 .title-baihat {
     color: #0099ff;
     font-family: Arial,Helvetica,sans-serif;
     font-size: 28px;
     font-weight: bold;
 	 margin: 0;
+	 padding-top:20px;
 	 text-align:Center;
 	 text-transform:uppercase;
 	 width:100%;
@@ -45,7 +51,7 @@ body {
 /*** row cau hat ***/
 .row-cauhat {width:100%;text-align:center;display:inline-block;margin:40px 0 0}
 /*** row button ***/
-.row-button {width:100%;position:relative; top: 20px;padding:10px 0;text-align:Center;max-width:800px;margin:0 auto}
+.row-button {width:100%;padding:10px 0;text-align:Center;max-width:730px;margin:0 auto}
 .font-size {font-size:20px;}
 .color-1 {color:#720d0f}
 .row-button .btn {font-size:15px;font-weight:bold;}
@@ -54,8 +60,9 @@ body {
 .row-baihat {width:100%;margin:10px auto;  font-family: Verdana;font-size: 12pt;font-weight: bold;z-index:10;}
 .reading-img {width:100%;height:66px;float:left;text-align:Center}
 .reading-img img {width:650px;height:66px;}
-.row-text {width:650px;float:left;margin-left:205.5px;margin-top:-3px}
+.row-text {width:650px;float:left;margin-left:120px;margin-top:-3px}
 .fa-new {display:block;margin-top:-3px;} 
+.row-text span {z-index:30;position:relative}
 #reading-text-1-1 {
     float: left;
     margin-left: -17px;
@@ -331,7 +338,7 @@ body {
 /*****************/
 .noidung {width:100%;display:inline-block}
 .minhhoa {width:100%}
- .img-left {position:fixed;bottom:84px;left:-70px;z-index:11;}
-  .img-right {position:fixed;bottom:84px;right:-40px;z-index:11;}
+ .img-left {position:absolute;bottom:84px;left:0px;z-index:11;opacity:0.6}
+  .img-right {position:absolute;bottom:84px;right:0px;z-index:11;opacity:0.6}
 .text {font-size:20px;padding-left:180px;padding-top:20px;}
  img.hinhdong {width:150px;height:150px;float:left}

@@ -1,21 +1,22 @@
+.container {width:1020px;margin:0 auto;padding:0;}
+button:active, a:active {border:0} 
+:focus {outline:none}
 ul {list-style-type:0; margin:0; padding:0;}
-
+.banner {background: url("../../images/bai1.png") top left no-repeat;width:100%;height:111px}
 .Unit1 .cHeader .container {
 	background: url("../../images/bai1.png") top left no-repeat;
-    height: 760px;
-	padding-top: 112px;
 }
 
 .Unit2 .cHeader .container {
 	background: url("../../images/bai2.png") top left no-repeat;
-    height: 760px;
-	padding-top: 112px;
 }
 
 .Unit3 .cHeader .container {
 	background: url("../../images/bai3.PNG") top left no-repeat;
-    height: 760px;
-	padding-top: 112px;
+}
+
+.Unit4 .cHeader .container {
+	background: url("../../images/bai3.PNG") top left no-repeat;
 }
 
 .Unit1 .cHeader .container , .Unit2 .cHeader .container {
@@ -56,21 +57,25 @@ ul {list-style-type:0; margin:0; padding:0;}
 }
 
 .rightSidebar, .menu-wrap {
-	opacity: 0.8;
+	/*opacity: 0.8;
     filter: alpha(opacity=80); /* For IE8 and earlier */
+	background:#fff!important;border-radius:16px;border:3px solid #3aafdb;z-index:9999
 }
 
 .cMain{
-    padding-top: 110px;
+    margin: 8px auto 0;
+    padding:0;
+    width: 1020px;
 }
 .cMain .mainContent{
-    background: url("../../images/cMainBG.jpeg") no-repeat;
+   background: url("../../images/cMainBG.jpeg") no-repeat;
     background-size: 100% 100%;
-    height: 648px;
-    margin: 0px;
+    height: 760px;
+    margin: 8px 0 0;
     padding: 0px;
+	position:relative;box-shadow:0 1px 2px #aeaeae
 }
-
+.mainContent .content {padding-top:111px;height:649px}
 .music.hvr-icon-bob:before {
 	content: "\f001";
 	left:1em;
@@ -87,7 +92,7 @@ ul {list-style-type:0; margin:0; padding:0;}
 
 /*custom style 4 off side bar left .content */
 .show-menu .content:before {
-	height: 648px;
+	height: 657px;top:102px;background: rgba(0,0,0,0.2);
 }
 
 .menuLeft {
@@ -116,4 +121,52 @@ ul {list-style-type:0; margin:0; padding:0;}
 .menuLeft ul ul li a {padding-left:25px;}
 
 #open-button i {color:red;}
+.menu-button {background:url(../../images/danhmuc.png) no-repeat!important;width:155px!important;height:38px!important;font-size:16px!important;color:#fff!important;text-align:center!important;bottom:13px!important;margin:20px 43px!important}
+.menu-button:hover {opacity:0.9!important;color:#752900!important}
+.mainButton {position:absolute;top:2px;right:0!important;width:64px;height:104px;background:url(../../images/background-menu.png) no-repeat;text-align:center;z-index:100}
+/****/
+.bia {
+   background: url("../../images/bg1.png") no-repeat;
+    height: 768px;
+    margin: 0px auto;
+    padding: 0px;
+	width:1020px;
+	text-align:Center;
+	position:relative
+}
+.logo {top:0;left:0} 
+.bg-img {background: url("../../images/bia.png") no-repeat;width:495px;height:712px;margin:0 auto;position:relative;padding:5px 0}
+.batdau {background:rgba(2, 88, 195, 0.85);color:#fff;font-size:24px;width:238px;height:50px;line-height:50px;position:absolute;bottom:110px;left:128.5px;cursor:pointer}
+	
+.batdau:hover, .batdau:active {
+  color: #fff;text-decoration: none;opacity:0.9
+}	
+#prev
+{
+    background-image: url("../../images/ButtonBack.png");
+    width: 38px;
+    height: 38px;
+    position: fixed;
+    bottom: 28px;
+   margin-left:910px;
+	z-index:100;
+	cursor:pointer
+}
 
+#next
+{
+    background-image: url("../../images/ButtonNext.png");
+    width: 38px;
+    height: 38px;
+    position: fixed;
+    bottom: 28px;
+    margin-left:950px;
+	z-index:100;
+	cursor:pointer
+}
+#hocHat a.active, #baiTap a.active {text-decoration:none;
+	background-color:#ff6600;
+	color:#ffffff;
+	-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius: 10px;
+	-webkit-transition-duration: 0.3s; /* Safari */
+    transition-duration: 0.3s;}

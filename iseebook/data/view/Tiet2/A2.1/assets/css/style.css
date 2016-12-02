@@ -21,15 +21,19 @@
     padding-left: 20px;
 }
 .frame {
-    margin-top: 24px;
-    margin-left: 40px;
-    padding: 0; 
-    width:92%; 
-    height: 93%;
-    float: left; 
-    overflow: auto;
+    height: 560px;
+    margin:0px auto 0;
+    padding: 0;
     position: relative;
-    background: #fff;
+    width: 730px;background:#fff;box-shadow:0 1px 2px #aeaeae}
+.modal-dialog {width:730px}
+.title {
+    color: #0099ff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+	 margin: 0 0 10px;
+	 padding:20px 20px 0;
 }
 h3{
     text-align: center;
@@ -88,3 +92,18 @@ q {
 span:focus {
     outline: none !important;
 }
+
+.noidung {width:100%;display:inline-block}
+.minhhoa {width:100%}
+ .img-left {position:absolute;bottom:84px;left:0px;z-index:11;}
+  .img-right {position:absolute;bottom:84px;right:0px;z-index:11;}
+.text {font-size:20px;padding-left:180px;padding-top:20px;}
+ img.hinhdong {width:150px;height:150px;float:left}
+ /*** row button ***/
+.row-button {width:100%;padding:20px 0;text-align:Center;max-width:730px;margin:0 auto;display:inline-block}
+.font-size {font-size:20px;}
+.color-1 {color:#720d0f}
+.row-button .btn {font-size:15px;font-weight:bold;}
+.row-button .btn i {vertical-align:middle}
+/***/
+.row-baihat {width:100%;margin:10px auto;  font-family: Verdana;font-size: 12pt;font-weight: bold;z-index:10;}

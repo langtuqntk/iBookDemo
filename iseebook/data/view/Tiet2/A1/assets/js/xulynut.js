@@ -6,10 +6,12 @@
                             $("#passage-text").find("span").removeClass("underline speaking");
                             audio.play();
                             $(this).html("Dừng phát");
+                            $(this).find('i').attr("class","fa fa-fw fa-pause font-size");
                         }
                         else {
                             audio.pause();
-                            $(this).html("Giai điệu bài hát");
+                            $(this).html("Cả bài");
+                            $(this).find('i').attr("class","fa fa-fw fa-play font-size");
                         }
         });
         
@@ -28,7 +30,7 @@
                         }
                         else{
                             clearTimeout(myTime);
-                            $('#startAudio').html("Giai điệu bài hát");
+                            $('#startAudio').html("Cả bài");
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
@@ -57,7 +59,7 @@
                         }
                         else{
                             clearTimeout(myTime);
-                            $('#startAudio').html("Giai điệu bài hát");
+                            $('#startAudio').html("Cả bài");
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
@@ -85,7 +87,7 @@
                         }
                         else{
                             clearTimeout(myTime);
-                            $('#startAudio').html("Giai điệu bài hát");
+                            $('#startAudio').html("Cả bài");
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
@@ -111,7 +113,7 @@
                         }
                         else{
                             clearTimeout(myTime);
-                            $('#startAudio').html("Giai điệu bài hát");
+                            $('#startAudio').html("Cả bài");
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
@@ -138,7 +140,7 @@
                         }
                         else{
                             clearTimeout(myTime);
-                            $('#startAudio').html("Giai điệu bài hát");
+                            $('#startAudio').html("Cả bài");
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
@@ -165,7 +167,7 @@
                         }
                         else{
                             clearTimeout(myTime);
-                            $('#startAudio').html("Giai điệu bài hát");
+                            $('#startAudio').html("Cả bài");
                             $("#passage-text").find("span").removeClass("underline speaking");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
@@ -181,7 +183,7 @@
         });
         $("#hatVoTay").on("click",function(){
                         clearTimeout(myTime);
-                        $('#startAudio').html("Giai điệu bài hát");
+                        $('#startAudio').html("Cả bài");
                         audio.src = "data/view/Tiet2/A1/media/2.t2.2.mp3";
                         audio.play();
                         var spanArray = $("#passage-text").find("span");
@@ -194,7 +196,7 @@
         });
         
         $('#passage-audio').on("ended", function(){
-                        $("#startAudio").html("Giai điệu bài hát");
+                        $("#startAudio").html("Cả bài");
         });
      
  } 

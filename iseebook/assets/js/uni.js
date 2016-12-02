@@ -1,40 +1,51 @@
-function selectUnit(unit, menuBaiTap){
-    $("#Tiet3").click(function(){
-                    var soBaiTap = 4;                    
-                    var loadBaiTap = "";
-                    for(i = 1; i <= soBaiTap; i++){
-                        loadBaiTap += "<li><a via-link via-href='Tiet3_BaiTap"+i+"'  class='music hvr-icon-forward'> Bài tập "+i+"</a></li>"; 
-                    } 
-                    unit.attr("class","row Unit3");
-                    menuBaiTap.html(loadBaiTap);  
-         var views = {
-            Tiet3_index: [{
+function selectUnit(unit, menuBaiTap, hocHat){
+    $("#Tiet1").click(function(){
+        if($("li>a[via-href]").hasClass("active")){
+           $("li>a[via-href]").removeClass("active");
+        }
+        menuBaiTap.find('li').attr("style","display:none;");
+        var soBaiTap = 5;                    
+        var loadBaiTap = "";
+        for(i = 0; i < soBaiTap; i++){
+            menuBaiTap.children()[i].setAttribute("style","display:block;");
+            menuBaiTap.children()[i].childNodes[0].setAttribute("via-href","Tiet1_BaiTap"+ (i+1));
+        } 
+        unit.attr("class","row Unit1");
+        hocHat.attr("via-href","Tiet1_HocHat");
+
+        var views = {
+            Tiet1_index: [{
                     selector: ".content",
-                    templateUrl: 'data/view/Tiet3/index.html'
+                    templateUrl: 'data/view/default.html'
                 },
             ],
             defaultView: {
-                view: 'Tiet3_index'
+                view: 'Tiet1_index'
             }
         };
 
         new Via(views);
     });
+    
     $("#Tiet2").click(function(){
+        if($("li>a[via-href]").hasClass("active")){
+           $("li>a[via-href]").removeClass("active");
+        }
+        menuBaiTap.find('li').attr("style","display:none;");
         var soBaiTap = 3;
         var loadBaiTap = "";
-        for(i = 1; i <= soBaiTap; i++){
-            loadBaiTap += "<li><a via-link via-href='Tiet2_BaiTap"+i+"'  class='music hvr-icon-forward'> Bài tập "+i+"</a></li>"; 
+        for(i = 0; i < soBaiTap; i++){
+            menuBaiTap.children()[i].setAttribute("style","display:block;");
+            menuBaiTap.children()[i].childNodes[0].setAttribute("via-href","Tiet2_BaiTap"+ (i+1));
         } 
         unit.attr("class","row Unit2");
-        menuBaiTap.html(loadBaiTap);  
-                        console.log(unit[0]);
-                console.log(menuBaiTap[0]);
+        hocHat.attr("via-href","Tiet2_HocHat");
+
         //route
         var views = {
             Tiet2_index: [{
                     selector: ".content",
-                    templateUrl: 'data/view/Tiet2/A1/index.html'
+                    templateUrl: 'data/view/default.html'
                 },
             ],
 			Tiet2_HocHat: [{
@@ -75,27 +86,63 @@ function selectUnit(unit, menuBaiTap){
         new Via(views);
     });
     
-                
-    $("#Tiet1").click(function(){
-                    var soBaiTap = 5;                    
-                    var loadBaiTap = "";
-                    for(i = 1; i <= soBaiTap; i++){
-                        loadBaiTap += "<li><a via-link via-href='Tiet1_BaiTap"+i+"'  class='music hvr-icon-forward'> Bài tập "+i+"</a></li>"; 
-                    } 
-                    unit.attr("class","row Unit1");
-                    menuBaiTap.html(loadBaiTap);  
+     $("#Tiet3").click(function(){
+        if($("li>a[via-href]").hasClass("active")){
+           $("li>a[via-href]").removeClass("active");
+        }
+        menuBaiTap.find('li').attr("style","display:none;");
+        var soBaiTap = 4;                    
+        var loadBaiTap = "";
+        for(i = 0; i < soBaiTap; i++){
+            menuBaiTap.children()[i].setAttribute("style","display:block;");
+            menuBaiTap.children()[i].childNodes[0].setAttribute("via-href","Tiet3_BaiTap"+ (i+1));
+        } 
+        unit.attr("class","row Unit3");
+        hocHat.attr("via-href","Tiet3_HocHat");
+         
         var views = {
-            Tiet2_index: [{
+            Tiet3_index: [{
                     selector: ".content",
-                    templateUrl: 'data/view/Tiet1/index.html'
+                    templateUrl: 'data/view/default.html'
                 },
             ],
             defaultView: {
-                view: 'Tiet2_index'
+                view: 'Tiet3_index'
             }
         };
 
         new Via(views);
     });
     
+     $("#Tiet4").click(function(){
+        if($("li>a[via-href]").hasClass("active")){
+           $("li>a[via-href]").removeClass("active");
+        }
+        menuBaiTap.find('li').attr("style","display:none;");
+        var soBaiTap = 2;                    
+        var loadBaiTap = "";
+        for(i = 0; i < soBaiTap; i++){
+            menuBaiTap.children()[i].setAttribute("style","display:block;");
+            menuBaiTap.children()[i].childNodes[0].setAttribute("via-href","Tiet4_BaiTap"+ (i+1));
+        } 
+        unit.attr("class","row Unit4");
+        hocHat.attr("via-href","Tiet4_HocHat");
+         
+        var views = {
+            Tiet4_index: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/default.html'
+                },
+            ],
+            defaultView: {
+                view: 'Tiet4_index'
+            }
+        };
+
+        new Via(views);
+    });
+    
+    function xulyMenu(){
+        
+    }
 }

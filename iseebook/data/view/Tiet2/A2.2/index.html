@@ -108,9 +108,9 @@
 				   </button>
 				   </div>
 				   <button class="btn btn-info"  id="btnPlay" data-toggle="tooltip" title="Nghe bài hát">
-					<i aria-hidden="true" class="fa fa-fw fa-play font-size"></i>Chơi nhạc
+					<i aria-hidden="true" class="fa fa-fw fa-play font-size"></i>Nghe
 				   </button>
-				   <button class="btn btn-info" id="btnRepeat" data-toggle="tooltip" title="Nghe lại bài hát">
+				   <button disabled class="btn btn-info" id="btnRepeat" data-toggle="tooltip" title="Nghe lại bài hát">
 					<i aria-hidden="true" class="fa fa-fw fa-repeat font-size"></i>Nghe lại
 				   </button>
 			       <!--<button class="btn btn-danger" id="btnRecord" data-toggle="tooltip" title="Thu âm lời hát">
@@ -172,7 +172,7 @@
                     $("#btnPlay").on("click",function(){
                         if(audioBaiHat.paused){
                             audioBaiHat.play();
-                            $(this).find('i').attr("class","fa fa-fw fa-stop font-size");
+                            $(this).find('i').attr("class","fa fa-fw fa-pause font-size");
                             var spanArray = $("#passage-text").find("span");
                             spanArray.removeClass("speaking");
                             for(var i = 0; i < spanArray.length; i++){
@@ -186,15 +186,23 @@
                             $(this).find('i').attr("class","fa fa-fw fa-play font-size");
                         }
                     });
+                
+                    $('#passage-audio').on("ended", function(){
+                        $("#btnPlay").find('i').attr("class","fa fa-fw fa-play font-size");
+                        $("#btnRepeat").attr("disabled","");
+                    });
+                
+                    $('#passage-audio').on("playing", function(){
+                        $("#btnRepeat").removeAttr("disabled");
+                    });
 
                     $('#btnRepeat').on("click", function(){
-                        $("#btnPlay").find('i').attr("class","fa fa-fw fa-stop font-size");
+                        $("#btnPlay").find('i').attr("class","fa fa-fw fa-pause font-size");
                         var spanArray = $("#passage-text").find("span");
                         spanArray.removeClass("speaking");
                         audioBaiHat.pause();
                         audioBaiHat.currentTime = 0;
                         audioBaiHat.play();
                     });
-                    
             });
         </script>

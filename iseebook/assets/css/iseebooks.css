@@ -1,4 +1,6 @@
-
+*{margin:0;padding:0;}
+body {background:url("../../images/nen2.png") repeat!important;}
+li, ol {list-style:none;}
 #StageCover{
     background-image: url("../../images/Cover.png");
     background-repeat: no-repeat;
@@ -99,9 +101,6 @@
 }
 
 #buttonHome{
-    position: relative;
-    top: -117px;
-    left: 870px;
     cursor: pointer;
 }
 

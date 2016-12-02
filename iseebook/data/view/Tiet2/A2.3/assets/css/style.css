@@ -1,18 +1,21 @@
+.frame {
+    min-height: 560px;
+    margin:0px auto 0;
+    padding: 0;
+    position: relative;
+    width: 730px;background:#fff;}
+.modal-dialog {width:730px}
 .title{
     font-family: Arial, Helvetica, sans-serif;
     color: #0099FF;
     font-size: 20px;
     font-weight: bold;
+	 padding:20px 20px 0;
 }
 .title span{
     color: #FF3399;
 }
-.frame{
-    width: 1000px;
-    margin: 0 auto;
-    padding: 0 50px;
-    background: #fff;
-}
+
 h3{
     text-align: center;
     color:darkturquoise;
