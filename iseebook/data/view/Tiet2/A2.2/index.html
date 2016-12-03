@@ -113,12 +113,13 @@
 				   <button disabled class="btn btn-info" id="btnRepeat" data-toggle="tooltip" title="Nghe lại bài hát">
 					<i aria-hidden="true" class="fa fa-fw fa-repeat font-size"></i>Nghe lại
 				   </button>
-			       <!--<button class="btn btn-danger" id="btnRecord" data-toggle="tooltip" title="Thu âm lời hát">
+			       <button class="btn btn-danger" id="btnRecord" data-toggle="tooltip" title="Thu âm lời hát">
 					<i aria-hidden="true" class="fa fa-fw fa-microphone font-size color-1"></i>Thu âm
 				   </button>
-				    <button class="btn btn-danger" id="btnStopRecord" data-toggle="tooltip" title="Dừng thu âm">
+				    <button disabled class="btn btn-danger" id="btnStopRecord" data-toggle="tooltip" title="Dừng thu âm">
 					<i aria-hidden="true" class="fa fa-fw fa-stop font-size color-1"></i>Dừng thu âm
-				   </button>-->
+				   </button>
+           <audio src="" id="audio"></audio>
 			   </div>
 		   </div>
 	      
@@ -203,6 +204,30 @@
                         audioBaiHat.pause();
                         audioBaiHat.currentTime = 0;
                         audioBaiHat.play();
+                    });
+
+                    $('#btnRecord').on("click", function(){
+                        $(this).attr('disabled','');
+                        $('#btnStopRecord').removeAttr('disabled');
+                        Fr.voice.record(function(){
+                          analyser = Fr.voice.context.createAnalyser();
+                          analyser.fftSize = 2048;
+                          analyser.minDecibels = -90;
+                          analyser.maxDecibels = -10;
+                          analyser.smoothingTimeConstant = 0.85;
+                          Fr.voice.input.connect(analyser);
+                        });
+                    });
+
+                      
+                    $('#btnStopRecord').on("click", function(){
+                        $(this).attr('disabled','');
+                        $('#btnRecord').removeAttr('disabled');
+                        Fr.voice.export(function(url){
+                          $("#audio").attr("src", url);
+                          $("#audio")[0].play();
+                        }, "URL");
+                        Fr.voice.stop();
                     });
             });
         </script>
