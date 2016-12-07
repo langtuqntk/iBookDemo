@@ -83,7 +83,6 @@ function loadMenuLeft() {
                 nextUnit = nextPage.split('_')[0] //get next unit
                 if(currenUnit !== nextUnit){
                      $('#'+nextUnit).triggerHandler('click');
-                     $('.next-prev').attr('style','display:block;');
                 }
             }
             else {
@@ -92,12 +91,11 @@ function loadMenuLeft() {
                 $("div#hiddenValue").html(hiddenInput);
                 
                 $('#Tiet1').triggerHandler('click');
-                $('.next-prev').attr('style','display:block;');
             }
             
-            //show menu BT
-            if(!isOpen){
-                classie.add( bodyEl, 'show-menu' );
+            //close menu BT
+            if(isOpen){
+                classie.remove( bodyEl, 'show-menu' );
                 isOpen = !isOpen;
             }
             
@@ -106,6 +104,10 @@ function loadMenuLeft() {
                 $("li>a[via-href]").removeClass("active");
             }
             $($("li>a[via-href="+nextPage+"]")).addClass("active");
+            
+            
+            //show next-prev
+            $('.next-prev').attr('style','display:block;');
             
             
         });
@@ -126,7 +128,6 @@ function loadMenuLeft() {
                 prevUnit = prevPage.split('_')[0] //get prev unit
                 if(currenUnit !== prevUnit){
                      $('#'+prevUnit).triggerHandler('click');
-                     $('.next-prev').attr('style','display:block;');
                 }
             }
             else {
@@ -135,13 +136,11 @@ function loadMenuLeft() {
                 $("div#hiddenValue").html(hiddenInput);
                 
                 $('#Tiet4').triggerHandler('click');
-                $('.next-prev').attr('style','display:block;');
-                $($("li>a[via-href="+listPage[lenghList - 1]+"]")).addClass("active");
             }
             
             //show menu BT
-            if(!isOpen){
-                classie.add( bodyEl, 'show-menu' );
+            if(isOpen){
+                classie.remove( bodyEl, 'show-menu' );
                 isOpen = !isOpen;
             }
             
@@ -150,6 +149,9 @@ function loadMenuLeft() {
                 $("li>a[via-href]").removeClass("active");
             }
             $($("li>a[via-href="+prevPage+"]")).addClass("active");
+            
+            //show next-prev
+            $('.next-prev').attr('style','display:block;');
         });
 	}
 

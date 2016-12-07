@@ -35,7 +35,7 @@
      * You should also include libmp3lame.min.js
      * You can get both files from https://github.com/subins2000/Francium-voice/blob/master/js/
      */
-    mp3WorkerPath: "src/mp3Worker.js",
+    mp3WorkerPath: "assets/libs/recorder/mp3Worker.js",
     
     stream: false,
     input: false,
@@ -71,7 +71,7 @@
     		this.init();
     		this.init_called = true;
     	}
-      
+        
       var $that = this;
     	navigator.getUserMedia({audio: true}, function(stream){
     		

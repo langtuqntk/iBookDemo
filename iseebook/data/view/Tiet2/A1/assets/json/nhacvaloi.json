@@ -1,4 +1,4 @@
-var data = [
+var datanhacvaloi = [
                 {"word": "Nghe", "begin": "17.312", "end": "17.562", "danhphach": "1"},
 				{"word": "véo", "begin": "17.562", "end": "17.825", "danhphach": "0"},
 				{"word": "von", "begin": "17.825", "end": "18.333", "danhphach": "1"},

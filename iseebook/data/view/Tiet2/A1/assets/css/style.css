@@ -51,7 +51,7 @@ body {
 /*** row cau hat ***/
 .row-cauhat {width:100%;text-align:center;display:inline-block;margin:40px 0 0}
 /*** row button ***/
-.row-button {width:100%;padding:10px 0;text-align:Center;max-width:730px;margin:0 auto}
+.row-button {width:100%;padding:10px 0;text-align:Center;max-width:730px;margin:0 auto;position:relative;z-index:1000;display:inline-block}
 .font-size {font-size:20px;}
 .color-1 {color:#720d0f}
 .row-button .btn {font-size:15px;font-weight:bold;}

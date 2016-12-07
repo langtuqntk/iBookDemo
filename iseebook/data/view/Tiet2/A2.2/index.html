@@ -116,7 +116,7 @@
 			       <button class="btn btn-danger" id="btnRecord" data-toggle="tooltip" title="Thu âm lời hát">
 					<i aria-hidden="true" class="fa fa-fw fa-microphone font-size color-1"></i>Thu âm
 				   </button>
-				    <button disabled class="btn btn-danger" id="btnStopRecord" data-toggle="tooltip" title="Dừng thu âm">
+				    <button style="display:none;" class="btn btn-danger" id="btnStopRecord" data-toggle="tooltip" title="Dừng thu âm">
 					<i aria-hidden="true" class="fa fa-fw fa-stop font-size color-1"></i>Dừng thu âm
 				   </button>
            <audio src="" id="audio"></audio>
@@ -207,8 +207,8 @@
                     });
 
                     $('#btnRecord').on("click", function(){
-                        $(this).attr('disabled','');
-                        $('#btnStopRecord').removeAttr('disabled');
+                        $(this).attr('style','display:none;');
+                        $('#btnStopRecord').removeAttr('style');
                         Fr.voice.record(function(){
                           analyser = Fr.voice.context.createAnalyser();
                           analyser.fftSize = 2048;
@@ -221,8 +221,8 @@
 
                       
                     $('#btnStopRecord').on("click", function(){
-                        $(this).attr('disabled','');
-                        $('#btnRecord').removeAttr('disabled');
+                        $(this).attr('style','display:none;');
+                        $('#btnRecord').removeAttr('style');
                         Fr.voice.export(function(url){
                           $("#audio").attr("src", url);
                           $("#audio")[0].play();

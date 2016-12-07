@@ -70,16 +70,6 @@ function selectUnit(unit, menuBaiTap, hocHat){
                     templateUrl: 'data/view/Tiet2/A2.3/index.html'
                 },
             ],
-            Tiet2_ngheNhacVaLoi: [{
-                    selector: ".content",
-                    templateUrl: 'data/view/Tiet2/A1/nhacvaloi.html'
-                },
-            ],
-            Tiet2_ngheNhacDem: [{
-                    selector: ".content",
-                    templateUrl: 'data/view/Tiet2/A1/nhacdem.html'
-                },
-            ],
             defaultView: {
                 view: 'Tiet2_index'
             }
