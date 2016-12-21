@@ -1,0 +1,89 @@
+  <style>
+  .drag { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  .droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet">
+  <div class="frame">
+    <h3>2. Write the name of each traditional handicraft in the box under the picture.</h3>
+    <div class="box">
+        <span id="carve" class="drag ui-widget-content">
+            <b class="draggable ui-draggable ui-draggable-handle">carve</b>
+            <b style="display:none;" class="draggable ui-draggable ui-draggable-handle">carve</b>
+        </span>
+        <span id="cast" class="drag ui-widget-content">
+            <b class="draggable ui-draggable ui-draggable-handle">cast</b>
+            <b style="display:none;" class="draggable ui-draggable ui-draggable-handle">cast</b>
+        </span>
+        <span id="weave" class="drag ui-widget-content">
+            <b class="draggable ui-draggable ui-draggable-handle">weave</b>
+            <b style="display:none;" class="draggable ui-draggable ui-draggable-handle">weave</b>
+        </span>
+        <span id="embroider" class="drag ui-widget-content">
+            <b class="draggable ui-draggable ui-draggable-handle">embroider</b>
+            <b style="display:none;" class="draggable ui-draggable ui-draggable-handle">embroider</b>
+        </span>
+        <span id="knit" class="drag ui-widget-content">
+            <b class="draggable ui-draggable ui-draggable-handle">knit</b>
+            <b style="display:none;" class="draggable ui-draggable ui-draggable-handle">knit</b>
+        </span>
+        <span id="mould" class="drag ui-widget-content">
+            <b class="draggable ui-draggable ui-draggable-handle">mould</b>
+            <b style="display:none;" class="draggable ui-draggable ui-draggable-handle">mould</b>
+        </span>
+    </div>
+    
+    <div class="fill">
+      <span class="droppable ui-widget-header"></span>
+      <span class="droppable ui-widget-header"></span>
+      <span class="droppable ui-widget-header"></span>
+      <span class="droppable ui-widget-header"></span>
+      <span class="droppable ui-widget-header"></span>
+      <span class="droppable ui-widget-header"></span>
+      <span class="droppable ui-widget-header"></span>
+    </div>
+    
+
+    <button>Submit</button>
+  </div>
+  <script>
+  $(function() {
+    $( ".draggable" ).draggable({ 
+        revert: "invalid", // when not dropped, the item will revert back to its initial position
+        containment: "document",
+        helper: "clone",
+        cursor: "pointer"
+    });
+    $( ".droppable" ).droppable({
+      classes: {
+        "ui-droppable-active": "ui-state-active",
+        "ui-droppable-hover": "ui-state-hover"
+      },
+      drop: function( event, ui ) {
+        if($(this).children(this).length == 0){
+          $(this).append($(ui.draggable));
+          var currentDrag = $(this).find('b').html().replace(/\s/g,'');
+          $('#'+currentDrag).children().attr('style','display:block;');
+        }
+        else{
+          var currentInDrop = $(this).find('b').html().replace(/\s/g,'');
+          $('#'+currentInDrop).append($(this).children());
+          $(this).append($(ui.draggable));
+          var currentDrag = $(this).find('b').html().replace(/\s/g,'');
+          $('#'+currentDrag).children().attr('style','display:block;');
+          if($('#'+currentInDrop).children().length == 2 && currentDrag !== currentInDrop){
+            $('#'+currentInDrop).children().filter(':nth-child(2)').attr('style','display:none;');
+          }
+          else{
+            $('#'+currentInDrop).children().attr('style','display:block;');
+          }
+        }
+        $(this).children().attr('style','display:block;');
+      },
+      out: function( event, ui ){
+        var currentDrag = $(ui.draggable).html().replace(/\s/g,'');
+        $('#'+currentDrag).append($(ui.draggable));
+        $('#'+currentDrag).children().filter(":nth-child(2)").attr('style','display:none;');
+      }
+    });
+  });
+  </script>

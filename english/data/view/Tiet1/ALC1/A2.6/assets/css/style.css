@@ -1,0 +1,14 @@
+.frame {
+    min-height: 560px;
+    margin:-8px auto 0;
+    padding: 0;
+    position: relative;
+    width: 730px;background:#fff;box-shadow:0 1px 2px #aeaeae
+}
+span:hover{
+    border-bottom: solid 2px;
+    cursor: pointer;
+}
+.underline{
+    border-bottom: solid 2px red;
+}

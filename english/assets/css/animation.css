@@ -1,0 +1,237 @@
+
+.header-banner {
+    background: rgba(0, 0, 0, 0) url("../../images/background1.png") no-repeat scroll 0 0;
+    height: 111px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 1020px;
+}
+.mattroi {
+    animation: 5s steps(12) 0s normal none infinite running mattroi;
+    background-image: url("../../images/mattroi.png");
+    height: 103px;
+    width: 1020px;
+    z-index: 1;
+}
+@keyframes mattroi {
+0% {
+    opacity: 1;
+}
+10% {
+    opacity: 0.8;
+}
+20% {
+    opacity: 0.6;
+}
+30% {
+    opacity: 0.4;
+}
+40% {
+    opacity: 0.2;
+}
+50% {
+    opacity: 0;
+}
+60% {
+    opacity: 0.2;
+}
+70% {
+    opacity: 0.4;
+}
+80% {
+    opacity: 0.6;
+}
+90% {
+    opacity: 0.8;
+}
+100% {
+    opacity: 1;
+}
+}
+div.animation1 {
+    animation: 4s steps(8) 0s normal none infinite running play1;
+    background-image: url("../../images/logo-2.png");
+    height: 90px;
+    left: -2px;
+    opacity: 1;
+    position: absolute;
+    top: 3px;
+    width: 250px;
+    z-index: 20;
+}
+@keyframes play1 {
+0% {
+    transform: rotate(0deg);
+}
+25% {
+    transform: rotate(3deg);
+}
+50% {
+    transform: rotate(0deg);
+}
+75% {
+    transform: rotate(-3deg);
+}
+100% {
+    transform: rotate(0deg);
+}
+}
+div.cay {
+    animation: 8s steps(24) 0s normal none infinite running caytrong;
+    background-image: url("../../images/cay.png");
+    bottom: -25px;
+    height: 133px;
+    opacity: 1;
+    position: absolute;
+    right: 135px;
+    width: 167px;
+    z-index: 10;
+}
+@keyframes caytrong {
+0% {
+    transform: rotate(0deg);
+}
+25% {
+    transform: rotate(0.5deg);
+}
+50% {
+    transform: rotate(0deg);
+}
+75% {
+    transform: rotate(-0.5deg);
+}
+100% {
+    transform: rotate(0deg);
+}
+}
+div.tiethoc {
+    animation: 3s steps(48) 0s normal none infinite running play2;
+    background-image: url("../../images/tiet.png");
+    height: 58px;
+    left: 226px;
+    opacity: 1;
+    position: absolute;
+    top: 13px;
+    width: 111px;
+    z-index: 20;
+}
+@keyframes play2 {
+0% {
+    top: 13px;
+    transform: rotate(0deg);
+}
+25% {
+    top: 14px;
+    transform: rotate(3deg);
+}
+50% {
+    top: 15px;
+    transform: rotate(0deg);
+}
+75% {
+    top: 14px;
+    transform: rotate(-3deg);
+}
+100% {
+    top: 13px;
+    transform: rotate(0deg);
+}
+}
+div.hinhnhay {
+    animation: 3s steps(12) 0s normal none infinite running play3;
+    background-image: url("../../images/img1.png");
+    bottom: -11px;
+    height: 110px;
+    left: 249px;
+    opacity: 1;
+    position: absolute;
+    width: 142px;
+    z-index: 10;
+}
+@keyframes play3 {
+0% {
+    transform: rotate(0deg);
+}
+25% {
+    transform: rotate(-2deg);
+}
+50% {
+    transform: rotate(0deg);
+}
+75% {
+    transform: rotate(-2deg);
+}
+100% {
+    transform: rotate(0deg);
+}
+}
+div.notnhac {
+    animation: 10s steps(48) 0s normal none infinite running play4;
+    background-image: url("../../images/img2.png");
+    height: 47px;
+    left: 278px;
+    opacity: 1;
+    position: absolute;
+    top: 50px;
+    width: 35px;
+    z-index: 10;
+}
+@keyframes play4 {
+0% {
+    top: 50px;
+}
+100% {
+    top: -47px;
+}
+0% {
+    transform: rotate(0deg);
+}
+25% {
+    transform: rotate(5deg);
+}
+50% {
+    transform: rotate(0deg);
+}
+75% {
+    transform: rotate(-5deg);
+}
+100% {
+    transform: rotate(0deg);
+}
+}
+div.chim {
+    animation: 10s steps(48) 0s normal none infinite running play5;
+    background-image: url("../../images/chim.png");
+    height: 53px;
+    opacity: 1;
+    position: absolute;
+    right: -71px;
+    top: 30px;
+    width: 71px;
+    z-index: 5;
+}
+@keyframes play5 {
+0% {
+    right: -71px;
+    top: 30px;
+}
+100% {
+    right: 400px;
+    top: -53px;
+}
+}
+.baihat {
+    background: rgba(0, 0, 0, 0) url("../../images/baihat-1.png") no-repeat scroll 0 0;
+    height: 84px;
+    left: 384px;
+    position: absolute;
+    top: 8px;
+    width: 324px;
+    z-index: 30;
+}
+/*** bai hat 2 ***/
+.Unit2 div.tiethoc {
+    background-image: url("../../images/tiet-2.png")}
+.Unit2 .baihat {
+    background: rgba(0, 0, 0, 0) url("../../images/baihat-2.png") no-repeat scroll 0 0; }	

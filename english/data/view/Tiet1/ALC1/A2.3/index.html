@@ -1,0 +1,47 @@
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <div class="frame">
+    <h3>3 Complete the sentences with the words/phrases from 2 to show where in Viet Nam the handicrafts are made. You do not have to use them all.</h3>
+    <p>1. The birthplace of the famous bai tho <input type="text" class="c1"/> is
+    Tay Ho village in Hue.</p>
+    <p>2. If you go to Hoi An on the 15th of each lunar
+    month, you can enjoy the lights of many
+    beautiful <input type="text" class="c1"/>.</p>
+    <p>3. Van Phuc village in Ha Noi produces di erent
+    types of <input type="text" class="c1"/> products such as cloth, scarves,
+    ties, and dresses.</p>
+    <p>4. On the Tet holiday, many Hanoians go to Dong
+    Ho village to buy folk <input type="text" class="c1"/>.</p>
+    <p>5. <input type="text" class="c1"/> products of Bau Truc, such as pots and
+    vases, have the natural colours typical of Champa
+    culture in Ninh Thuan.</p>
+    <p>6. Going to Non Nuoc marble village in Da Nang,
+    we’re impressed by a wide variety of <input type="text" class="c1"/>
+    from Buddha statues to bracelets.</p>
+    <button>Submit</button>
+  </div>
+  <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $('#submit1').on('click', function(){
+                    var inputArr = $('.c1');
+                    var ketquaArr = Array('A','B','C','D','E','F','G','H');
+                    var wrongArr = Array();
+                    var check, i;
+                    for(i = 0; i < 8; i++){
+                        if(inputArr[i].value !== ketquaArr[i]){
+                            check = false;
+                            wrongArr.push(i + 1);
+                        }
+                        else {
+                            check = true;
+                        }
+                    }
+                    if(check){
+                        alert('Làm tốt lắm!');
+                    }
+                    else{
+                        alert('Có gì đó sai sai ở các câu sau:' + JSON.stringify(wrongArr));
+                    }
+                });
+            });  
+    </script>

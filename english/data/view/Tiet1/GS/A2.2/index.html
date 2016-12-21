@@ -1,0 +1,81 @@
+
+
+
+  <style>
+  .drag { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  .droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet">
+  <div class="frame">
+    <h3>2. Write the name of each traditional handicraft in the box under the picture.</h3>
+    <div class="box">
+        <span id="paintings" class="drag ui-widget-content">
+            <b class="draggable">paintings</b>
+        </span>
+        <span id="pottery" class="drag ui-widget-content">
+            <b class="draggable">pottery</b>
+        </span>
+        <span id="drums" class="drag ui-widget-content">
+            <b class="draggable">drums</b>
+        </span>
+        <span id="silk" class="drag ui-widget-content">
+            <b class="draggable">silk</b>
+        </span>
+        <span id="lanterns" class="drag ui-widget-content">
+            <b class="draggable">lanterns</b>
+        </span>
+        <span id="conicalhats" class="drag ui-widget-content">
+            <b class="draggable">conical hats</b>
+        </span>
+        <span id="lacquerware" class="drag ui-widget-content">
+            <b class="draggable">lacquerware</b>
+        </span>
+        <span id="marblesculptures" class="drag ui-widget-content">
+            <b class="draggable">marble sculptures</b>
+        </span>
+    </div>
+    
+    <div class="fill">
+      <span id="droppable" class="droppable ui-widget-header"></span>
+      <span id="droppable" class="droppable ui-widget-header"></span>
+      <span id="droppable" class="droppable ui-widget-header"></span>
+      <span id="droppable" class="droppable ui-widget-header"></span>
+      <span id="droppable" class="droppable ui-widget-header"></span>
+      <span id="droppable" class="droppable ui-widget-header"></span>
+      <span id="droppable" class="droppable ui-widget-header"></span>
+      <span id="droppable" class="droppable ui-widget-header"></span>  
+    </div>
+    
+
+    <button>Submit</button>
+  </div>
+  <script>
+  $(function() {
+    $( ".draggable" ).draggable({ 
+        revert: "invalid", // when not dropped, the item will revert back to its initial position
+        containment: "document",
+        helper: "clone",
+        cursor: "pointer"
+    });
+    $( ".droppable" ).droppable({
+      classes: {
+        "ui-droppable-active": "ui-state-active",
+        "ui-droppable-hover": "ui-state-hover"
+      },
+      drop: function( event, ui ) {
+        if($(this).children(this).length == 0){
+          $(this).append($(ui.draggable));
+        }
+        else{
+          var currentDrag = $(this).find('b').html().replace(/\s/g,'');
+          $('#'+currentDrag).append($(this).children());
+          $(this).append($(ui.draggable));
+        }
+      },
+      out: function( event, ui ){
+        var currentDrag = $(ui.draggable).html().replace(/\s/g,'');
+        $('#'+currentDrag).append($(ui.draggable));
+      }
+    });
+  });
+  </script>

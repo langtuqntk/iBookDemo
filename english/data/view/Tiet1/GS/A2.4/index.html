@@ -1,0 +1,42 @@
+  <link href="assets/css/style.css" rel="stylesheet">
+  <div class="frame">
+    <h3>4 QUIZ: WHAT IS THE PLACE OF INTEREST?</h3>
+    <h5>a. Work in pairs to do the quiz. </h5>
+    <p>1. People go to this area to walk, play, and relax.<input type="text" class="c1"/></p>
+    <p>2. It is a place where objects of artistic, cultural,
+    historical, or scienti c interest are kept and shown.<input type="text" class="c1"/></p>
+    <p>3. People go to this place to see animals.<input type="text" class="c1"/></p>
+    <p>4. It is an area of sand, or small stones, beside the sea
+    or a lake.<input type="text" class="c1"/></p>
+    <p>5. It is a beautiful and famous place in the countryside.<input type="text" class="c1"/></p>
+    <button>Submit</button>
+
+    <h5>b. Work in groups. Write a similar quiz about places of interest. Ask another group to answer the quiz.</h5>
+    <textarea cols="50" rows="15"></textarea>
+    <button>Send to another group</button>
+  </div>
+  <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $('#submit1').on('click', function(){
+                    var inputArr = $('.c1');
+                    var ketquaArr = Array('A','B','C','D','E','F','G','H');
+                    var wrongArr = Array();
+                    var check, i;
+                    for(i = 0; i < 8; i++){
+                        if(inputArr[i].value !== ketquaArr[i]){
+                            check = false;
+                            wrongArr.push(i + 1);
+                        }
+                        else {
+                            check = true;
+                        }
+                    }
+                    if(check){
+                        alert('Làm tốt lắm!');
+                    }
+                    else{
+                        alert('Có gì đó sai sai ở các câu sau:' + JSON.stringify(wrongArr));
+                    }
+                });
+            });  
+    </script>

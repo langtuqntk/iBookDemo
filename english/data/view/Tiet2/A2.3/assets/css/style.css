@@ -1,0 +1,78 @@
+.frame {
+    min-height: 560px;
+    margin:-8px auto 0;
+    padding: 0;
+    position: relative;
+    width: 730px;background:#fff;}
+.modal-dialog {width:730px}
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0099FF;
+    font-size: 20px;
+    font-weight: bold;
+	 padding:20px 20px 0;
+}
+.title span{
+    color: #FF3399;
+}
+
+h3{
+    text-align: center;
+    color:darkturquoise;
+}
+
+#startAudio{
+    padding:5px;
+    background:red;
+    color:#fff;
+}
+#startAudio:hover{
+    cursor: pointer;
+}
+.not-nhac{
+    width:100%;
+}
+
+.passage-audio {
+    height: 2em;
+}
+#passage-audio {
+    width: 100%;
+    max-height: 2em;
+}
+#passage-text.speaking {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+q {
+    quotes: "“" "”" "‘" "’";
+}
+.section-heading {
+    display: none;
+}
+.passage p {
+    line-height: 1.4em;
+}
+.verse-start {
+    line-height: 0;
+}
+.initialized span[data-begin]:focus,
+.initialized span[data-begin]:hover {
+    background-color: #FFFFCA;
+    box-shadow: 0px 0px 4px #FFFFCA;
+}
+.initialized span[data-begin].speaking {
+    background-color: yellow;
+    box-shadow: 0px 0px 4px yellow;
+}
+.initialized span[data-begin] {
+    cursor: pointer;
+    padding:0 5px;
+    font-weight: bold;
+}
+.error {
+    color: red;
+}

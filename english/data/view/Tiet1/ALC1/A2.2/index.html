@@ -1,0 +1,105 @@
+  <link href="data/view/Tiet1/ALC1/A2.2/assets/css/style.css" rel="stylesheet">
+  <div class="frame">
+    <h3>2a. Match the verbs in column A with the groups of nouns in column B. </h3>
+    <table border="1">
+        <tr>
+          <th>A</th>
+          <th>B</th>
+        </tr>
+        <tr>
+          <td class="left">1. carve</td>
+          <td class="right">a. handkerchiefs, tablecloths, pictures</td>
+        </tr>
+        <tr>
+          <td class="left">2. cast</td>
+          <td class="right">b. stone, wood, eggshells </td>
+        </tr>
+        <tr>
+          <td class="left">3. weave</td>
+          <td class="right">c. clay, cheese, chocolate </td>
+        </tr>
+        <tr>
+          <td class="left">4. embroider</td>
+          <td class="right">d. bronze, gold, iron </td>
+        </tr>
+        <tr>
+          <td class="left">5. knit</td>
+          <td class="right">e. baskets, carpets, silk, cloth </td>
+        </tr>
+        <tr>
+          <td class="left">6. mould</td>
+          <td class="right">f. sweaters, toys, hats</td>
+        </tr>
+    </table>
+    <button>Submit</button>
+
+    <h3>b. Now write the correct verb forms for these verbs.</h3>
+    <table border="1">
+        <tr>
+          <th>In nitive</th>
+          <th>Past tense</th>
+          <th>Past participle</th>
+        </tr>
+        <tr>
+          <td>1. carve</td>
+          <td>I carved it.</td>
+          <td>It was carved.</td>
+        </tr>
+        <tr>
+          <td>2. to cast</td>
+          <td>I <input type="text" class="c1"/> it.</td>
+          <td>It was <input type="text" class="c1"/>.</td>
+        </tr>
+        <tr>
+          <td>3. to weave</td>
+          <td>I <input type="text" class="c1"/> it.</td>
+          <td>It was <input type="text" class="c1"/>.</td>
+        </tr><tr>
+          <td>4. to embroider</td>
+          <td>I <input type="text" class="c1"/> it.</td>
+          <td>It was <input type="text" class="c1"/>.</td>
+        </tr><tr>
+          <td>5. to knit</td>
+          <td>I <input type="text" class="c1"/> it.</td>
+          <td>It was <input type="text" class="c1"/>.</td>
+        </tr><tr>
+          <td>6. to mould</td>
+          <td>I <input type="text" class="c1"/> it.</td>
+          <td>It was <input type="text" class="c1"/>.</td>
+        </tr>
+    </table>
+    <button>Submit</button>
+  </div>
+  <script>
+  $(function() {
+    var colorArr = ['fillColor0','fillColor1','fillColor2','fillColor3','fillColor4','fillColor5'],
+        leftColJArr = $('.left'),
+        rightColJArr = $('.right'),
+        leftClick;
+    $('.left').click(function(){
+        if($(this).attr('id') !== undefined){
+          $(this).removeAttr('id');  
+        }
+        else{
+          switch(leftColJArr.index(this)){
+            case 0: {$(this).attr('id',(colorArr[0])); leftClick = colorArr[0]; break;}
+            case 1: {$(this).attr('id',(colorArr[1])); leftClick = colorArr[1]; break;}
+            case 2: {$(this).attr('id',(colorArr[2])); leftClick = colorArr[2]; break;}
+            case 3: {$(this).attr('id',(colorArr[3])); leftClick = colorArr[3]; break;}
+            case 4: {$(this).attr('id',(colorArr[4])); leftClick = colorArr[4]; break;}
+            case 5: {$(this).attr('id',(colorArr[5])); leftClick = colorArr[5]; break;}
+          }
+        }
+    });
+
+    $('.right').click(function(){
+        if($(this).attr('id') !== undefined){
+          $(this).removeAttr('id');  
+        }
+        else{
+          $(this).attr('id',leftClick);
+          leftClick = '';
+        }
+    });
+  });
+  </script>

@@ -1,0 +1,85 @@
+
+
+
+  <style>
+  .drag { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  .droppable { padding-left:50px; }
+  </style>
+  <link href="assets/css/style.css" rel="stylesheet">
+  <div class="frame">
+    <h3>4. Complete the passage by  lling each blank with a suitable word from the box. </h3>
+    <div class="box">
+        <span id="attraction" class="drag ui-widget-content">
+            <b class="draggable">attraction</b>
+        </span>
+        <span id="historical" class="drag ui-widget-content">
+            <b class="draggable">historical</b>
+        </span>
+        <span id="traditional" class="drag ui-widget-content">
+            <b class="draggable">traditional</b>
+        </span>
+        <span id="handicrafts" class="drag ui-widget-content">
+            <b class="draggable">handicrafts</b>
+        </span>
+        <span id="culture" class="drag ui-widget-content">
+            <b class="draggable">culture</b>
+        </span>
+        <span id="exercise" class="drag ui-widget-content">
+            <b class="draggable">exercise</b>
+        </span>
+    </div>
+    </br>
+    <div class="fill">
+        <p>
+            Some people say that a place of interest is a place famous for
+            its scenery or a well-known (1)<span id="droppable" class="droppable ui-widget-header"></span> site. I don’t think it
+            has to be so limited. In my opinion, a place of interest is simply
+            one that people like going to.
+        </p>
+        <p>
+            In my town, the park is a(n) (2)<span id="droppable" class="droppable ui-widget-header"></span> because many people
+            love spending time there. Old people do (3)<span id="droppable" class="droppable ui-widget-header"></span> and walk
+            in the park. Children play games there while their parents sit
+            and talk with each other. Another place of interest in my town
+            is Hoa Binh market. It’s a(n) (4)<span id="droppable" class="droppable ui-widget-header"></span> market with a lot of
+            things to see. I love to go there to buy food and clothes, and
+            watch other people buying and selling. Foreign tourists also
+            like this market because they can experience the (5)<span id="droppable" class="droppable ui-widget-header"></span>
+            of Vietnamese people, and buy woven cloth and other
+            (6)<span id="droppable" class="droppable ui-widget-header"></span> as souvenirs. 
+        </p>  
+    </div>
+    
+
+    <button>Submit</button>
+  </div>
+  <script>
+  $(function() {
+    $( ".draggable" ).draggable({ 
+        revert: "invalid", // when not dropped, the item will revert back to its initial position
+        containment: "document",
+        helper: "clone",
+        cursor: "pointer"
+    });
+    $( ".droppable" ).droppable({
+      classes: {
+        "ui-droppable-active": "ui-state-active",
+        "ui-droppable-hover": "ui-state-hover"
+      },
+      drop: function( event, ui ) {
+        if($(this).children(this).length == 0){
+          $(this).append($(ui.draggable));
+        }
+        else{
+          var currentDrag = $(this).find('b').html().replace(/\s/g,'');
+          $('#'+currentDrag).append($(this).children());
+          $(this).append($(ui.draggable));
+        }
+      },
+      out: function( event, ui ){
+        var currentDrag = $(ui.draggable).html().replace(/\s/g,'');
+        $('#'+currentDrag).append($(ui.draggable));
+      }
+    });
+  });
+  </script>

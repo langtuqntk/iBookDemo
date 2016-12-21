@@ -1,0 +1,56 @@
+        <link href="assets/css/style.css" rel="stylesheet">
+
+        <div class="frame">
+                <h3>a. Can you find a word/phrase that means: </h3>
+                <p>1. a thing which is skilfully made with your hands<input type="text" class="c1"/></p>
+                <p>2. start something (a business, an organisation, etc.)<input type="text" class="c1"/></p>
+                <p>3. take control of something (a business, an
+                organisation, etc.)<input type="text" class="c1"/></p>
+                <p>4. people who do skilled work, making things with
+                their hands<input type="text" class="c1"/></p>
+                <p>5. an interesting or enjoyable place to go or thing to do<input type="text" class="c1"/></p>
+                <p>6. a particular place<input type="text" class="c1"/></p>
+                <p>7. make someone remember or think about
+                something<input type="text" class="c1"/></p>
+                <p>8. walk around a place to see what is there<input type="text" class="c1"/></p>
+                <button id="submit1">Submit</button>
+
+
+                <h3>b. Answer the following questions.</h3>
+                <p>1. Where are Nick, Mi, and Phong?<input type="text" class="c2"/></p>
+                <p>2. How old is the village?<input type="text" class="c2"/></p>
+                <p>3. Who started Phong’s family workshop?<input type="text" class="c2"/></p>
+                <p>4. Why is the village a place of interest in Ha Noi?<input type="text" class="c2"/></p>
+                <p>5. Where is the craft village that Mi visited?<input type="text" class="c2"/></p>
+                <p>6. Why do tourists like to buy handicrafts as
+                souvenirs?<input type="text" class="c2"/></p>
+                <button id="submit2">Submit</button>
+        </div>
+
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $('#submit1').on('click', function(){
+                    var inputArr = $('.c1');
+                    var ketquaArr = Array('A','B','C','D','E','F','G','H');
+                    var wrongArr = Array();
+                    var check, i;
+                    for(i = 0; i < 8; i++){
+                        if(inputArr[i].value !== ketquaArr[i]){
+                            check = false;
+                            wrongArr.push(i + 1);
+                        }
+                        else {
+                            check = true;
+                        }
+                    }
+                    if(check){
+                        alert('Làm tốt lắm!');
+                    }
+                    else{
+                        alert('Có gì đó sai sai ở các câu sau:' + JSON.stringify(wrongArr));
+                    }
+                });
+            });  
+        </script>
+
+        
