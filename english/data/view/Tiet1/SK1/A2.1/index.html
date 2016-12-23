@@ -1,0 +1,72 @@
+﻿		<link href="data/view/Tiet1/GS/A2.1/assets/css/style1.css" rel="stylesheet">
+
+        <div class="frame">
+		    <div class="row-bai2">
+	             <div class="col-baitap">
+						<h3>1 Work in pairs. One looks at Picture A, and the other looks at Picture B on page 15. Ask each other questions to  nd out the similarities and differences between your pictures.</h3>
+						<img src="" alt="picture A"/>
+                        <img src="" alt="picture B"/>
+                        <p>+Point 1:<input type="text"/></p>
+                        <button id="add">+</button>
+						<!--<button id="submit1">Submit</button>-->
+						<button id="submit1" data-toggle="modal" data-target="#myModal" class="btn btn-danger float-right" onclick="" id="">
+							<i aria-hidden="true" class="fa fa-fw fa-random"></i>Kiểm tra
+						</button>
+                </div>
+		    </div>				
+        </div>
+       <!-- modal dialog-->
+		 <div id="myModal" class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Hướng dẫn</h4>
+                  </div>
+                  <div class="modal-body">
+				     <div class="noidung">
+							<img class="hinhdong" src="images/chim.gif" />
+							<p class="text">Em nghe giai điệu của bài hát để nhớ và điền đúng các từ còn thiếu vào chỗ có dấu chấm (…).</p>
+						
+                     </div>
+				  </div>
+                  <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Đóng cửa sổ</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div>
+		
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $('#submit1').on('click', function(){
+                    var inputArr = $('.c1');
+                    var ketquaArr = Array('A','B','C','D','E','F','G','H');
+                    var wrongArr = Array();
+                    var check, i;
+                    for(i = 0; i < 8; i++){
+                        if(inputArr[i].value !== ketquaArr[i]){
+                            check = false;
+                            wrongArr.push(i + 1);
+                        }
+                        else {
+                            check = true;
+                        }
+                    }
+                    if(check){
+                        alert('Làm tốt lắm!');
+                    }
+                    else{
+                        alert('Có gì đó sai sai ở các câu sau:' + JSON.stringify(wrongArr));
+                    }
+                });
+
+                var i = 2;
+                $('#add').on('click', function(){
+                    $(this).before('<p>+Point '+i+':<input type="text"/></p>');
+                    i++;
+                });
+            });  
+        </script>
+   
+        

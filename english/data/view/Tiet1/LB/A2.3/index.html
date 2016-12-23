@@ -1,0 +1,110 @@
+	<style>
+      .drag { width: 100px; height: 100px; padding: 0.5em }
+      .droppable { padding-left:50px; }
+  </style>
+    <link href="data/view/Tiet1/GS/A2.1/assets/css/style1.css" rel="stylesheet">
+        <div class="frame">
+          <div class="row-bai2">
+                <div class="col-baitap">
+              <h3>2 Complete the second sentence in each pair by putting the correct form of a verb from the box into each blank. </h3>
+              <div class="box">
+                  <span id="looked" class="drag ui-widget-content">
+                      <b class="draggable">looked</b>
+                  </span>
+                  <span id="team-building" class="drag ui-widget-content">
+                      <b class="draggable">team-building</b>
+                  </span>
+                  <span id="zoo" class="drag ui-widget-content">
+                      <b class="draggable">zoo</b>
+                  </span>
+                  <span id="lunch" class="drag ui-widget-content">
+                      <b class="draggable">lunch</b>
+                  </span>
+                  <span id="interest" class="drag ui-widget-content">
+                      <b class="draggable">interest</b>
+                  </span>
+                  <span id="lookingforwardto" class="drag ui-widget-content">
+                      <b class="draggable">looking forward to</b>
+                  </span>
+                  <span id="craft" class="drag ui-widget-content">
+                      <b class="draggable">craft</b>
+                  </span>
+                  <span id="museum" class="drag ui-widget-content">
+                      <b class="draggable">museum</b>
+                  </span>
+              </div>
+              <div class="fill">
+                  <p>Last week we had a memorable trip to a new (1)<span class="droppable" class="droppable ui-widget-header"></span> on the
+                    outskirts of the city. We were all (2)<span class="droppable" class="droppable ui-widget-header"></span> the trip. There are lots
+                    of wild animals, and they are looked after carefully. Each species
+                    is kept in one big compound and the animals look healthy. After
+                    we (3)<span class="droppable" class="droppable ui-widget-header"></span> round the animal zone, we gathered on a big lawn
+                    at the back of the zoo. There we played some (4) <span class="droppable" class="droppable ui-widget-header"></span> games
+                    and sang songs. Then we had a delicious (5)<span class="droppable" class="droppable ui-widget-header"></span> prepared by
+                    Nga and Phuong. In the afternoon, we walked to a (6)<span class="droppable" class="droppable ui-widget-header"></span>
+                    nearby. There is a big collection of handicrafts made by di erent
+                    (7) <span class="droppable" class="droppable ui-widget-header"></span> villages. I’m sure that the zoo will be our new place of
+                    (8)<span class="droppable" class="droppable ui-widget-header"></span>.
+                  </p>
+              </div>
+              <!--<button id="submit1">Submit</button>-->
+              <button id="submit1" data-toggle="modal" data-target="#myModal" class="btn btn-danger float-right" onclick="" id="">
+                <i aria-hidden="true" class="fa fa-fw fa-random"></i>Kiểm tra
+              </button>
+            </div>
+          </div>				
+        </div>
+       <!-- modal dialog-->
+		 <div id="myModal" class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Hướng dẫn</h4>
+                  </div>
+                  <div class="modal-body">
+				     <div class="noidung">
+							<img class="hinhdong" src="images/chim.gif" />
+							<p class="text">Em nghe giai điệu của bài hát để nhớ và điền đúng các từ còn thiếu vào chỗ có dấu chấm (…).</p>
+						
+                     </div>
+				  </div>
+                  <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Đóng cửa sổ</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div>
+		
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $( ".draggable" ).draggable({ 
+                    revert: "invalid", // when not dropped, the item will revert back to its initial position
+                    containment: "document",
+                    helper: "clone",
+                    cursor: "pointer"
+                });
+                $( ".droppable" ).droppable({
+                  classes: {
+                    "ui-droppable-active": "ui-state-active",
+                    "ui-droppable-hover": "ui-state-hover"
+                  },
+                  drop: function( event, ui ) {
+                    if($(this).children(this).length == 0){
+                      $(this).append($(ui.draggable));
+                    }
+                    else{
+                      var currentDrag = $(this).find('b').html().replace(/\s/g,'');
+                      $('#'+currentDrag).append($(this).children());
+                      $(this).append($(ui.draggable));
+                    }
+                  },
+                  out: function( event, ui ){
+                    var currentDrag = $(ui.draggable).html().replace(/\s/g,'');
+                    $('#'+currentDrag).append($(ui.draggable));
+                  }
+                });
+            });  
+        </script>
+   
+        

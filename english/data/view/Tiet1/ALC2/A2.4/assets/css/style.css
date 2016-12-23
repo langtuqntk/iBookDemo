@@ -1,0 +1,43 @@
+.frame {
+    min-height: 560px;
+    margin:-8px auto 0;
+    padding: 0;
+    position: relative;
+    width: 730px;background:#fff;box-shadow:0 1px 2px #aeaeae
+}
+
+#fillColor0{
+    background: red;
+    color:white;
+}
+#fillColor1{
+    background: palegreen;
+    color:white;
+}
+#fillColor2{
+    background: blue;
+    color:white;
+}
+#fillColor3{
+    background: green;
+    color:white;
+}
+#fillColor4{
+    background: orange;
+    color:white;
+}
+#fillColor5{
+    background: deepskyblue;
+    color:white;
+}
+#fillColor6{
+    background: hotpink;
+    color:white;
+}
+
+#fillColor7{
+    background: blanchedalmond;
+    color:white;
+}
+
+

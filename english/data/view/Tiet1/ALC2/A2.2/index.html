@@ -1,0 +1,48 @@
+  <link href="data/view/Tiet1/ALC1/A2.2/assets/css/style.css" rel="stylesheet">
+  <div class="frame">
+    <h3>2. Make a complex sentence from each pair of sentences. Use the subordinator provided and make any necessary changes.</h3>
+    <p>1. The villagers are trying to learn English. They can communicate with foreign customers. (in order that)</p>
+    <input type="text" class="c1"/>
+    <p>2. We ate lunch. Then we went to Non Nuoc marble village to buy some souvenirs. (after)</p>
+    <input type="text" class="c1"/>
+    <p>3. This hand-embroidered picture was expensive. We bought it. (even though)</p>
+    <input type="text" class="c1"/>
+    <p>4. This department store is an attraction in my city. The products are of good quality. (because)</p>
+    <input type="text" class="c1"/>
+    <p>5. This is called a Chuong conical hat. It was made in Chuong village. (since)</p>
+    <input type="text" class="c1"/>
+    <button>Submit</button>
+  </div>
+  <script>
+  $(function() {
+    var colorArr = ['fillColor0','fillColor1','fillColor2','fillColor3','fillColor4','fillColor5'],
+        leftColJArr = $('.left'),
+        rightColJArr = $('.right'),
+        leftClick;
+    $('.left').click(function(){
+        if($(this).attr('id') !== undefined){
+          $(this).removeAttr('id');  
+        }
+        else{
+          switch(leftColJArr.index(this)){
+            case 0: {$(this).attr('id',(colorArr[0])); leftClick = colorArr[0]; break;}
+            case 1: {$(this).attr('id',(colorArr[1])); leftClick = colorArr[1]; break;}
+            case 2: {$(this).attr('id',(colorArr[2])); leftClick = colorArr[2]; break;}
+            case 3: {$(this).attr('id',(colorArr[3])); leftClick = colorArr[3]; break;}
+            case 4: {$(this).attr('id',(colorArr[4])); leftClick = colorArr[4]; break;}
+            case 5: {$(this).attr('id',(colorArr[5])); leftClick = colorArr[5]; break;}
+          }
+        }
+    });
+
+    $('.right').click(function(){
+        if($(this).attr('id') !== undefined){
+          $(this).removeAttr('id');  
+        }
+        else{
+          $(this).attr('id',leftClick);
+          leftClick = '';
+        }
+    });
+  });
+  </script>

@@ -1,0 +1,97 @@
+	<style>
+      .drag { width: 315px; height: 25px; }
+      .droppable { padding: 0.5em; margin: 10px; }
+  </style>
+    <link href="data/view/Tiet1/GS/A2.1/assets/css/style1.css" rel="stylesheet">
+        <div class="frame">
+          <div class="row-bai2">
+                <div class="col-baitap">
+              <h3>2 Mi visited Tay Ho village in Hue last month. She has decided to present what she knows about this place to the class. Read what she has prepared and match the
+  titles with the paragraphs.</h3>
+              <div class="box">
+                  <span id="paintings" class="drag ui-widget-content">
+                      <b class="draggable">paintings</b>
+                  </span></br>
+                  <span id="pottery" class="drag ui-widget-content">
+                      <b class="draggable">pottery</b>
+                  </span></br>
+                  <span id="drums" class="drag ui-widget-content">
+                      <b class="draggable">drums</b>
+                  </span></br>
+              </div>
+
+              <div class="fill">
+                  <p>
+                      A: <span id="droppable" class="droppable ui-widget-header"></span></br>
+                      When you think about the conical hat, the first thing you think of is the region of Hue. Conical hat making has been a traditional craft there for hundreds of years, and there are many craft villages like Da Le, Phu Cam, and Doc So. However, Tay Ho is the most famous because it is the birthplace of the conical hat in Hue. It is a village on the bank of the Nhu Y River, 12 km from Hue City
+                  </p>
+                  <p>
+                      B: <span id="droppable" class="droppable ui-widget-header"></span>
+                      A conical hat may look simple, but artisans have to follow 15 stages, from going to the forest to collect leaves to ironing the leaves, making the frames, etc. Hue’s conical hats always have two layers of leaves. Craftsmen must be skilful to make the two layers very thin. What is special is that they then add poems and paintings of Hue between the two layers, creating the famous bai tho or poetic conical hats.
+                  </p>
+                  <p>
+                      C: <span id="droppable" class="droppable ui-widget-header"></span>
+                      Conical hat making in the village has been passed down from generation to generation because everybody, young or old, can take part in the process. It is a well-known handicraft, not only in Viet Nam, but all around the world.
+                  </p>
+              </div>
+              <!--<button id="submit1">Submit</button>-->
+              <button id="submit1" data-toggle="modal" data-target="#myModal" class="btn btn-danger float-right" onclick="" id="">
+                <i aria-hidden="true" class="fa fa-fw fa-random"></i>Kiểm tra
+              </button>
+            </div>
+          </div>				
+        </div>
+       <!-- modal dialog-->
+		 <div id="myModal" class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Hướng dẫn</h4>
+                  </div>
+                  <div class="modal-body">
+				     <div class="noidung">
+							<img class="hinhdong" src="images/chim.gif" />
+							<p class="text">Em nghe giai điệu của bài hát để nhớ và điền đúng các từ còn thiếu vào chỗ có dấu chấm (…).</p>
+						
+                     </div>
+				  </div>
+                  <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Đóng cửa sổ</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div>
+		
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $( ".draggable" ).draggable({ 
+                    revert: "invalid", // when not dropped, the item will revert back to its initial position
+                    containment: "document",
+                    helper: "clone",
+                    cursor: "pointer"
+                });
+                $( ".droppable" ).droppable({
+                  classes: {
+                    "ui-droppable-active": "ui-state-active",
+                    "ui-droppable-hover": "ui-state-hover"
+                  },
+                  drop: function( event, ui ) {
+                    if($(this).children(this).length == 0){
+                      $(this).append($(ui.draggable));
+                    }
+                    else{
+                      var currentDrag = $(this).find('b').html().replace(/\s/g,'');
+                      $('#'+currentDrag).append($(this).children());
+                      $(this).append($(ui.draggable));
+                    }
+                  },
+                  out: function( event, ui ){
+                    var currentDrag = $(ui.draggable).html().replace(/\s/g,'');
+                    $('#'+currentDrag).append($(ui.draggable));
+                  }
+                });
+            });  
+        </script>
+   
+        

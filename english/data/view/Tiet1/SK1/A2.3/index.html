@@ -1,0 +1,43 @@
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <div class="frame">
+    <h3>3 Read the text again and answer the questions.</h3>
+    <p>1. Why is Tay Ho the most well-known conical hat making village?</p>
+    <input type="text" class="c1"/>.
+    <p>2. How far is it from Tay Ho to Hue City?</p>
+    <input type="text" class="c1"/>.
+    <p>3. What is the  rst stage of conical hat making?</p>
+    <input type="text" class="c1"/>
+    <p>4. What is special about the hat layers?</p>
+    <input type="text" class="c1"/>
+    <p>5. What is special about the bai tho conical hat?</p>
+    <input type="text" class="c1"/>
+    <p>6. Who can make conical hats?</p>
+    <input type="text" class="c1"/>
+    <button>Submit</button>
+  </div>
+  <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $('#submit1').on('click', function(){
+                    var inputArr = $('.c1');
+                    var ketquaArr = Array('A','B','C','D','E','F','G','H');
+                    var wrongArr = Array();
+                    var check, i;
+                    for(i = 0; i < 8; i++){
+                        if(inputArr[i].value !== ketquaArr[i]){
+                            check = false;
+                            wrongArr.push(i + 1);
+                        }
+                        else {
+                            check = true;
+                        }
+                    }
+                    if(check){
+                        alert('Làm tốt lắm!');
+                    }
+                    else{
+                        alert('Có gì đó sai sai ở các câu sau:' + JSON.stringify(wrongArr));
+                    }
+                });
+            });  
+    </script>

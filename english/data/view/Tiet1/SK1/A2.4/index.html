@@ -1,0 +1,52 @@
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <div class="frame">
+    <h3>4 Read the following ideas. Are they about the bene ts of traditional crafts (B) or challenges that artisans may face (C). Write B or C.</h3>
+    <p>1. providing employment</p>
+    <input type="text" class="c1"/>.
+    <p>2. losing authenticity</p>
+    <input type="text" class="c1"/>.
+    <p>3. providing additional income</p>
+    <input type="text" class="c1"/>
+    <p>4. relying too much on tourism</p>
+    <input type="text" class="c1"/>
+    <p>5. treating waste and pollution</p>
+    <input type="text" class="c1"/>
+    <p>6. preserving cultural heritage</p>
+    <input type="text" class="c1"/>
+    <button>Submit</button>
+
+    <h3>Can you add some more bene ts and challenges?</h3>
+    <button id="add"></button>
+  </div>
+  <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $('#submit1').on('click', function(){
+                    var inputArr = $('.c1');
+                    var ketquaArr = Array('A','B','C','D','E','F','G','H');
+                    var wrongArr = Array();
+                    var check, i;
+                    for(i = 0; i < 8; i++){
+                        if(inputArr[i].value !== ketquaArr[i]){
+                            check = false;
+                            wrongArr.push(i + 1);
+                        }
+                        else {
+                            check = true;
+                        }
+                    }
+                    if(check){
+                        alert('Làm tốt lắm!');
+                    }
+                    else{
+                        alert('Có gì đó sai sai ở các câu sau:' + JSON.stringify(wrongArr));
+                    }
+                });
+
+                var i = 1;
+                $('#add').on('click', function(){
+                    $(this).before('<p>+Point '+i+':<input type="text"/></p>');
+                    i++;
+                });
+            });  
+    </script>

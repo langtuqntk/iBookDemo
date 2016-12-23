@@ -1,0 +1,108 @@
+		<link href="data/view/Tiet1/GS/A2.1/assets/css/style1.css" rel="stylesheet">
+
+        <div class="frame">
+		    <div class="row-bai2">
+	             <div class="col-baitap">
+						<h3>3 Listen again and complete the table. Use no more than three words for each blank.</h3>
+                        <audio controls>
+                            <source src=""/>
+                        </audio>
+						<table border="1">
+                            <tr>
+                                <th>Student</th>
+                                <th>Place of interest</th>
+                                <th>Activities</th>
+                            </tr>
+                            <tr>
+                                <td><img src="" alt="Trà avatar"/>Tra</td>
+                                <td>Viet Nam National Museum of History</td>
+                                <td>
+                                    <p>- Seeing various (1)<input type="text" class="c1"/></p>
+                                    <p>- Looking round and (2)<input type="text" class="c1"/></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="" alt="Nam avatar"/></td>
+                                <td>Bat Trang pottery village</td>
+                                <td>
+                                    <p>- Learning to (3)<input type="text" class="c1"/> and(4) <input type="text" class="c1"/></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="" alt="Hoa avatar"/></td>
+                                <td>Ha Noi Botanical Garden</td>
+                                <td>
+                                    <p>- Climbing up (5)<input type="text" class="c1"/></p>
+                                    <p>- Reading (6)<input type="text" class="c1"/></p>
+                                    <p>- Feeding (7)<input type="text" class="c1"/></p>
+                                    <p>- (8)<input type="text" class="c1"/>people</p>
+                                </td>
+                            </tr>
+                        </table>
+						<!--<button id="submit1">Submit</button>-->
+						<button id="submit1" data-toggle="modal" data-target="#myModal" class="btn btn-danger float-right" onclick="" id="">
+							<i aria-hidden="true" class="fa fa-fw fa-random"></i>Kiểm tra
+						</button>
+                        
+                        <h3>Listen and check your answers.</h3>
+                        <audio controls>
+                            <source src="" />
+                        </audio>
+                </div>
+		    </div>				
+        </div>
+       <!-- modal dialog-->
+		 <div id="myModal" class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Hướng dẫn</h4>
+                  </div>
+                  <div class="modal-body">
+				     <div class="noidung">
+							<img class="hinhdong" src="images/chim.gif" />
+							<p class="text">Em nghe giai điệu của bài hát để nhớ và điền đúng các từ còn thiếu vào chỗ có dấu chấm (…).</p>
+						
+                     </div>
+				  </div>
+                  <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Đóng cửa sổ</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div>
+		
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $('#submit1').on('click', function(){
+                    var inputArr = $('.c1');
+                    var ketquaArr = Array('A','B','C','D','E','F','G','H');
+                    var wrongArr = Array();
+                    var check, i;
+                    for(i = 0; i < 8; i++){
+                        if(inputArr[i].value !== ketquaArr[i]){
+                            check = false;
+                            wrongArr.push(i + 1);
+                        }
+                        else {
+                            check = true;
+                        }
+                    }
+                    if(check){
+                        alert('Làm tốt lắm!');
+                    }
+                    else{
+                        alert('Có gì đó sai sai ở các câu sau:' + JSON.stringify(wrongArr));
+                    }
+                });
+
+                var i = 2;
+                $('#add').on('click', function(){
+                    $(this).before('<p>+Point '+i+':<input type="text"/></p>');
+                    i++;
+                });
+            });  
+        </script>
+   
+        

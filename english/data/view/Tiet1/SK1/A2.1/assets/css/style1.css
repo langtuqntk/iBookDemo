@@ -1,0 +1,37 @@
+* {margin:0;padding:0}
+body {
+    font-family: Arial,Helvetica,sans-serif;  
+}
+.frame {background:url(../../images/background.png) repeat;padding: 0; width:1020px; height: 560px; float: left; overflow: auto; position: relative;}
+.modal-dialog {width:860px} 
+.title {
+    color: #0099ff;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+	 margin: 0 0 10px;
+}
+.title span, em {
+    color: #ff3399;
+}
+.title  em {font-style:normal}
+/*** row button ***/
+.row-button {width:100%;position:fixed;bottom:5px;left:auto;right:auto;text-align:Center;max-width:800px;margin:0 auto}
+.btn {font-size:15px;font-weight:bold;padding:2px 5px;margin-top:10px;}
+.btn i {vertical-align:middle}
+/***/
+.noidung {width:100%;display:inline-block}
+.minhhoa {width:100%}
+.img-left {position:fixed;bottom:84px;left:-70px;z-index:11;}
+.img-right {position:fixed;bottom:84px;right:-40px;z-index:11;}
+.text {font-size:20px;padding-left:180px;padding-top:20px;}
+ img.hinhdong {width:150px;height:150px;float:left}
+ .text span {color:#ff3399;padding-right:8px;}
+/*** custom *****/
+.row-bai2 {width:50%;margin-top:0px;float:left;}
+/***/
+.col-baitap {padding:10px}
+.col-baitap h3 {font-size:24px;color:#d44302;padding:2px 0 8px;margin:0}
+.col-baitap p {font-size:16px;vertical-align:middle;padding:3px 0;margin:0 auto}
+.ip-text {font-size:16px;width:100%;border-left:0;border-right:0;border-top:0;border-bottom:1px dotted #333;background:none;padding:0 15px;text-align:left;color:#0099ff;margin-top:0px;}
+.float-right {float:right}

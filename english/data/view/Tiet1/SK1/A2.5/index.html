@@ -1,0 +1,32 @@
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <div class="frame">
+    <h3>5 Imagine that your group is responsible for promoting traditional crafts in your area. Propose an action plan to deal with the challenges. </h3>
+    <textarea cols="50" rows="15"></textarea>
+    <button>Submit</button>
+  </div>
+  <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $('#submit1').on('click', function(){
+                    var inputArr = $('.c1');
+                    var ketquaArr = Array('A','B','C','D','E','F','G','H');
+                    var wrongArr = Array();
+                    var check, i;
+                    for(i = 0; i < 8; i++){
+                        if(inputArr[i].value !== ketquaArr[i]){
+                            check = false;
+                            wrongArr.push(i + 1);
+                        }
+                        else {
+                            check = true;
+                        }
+                    }
+                    if(check){
+                        alert('Làm tốt lắm!');
+                    }
+                    else{
+                        alert('Có gì đó sai sai ở các câu sau:' + JSON.stringify(wrongArr));
+                    }
+                });
+            });  
+    </script>

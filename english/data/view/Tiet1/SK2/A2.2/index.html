@@ -1,0 +1,80 @@
+	<style>
+      .drag { width: 315px; height: 25px; }
+      .droppable { padding: 0.5em; margin: 10px; }
+  </style>
+    <link href="data/view/Tiet1/GS/A2.1/assets/css/style1.css" rel="stylesheet">
+        <div class="frame">
+          <div class="row-bai2">
+                <div class="col-baitap">
+              <h3>2 Listen to what these students say and decide if the statements are true (T) or false (F).</h3>
+              <audio controls>
+                  <source src="" />
+              </audio>
+              <div class="box">
+                  <p>1. Tra is interested in history.<input type="checkbox" class="c1"/></p>
+                  <p>2. Nam likes making things with his hands.<input type="checkbox" class="c1"/></p>
+                  <p>3. Nam’s family owns a workshop in Bat Trang.<input type="checkbox" class="c1"/></p>
+                  <p>4. The trees in the garden only come from provinces of Viet Nam.<input type="checkbox" class="c1"/></p>
+                  <p>5. Hoa loves nature and quietness.<input type="checkbox" class="c1"/></p>
+              </div>
+              <!--<button id="submit1">Submit</button>-->
+              <button id="submit1" data-toggle="modal" data-target="#myModal" class="btn btn-danger float-right" onclick="" id="">
+                <i aria-hidden="true" class="fa fa-fw fa-random"></i>Kiểm tra
+              </button>
+            </div>
+          </div>				
+        </div>
+       <!-- modal dialog-->
+		 <div id="myModal" class="modal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">Hướng dẫn</h4>
+                  </div>
+                  <div class="modal-body">
+				     <div class="noidung">
+							<img class="hinhdong" src="images/chim.gif" />
+							<p class="text">Em nghe giai điệu của bài hát để nhớ và điền đúng các từ còn thiếu vào chỗ có dấu chấm (…).</p>
+						
+                     </div>
+				  </div>
+                  <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Đóng cửa sổ</button>
+                  </div>
+                </div><!-- /.modal-content -->
+              </div><!-- /.modal-dialog -->
+            </div>
+		
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $( ".draggable" ).draggable({ 
+                    revert: "invalid", // when not dropped, the item will revert back to its initial position
+                    containment: "document",
+                    helper: "clone",
+                    cursor: "pointer"
+                });
+                $( ".droppable" ).droppable({
+                  classes: {
+                    "ui-droppable-active": "ui-state-active",
+                    "ui-droppable-hover": "ui-state-hover"
+                  },
+                  drop: function( event, ui ) {
+                    if($(this).children(this).length == 0){
+                      $(this).append($(ui.draggable));
+                    }
+                    else{
+                      var currentDrag = $(this).find('b').html().replace(/\s/g,'');
+                      $('#'+currentDrag).append($(this).children());
+                      $(this).append($(ui.draggable));
+                    }
+                  },
+                  out: function( event, ui ){
+                    var currentDrag = $(ui.draggable).html().replace(/\s/g,'');
+                    $('#'+currentDrag).append($(ui.draggable));
+                  }
+                });
+            });  
+        </script>
+   
+        

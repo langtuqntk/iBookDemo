@@ -5,7 +5,7 @@ function selectUnit(unit, menuBaiTap, hocHat){
         }
         $('.next-prev').attr('style','display:none;');
         menuBaiTap.find('li').attr("style","display:none;");
-        var soBaiTap = 10;                    
+        var soBaiTap = 16;                    
         var loadBaiTap = "";
         for(i = 0; i < soBaiTap; i++){
             menuBaiTap.children()[i].setAttribute("style","display:block;");
@@ -68,6 +68,136 @@ function selectUnit(unit, menuBaiTap, hocHat){
             Tiet1_BaiTap10: [{
                     selector: ".content",
                     templateUrl: 'data/view/Tiet1/ALC1/A2.6/index.html'
+                },
+            ],
+            Tiet1_BaiTap11: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/ALC2/A2.1/index.html'
+                },
+            ],
+            Tiet1_BaiTap12: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/ALC2/A2.2/index.html'
+                },
+            ],
+            Tiet1_BaiTap13: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/ALC2/A2.3/index.html'
+                },
+            ],
+            Tiet1_BaiTap14: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/ALC2/A2.4/index.html'
+                },
+            ],
+            Tiet1_BaiTap15: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/ALC2/A2.5/index.html'
+                },
+            ],
+            Tiet1_BaiTap16: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/ALC2/A2.6/index.html'
+                },
+            ],
+            Tiet1_BaiTap17: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/COM/A2.1/index.html'
+                },
+            ],
+            Tiet1_BaiTap18: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/COM/A2.2/index.html'
+                },
+            ],
+            Tiet1_BaiTap19: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/COM/A2.3/index.html'
+                },
+            ],
+            Tiet1_BaiTap20: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/SK1/A2.1/index.html'
+                },
+            ],
+            Tiet1_BaiTap21: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/SK1/A2.2/index.html'
+                },
+            ],
+            Tiet1_BaiTap22: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/SK1/A2.3/index.html'
+                },
+            ],
+            Tiet1_BaiTap23: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/SK1/A2.4/index.html'
+                },
+            ],
+            Tiet1_BaiTap24: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/SK1/A2.5/index.html'
+                },
+            ],
+            Tiet1_BaiTap25: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/SK2/A2.1/index.html'
+                },
+            ],
+            Tiet1_BaiTap26: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/SK2/A2.2/index.html'
+                },
+            ],
+            Tiet1_BaiTap27: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/SK2/A2.3/index.html'
+                },
+            ],
+            Tiet1_BaiTap28: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/SK2/A2.4/index.html'
+                },
+            ],
+            Tiet1_BaiTap29: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/SK2/A2.5/index.html'
+                },
+            ],
+            Tiet1_BaiTap30: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/LB/A2.1/index.html'
+                },
+            ],
+            Tiet1_BaiTap31: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/LB/A2.2/index.html'
+                },
+            ],
+            Tiet1_BaiTap32: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/LB/A2.3/index.html'
+                },
+            ],
+            Tiet1_BaiTap33: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/LB/A2.4/index.html'
+                },
+            ],
+            Tiet1_BaiTap34: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/LB/A2.5/index.html'
+                },
+            ],
+            Tiet1_BaiTap35: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/LB/A2.6/index.html'
+                },
+            ],
+            Tiet1_BaiTap36: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/PROJECT/index.html'
                 },
             ],
             defaultView: {

@@ -1,0 +1,80 @@
+  <link href="data/view/Tiet1/ALC2/A2.4/assets/css/style.css" rel="stylesheet">
+  <div class="frame">
+    <h3>4. Match the phrasal verbs in A with their meaning in B.</h3>
+    <table border="1">
+        <tr>
+          <th>A</th>
+          <th>B</th>
+        </tr>
+        <tr>
+          <td class="left">1. pass down</td>
+          <td class="right">a. stop doing business</td>
+        </tr>
+        <tr>
+          <td class="left">2. live on</td>
+          <td class="right">b. have a friendly relationship with somebody</td>
+        </tr>
+        <tr>
+          <td class="left">3. deal with</td>
+          <td class="right">c. transfer from one generation to the next</td>
+        </tr>
+        <tr>
+          <td class="left">4. close down</td>
+          <td class="right">d. reject or refuse something</td>
+        </tr>
+        <tr>
+          <td class="left">5. face up to</td>
+          <td class="right">e. return</td>
+        </tr>
+        <tr>
+          <td class="left">6. get on with</td>
+          <td class="right">f. take action to solve a problem</td>
+        </tr>
+        </tr>
+        <tr>
+          <td class="left">7. come back</td>
+          <td class="right">g. have enough money to live</td>
+        </tr>
+        </tr>
+        <tr>
+          <td class="left">8. turn down</td>
+          <td class="right">h. accept, deal with</td>
+        </tr>
+    </table>
+    <button>Submit</button>
+  </div>
+  <script>
+  $(function() {
+    var colorArr = ['fillColor0','fillColor1','fillColor2','fillColor3','fillColor4','fillColor5','fillColor6','fillColor7'],
+        leftColJArr = $('.left'),
+        rightColJArr = $('.right'),
+        leftClick;
+    $('.left').click(function(){
+        if($(this).attr('id') !== undefined){
+          $(this).removeAttr('id');  
+        }
+        else{
+          switch(leftColJArr.index(this)){
+            case 0: {$(this).attr('id',(colorArr[0])); leftClick = colorArr[0]; break;}
+            case 1: {$(this).attr('id',(colorArr[1])); leftClick = colorArr[1]; break;}
+            case 2: {$(this).attr('id',(colorArr[2])); leftClick = colorArr[2]; break;}
+            case 3: {$(this).attr('id',(colorArr[3])); leftClick = colorArr[3]; break;}
+            case 4: {$(this).attr('id',(colorArr[4])); leftClick = colorArr[4]; break;}
+            case 5: {$(this).attr('id',(colorArr[5])); leftClick = colorArr[5]; break;}
+            case 6: {$(this).attr('id',(colorArr[6])); leftClick = colorArr[6]; break;}
+            case 7: {$(this).attr('id',(colorArr[7])); leftClick = colorArr[7]; break;}
+          }
+        }
+    });
+
+    $('.right').click(function(){
+        if($(this).attr('id') !== undefined){
+          $(this).removeAttr('id');  
+        }
+        else{
+          $(this).attr('id',leftClick);
+          leftClick = '';
+        }
+    });
+  });
+  </script>

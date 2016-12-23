@@ -1,0 +1,38 @@
+
+  <link href="assets/css/style.css" rel="stylesheet">
+  <div class="frame">
+    <h3>3. Read this part of the conversation from GETTING STARTED. Pay attention to the underlined part and answer the questions.</h3>
+    <p>Mi: <span>Wow! When did your grandparents <u>set up</u> this workshop?</span></p>
+    <p>Phong: <span>My great-grandparents started it, not my grandparents. Then my grandparents <u>took over</u> the business.</p>
+   
+    <p>1. What is the meaning of the underlined verb phrases?</p>
+    <input type="text" class="c1"/>
+    <p>2. Can each part of the verb phrase help you understand its meaning?</p>
+    <input type="text" class="c1"/>
+    <button>Submit</button>
+  </div>
+  <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $('#submit1').on('click', function(){
+                    var inputArr = $('.c1');
+                    var ketquaArr = Array('A','B','C','D','E','F','G','H');
+                    var wrongArr = Array();
+                    var check, i;
+                    for(i = 0; i < 8; i++){
+                        if(inputArr[i].value !== ketquaArr[i]){
+                            check = false;
+                            wrongArr.push(i + 1);
+                        }
+                        else {
+                            check = true;
+                        }
+                    }
+                    if(check){
+                        alert('Làm tốt lắm!');
+                    }
+                    else{
+                        alert('Có gì đó sai sai ở các câu sau:' + JSON.stringify(wrongArr));
+                    }
+                });
+            });  
+    </script>

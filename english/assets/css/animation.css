@@ -5,13 +5,13 @@
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    width: 1020px;
+    width: 1024px;
 }
 .mattroi {
     animation: 5s steps(12) 0s normal none infinite running mattroi;
     background-image: url("../../images/mattroi.png");
     height: 103px;
-    width: 1020px;
+    width: 1024px;
     z-index: 1;
 }
 @keyframes mattroi {

@@ -1,4 +1,4 @@
-.container {width:1020px;margin:0 auto;padding:0;}
+.container {width:1024px;margin:0 auto;padding:0;}
 button:active, a:active {border:0} 
 :focus {outline:none}
 ul {list-style-type:0; margin:0; padding:0;}
@@ -65,7 +65,7 @@ ul {list-style-type:0; margin:0; padding:0;}
 .cMain{
     margin: 8px auto 0;
     padding:0;
-    width: 1020px;
+    width: 1024px;
 }
 .cMain .mainContent{
    background:#fff url("../../images/bg1.png") repeat-x left bottom;
@@ -74,7 +74,7 @@ ul {list-style-type:0; margin:0; padding:0;}
     padding: 0px;
 	position:relative;box-shadow:0 1px 2px #aeaeae
 }
-.mainContent .content {padding-top:111px;height:649px}
+.mainContent .content {padding-top:101px;height:659px}
 .music.hvr-icon-bob:before {
 	content: "\f001";
 	left:1em;
@@ -130,7 +130,7 @@ ul {list-style-type:0; margin:0; padding:0;}
     height: 768px;
     margin: 0px auto;
     padding: 0px;
-	width:1020px;
+	width:1024px;
 	text-align:Center;
 	position:relative
 }
