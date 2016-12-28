@@ -3,15 +3,25 @@ body {
     font-family: Arial,Helvetica,sans-serif;  
 	background:#eee
 }
-.frame {width:1024px; height: 590px;position: relative;background:none;overflow:hidden}
+.frame {width:1024px; height: 585px;position: relative;background:none;overflow:hidden;box-shadow: 0 0 10px #999;}
 .book-right {z-index:2;position:absolute;right:0;top:0;width:32px;height:590px;background:url(../../images/pages-depth.png) no-repeat}
 .page-right {height:582px;width:498px;position:absolute;top:3px;right:14px;
-background: rgba(0, 0, 0, 0) -moz-linear-gradient(right center , #fff 95%, #cacaca 100%) repeat scroll 0 0;
+background:-webkit-gradient(linear, right top, left top, color-stop(0.95, #fff), color-stop(1, #cacaca));
+	background-image:-webkit-linear-gradient(right, #fff 95%, #cacaca 100%);
+	background-image:-moz-linear-gradient(right, #fff 95%, #cacaca 100%);
+	background-image:-ms-linear-gradient(right, #fff 95%, #cacaca 100%);
+	background-image:-o-linear-gradient(right, #fff 95%, #cacaca 100%);
+	background-image:linear-gradient(right, #fff 95%, #cacaca 100%);
 box-shadow: 0 0 20px rgba(0, 0, 0, 0);
  z-index:4
 }
 .page-left {height:582px;width:498px;position:absolute;top:3px;left:14px;
- background: rgba(0, 0, 0, 0) -moz-linear-gradient(left center , #fff 95%, #dadada 100%) repeat scroll 0 0;
+background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
+	background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
+	background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
+	background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
+	background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
+	background-image:linear-gradient(left, #fff 95%, #dadada 100%);
  z-index:4
 }
 .modal-dialog {width:860px} 
@@ -45,10 +55,11 @@ box-shadow: 0 0 20px rgba(0, 0, 0, 0);
 .col-baitap {padding:10px 20px;text-align:left}
 .col-baitap h3 {font-size:24px;color:#d44302;padding:2px 0 8px;margin:0}
 .col-baitap p {font-size:16px;vertical-align:middle;padding:3px 0;margin:0}
-.ip-text {font-size:16px;width:100%;border-left:0;border-right:0;border-top:0;border-bottom:1px dotted #333;background:none;padding:0 15px;text-align:left;color:#0099ff;margin-top:0px;height:20px}
+.ip-text1 {font-size:16px;width:100%;border-left:0;border-right:0;border-top:0;border-bottom:1px dotted #333;background:none;padding:0 15px;text-align:left;color:#0099ff;margin-top:0px;height:20px}
+.ip-text2 {font-size:16px;width:100%;border-left:0;border-right:0;border-top:0;border-bottom:1px dotted #333;background:none;padding:0 15px;text-align:left;color:#0099ff;margin-top:0px;height:20px}
 .float-right {float:right}
-.traloi-sai {display:block;font-size:16px;color:red;border-bottom:1px dotted #333;height:20px;padding:0 15px;}
-.traloi-dung {display:block;font-size:16px;color:blue;border-bottom:1px dotted #333;height:20px;padding:0 15px;}
+.ketqua1 {display:block;font-size:16px;border-bottom:1px dotted #333;height:20px;padding:0 15px;}
+.ketqua2 {display:block;font-size:16px;border-bottom:1px dotted #333;height:20px;padding:0 15px;}
 .color-red {color:red;}
 .color-blue {color:blue}
 .display-none {display:none}
@@ -176,3 +187,4 @@ rotateZ(0deg) ;
 z-index:20;
 transition: transform 1s ease 0s;
 }
+.modal {top:auto}

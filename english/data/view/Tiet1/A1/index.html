@@ -1,0 +1,212 @@
+
+    <link href="data/view/Tiet1/A1/assets/css/style.css" rel="stylesheet">
+	<div class="content-hoathinh">
+    <div class="col-left">
+			<div class="hoathinh">
+				<div id="passive-hoathinh">
+				 <div class="mieng"></div>
+				 <div class="noidung">
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+					<span class="nd-text"></span>
+				 </div>
+				  <div class="mieng1"></div>
+				   <div class="noidung1">
+					    <span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+						<span class="nd-text1"></span>
+				   </div>
+				</div>
+			</div>
+	</div>		
+	<div class="col-right">
+		<div id="passive-text">
+			<div class="row-nick">
+				<h4>Nick</h4>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+				<span class="outer-text"></span>
+			</div>
+
+			<div class="row-adam">
+				<h4>Adam</h4>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+				<span class="outer-text1"></span>
+			</div>
+		</div>
+		<div class="btn-batdau"><a>bắt đầu</a></div>
+		<div style="display:none;" class="btn-dung"><a>dừng</a></div>
+		<audio id="passive-audio">
+			<source src="data/view/Tiet1/A1/audio/test.wav" />
+		</audio>
+	</div>		
+   <!-- -->
+ </div>  
+		<script type="text/javascript" charset="utf-8" src="data/view/Tiet1/A1/assets/js/readalong.js"></script>
+		<script type="text/javascript" charset="utf-8" src="data/view/Tiet1/A1/data/Luke.2.1-Luke.2.20.js"></script>
+		<script>
+			var spanTag = $("#passive-text").find('span'),
+				spanTagHH = $("#passive-hoathinh").find('span'),
+				audio = $("#passive-audio")[0];
+			$(document).ready(function(){
+				var args = {
+						audio_element: audio,
+						text_element: $("#passive-text")[0],
+						text_hoathinh: $("#passive-hoathinh")[0],
+                        autofocus_current_word: true
+					};
+				
+				$.each(data, function(index, obj) {
+						spanTag[index].setAttribute('data-dur',obj.duration);
+                        spanTag[index].setAttribute('data-begin',obj.time);
+                        spanTag[index].innerHTML = obj.name;
+
+						spanTagHH[index].setAttribute('data-dur',obj.duration);
+                        spanTagHH[index].setAttribute('data-begin',obj.time);
+                        spanTagHH[index].innerHTML = obj.name;
+                });
+				ReadAlong.init(args);
+				document.body.classList.add('initialized');
+
+				var curTime = 0;
+				$( ".btn-dung" ).click(function() {
+					if(args.audio_element.paused){
+						$('.btn-batdau').triggerHandler('click');
+						$(this).find('a').html('dừng');
+					}
+					else{
+						clearTimeout(myTime);
+						clearTimeout(myTime1);
+						args.audio_element.pause();
+						curTime = args.audio_element.currentTime;
+						$('.mieng').removeClass( "animation" );
+						$('.mieng1').removeClass( "animation" );
+						$(this).find('a').html('tiếp tục');
+					}
+				});
+
+				var myTime, myTime1;
+				$('.btn-batdau').click(function(){
+					$('.btn-dung').attr('style', 'display:block;');
+					if(args.audio_element.paused){
+						var tgHienThiNoiDung2 = curTime <= data[17].time ? Number(data[33].time) + Number(data[33].duration) - Number(data[17].time) + Number(data[17].duration) : Number(data[33].time) + Number(data[33].duration);
+						$("#passive-text").find('span').removeClass("speaking");
+						$("#passive-hoathinh").find('span').removeClass("speaking");
+						args.audio_element.play();
+						if(curTime > data[17].time){
+							myTime = setTimeout(function(){
+								$('.mieng1').toggleClass( "animation" );
+								myTime1 = setTimeout(function(){
+									$('.mieng1').removeClass( "animation" );
+									$('.noidung1').removeClass( "animation" );
+								},(tgHienThiNoiDung2 - curTime) * 1000);
+							},0);
+						}
+						else{
+							$('.mieng').toggleClass( "animation" );
+							$('.noidung').addClass( "animation" );
+							myTime = setTimeout(function(){
+								$('.mieng1').toggleClass( "animation" );
+								$('.noidung1').addClass( "animation" );
+								$('.mieng').removeClass( "animation" );
+								$('.noidung').removeClass( "animation" );
+								myTime1 = setTimeout(function(){
+									$('.mieng1').removeClass( "animation" );
+									$('.noidung1').removeClass( "animation" );
+								},(tgHienThiNoiDung2) * 1000);
+							},(data[17].time - curTime) * 1000);
+						}	
+					}
+					else{
+						clearTimeout(myTime);
+						clearTimeout(myTime1);
+						args.audio_element.pause();
+						args.audio_element.currentTime = 0;
+						$("#passive-text").find('span').removeClass("speaking");
+						$("#passive-hoathinh").find('span').removeClass("speaking");
+						$('.mieng').removeClass( "animation" );
+						$('.noidung').removeClass( "animation" );
+						$('.mieng1').removeClass( "animation" );
+						$('.noidung1').removeClass( "animation" );
+						args.audio_element.play();
+						$('.mieng').toggleClass( "animation" );
+						$('.noidung').addClass( "animation" );
+						myTime = setTimeout(function(){
+							$('.mieng1').toggleClass( "animation" );
+							$('.noidung1').addClass( "animation" );
+							$('.mieng').removeClass( "animation" );
+							$('.noidung').removeClass( "animation" );
+							myTime1 = setTimeout(function(){
+								$('.mieng1').removeClass( "animation" );
+								$('.noidung1').removeClass( "animation" );
+							},(Number(data[33].time) + Number(data[33].duration) - Number(data[17].time)) * 1000);
+						},data[17].time * 1000);
+					}
+				});
+
+				$(args.audio_element).on('ended', function(){
+					curTime = 0;
+					$('.btn-dung').attr('style', 'display:none;');
+				});
+			});
+		</script>
+	<!-- script include file html -->

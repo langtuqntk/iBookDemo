@@ -3,8 +3,8 @@
     <h3>4. Match the phrasal verbs in A with their meaning in B.</h3>
     <table border="1">
         <tr>
-          <th>A</th>
-          <th>B</th>
+          <th>A<div style="width:15px;height:15px;" class="nextColor1"></div></th>
+          <th>B<div style="width:15px;height:15px;" class="nextColor2"></div></th>
         </tr>
         <tr>
           <td class="left">1. pass down</td>
@@ -46,35 +46,36 @@
   <script>
   $(function() {
     var colorArr = ['fillColor0','fillColor1','fillColor2','fillColor3','fillColor4','fillColor5','fillColor6','fillColor7'],
-        leftColJArr = $('.left'),
-        rightColJArr = $('.right'),
-        leftClick;
+        leftColJArr = [],
+        rightColJArr = [];
     $('.left').click(function(){
         if($(this).attr('id') !== undefined){
-          $(this).removeAttr('id');  
-        }
-        else{
-          switch(leftColJArr.index(this)){
-            case 0: {$(this).attr('id',(colorArr[0])); leftClick = colorArr[0]; break;}
-            case 1: {$(this).attr('id',(colorArr[1])); leftClick = colorArr[1]; break;}
-            case 2: {$(this).attr('id',(colorArr[2])); leftClick = colorArr[2]; break;}
-            case 3: {$(this).attr('id',(colorArr[3])); leftClick = colorArr[3]; break;}
-            case 4: {$(this).attr('id',(colorArr[4])); leftClick = colorArr[4]; break;}
-            case 5: {$(this).attr('id',(colorArr[5])); leftClick = colorArr[5]; break;}
-            case 6: {$(this).attr('id',(colorArr[6])); leftClick = colorArr[6]; break;}
-            case 7: {$(this).attr('id',(colorArr[7])); leftClick = colorArr[7]; break;}
+            $(this).removeAttr('id');
+            var indexElm = leftColJArr.indexOf(this);
+            leftColJArr.splice(indexElm,1);
           }
-        }
+          else{
+            leftColJArr.push(this);
+            $.each(leftColJArr,function(index,value){
+              $(value).attr('id',(colorArr[index]));
+            });
+          }
+          $('.nextColor1').attr('id',colorArr[leftColJArr.length]);
     });
 
     $('.right').click(function(){
         if($(this).attr('id') !== undefined){
-          $(this).removeAttr('id');  
+          $(this).removeAttr('id');
+          var indexElm = rightColJArr.indexOf(this);
+          rightColJArr.splice(indexElm,1);
         }
         else{
-          $(this).attr('id',leftClick);
-          leftClick = '';
+          rightColJArr.push(this);
+          $.each(rightColJArr,function(index,value){
+            $(value).attr('id',(colorArr[index]));
+          });
         }
+        $('.nextColor2').attr('id',colorArr[rightColJArr.length]);
     });
   });
   </script>

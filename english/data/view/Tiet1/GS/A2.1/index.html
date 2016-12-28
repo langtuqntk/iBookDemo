@@ -1,175 +1,210 @@
-﻿         <link href="data/view/Tiet1/GS/A2.1/assets/css/bootstrap.min.css" rel="stylesheet">
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="data/view/Tiet1/GS/A2.1/assets/css/font-awesome.min.css">
-	  <!-- -->
-		<link href="data/view/Tiet1/GS/A2.1/assets/css/style1.css" rel="stylesheet">
+﻿<link href="data/view/Tiet1/GS/A2.1/assets/css/style1.css" rel="stylesheet">
+<div class="frame">
+	<div class="page-left id1">
+		<div class="col-baitap">
+			<h3>a. Can you find a word/phrase that means: </h3>
+			<p>1. a thing which is skilfully made with your hands<input class="ip-text1" type="text" /></p>
+			<p>2. start something (a business, an organisation, etc.)<input type="text" class="ip-text1" /></p>
+			<p>3. take control of something (a business, an organisation, etc.)<input type="text" class="ip-text1" /></p>
+			<p>4. people who do skilled work, making things with their hands<input type="text" class="ip-text1" /></p>
+			<p>5. an interesting or enjoyable place to go or thing to do<input type="text" class="ip-text1" /></p>
+			<p>6. a particular place<input type="text" class="ip-text1" /></p>
+			<p>7. make someone remember or think about something
+				<input type="text" class="ip-text1" /></p>
+			<p>8. walk around a place to see what is there<input type="text" class="ip-text1" /></p>
 
-       <div class="frame">
-    
-     <div class="page-left id1">
-	     <div class="col-baitap">
-						<h3>a. Can you find a word/phrase that means: </h3>
-						<p>1. a thing which is skilfully made with your hands<input class="ip-text" type="text"/></p>
-						<p>2. start something (a business, an organisation, etc.)<input type="text" class="ip-text"/></p>
-						<p>3. take control of something (a business, an
-						organisation, etc.)<input type="text" class="ip-text"/></p>
-						<p>4. people who do skilled work, making things with
-						their hands<input type="text" class="ip-text"/></p>
-						<p>5. an interesting or enjoyable place to go or thing to do<input type="text" class="ip-text"/></p>
-						<p>6. a particular place<input type="text" class="ip-text"/></p>
-						<p>7. make someone remember or think about
-						something<input type="text" class="ip-text"/></p>
-						<p>8. walk around a place to see what is there<input type="text" class="ip-text"/></p>
-						
-						<button id="submit2" class="btn btn-danger float-right kiemtra1">
+			<button id="submit1" class="btn btn-danger float-right kiemtra1">
 							<i aria-hidden="true" class="fa fa-fw fa-random"></i>Kiểm tra
 						</button>
-						<!--<button class="btn btn-primary float-right click">Qua trang</button>-->
-                </div>
-	 </div>
-	  <!-- page kiem tra modal -->
-	 <div class="page-right id2">
-	     <div class="col-baitap">
-						<h3>Bạn trả lời đúng 2/8 câu hỏi</h3>
-						<p>1. a thing which is skilfully made with your hands
-							<span class="traloi-sai">Bạn đã trả lời sai<i class="fa fa-fw fa-ban float-right color-red"></i></span>
-						</p>
-						<p>2. start something (a business, an organisation, etc.)
-						   <span class="traloi-dung">Bạn đã trả đúng<i class="fa fa-fw fa-check-square-o float-right color-blue"></i></span>
-						</p>
-						<p>3. take control of something (a business, an organisation, etc.)
-						<span class="traloi-dung">Bạn đã trả đúng<i class="fa fa-fw fa-check-square-o float-right color-blue"></i></span>
-						</p>
-						<p>4. people who do skilled work, making things with their hands
-						<span class="traloi-sai">Bạn đã trả lời sai<i class="fa fa-fw fa-ban float-right color-red"></i></span>
-						</p>
-						<p>5. an interesting or enjoyable place to go or thing to do
-						<span class="traloi-sai">Bạn đã trả lời sai<i class="fa fa-fw fa-ban float-right color-red"></i></span>
-						</p>
-						<p>6. a particular place
-						<span class="traloi-sai">Bạn đã trả lời sai<i class="fa fa-fw fa-ban float-right color-red"></i></span>
-						</p>
-						<p>7. make someone remember or think about something
-						<span class="traloi-sai">Bạn đã trả lời sai<i class="fa fa-fw fa-ban float-right color-red"></i></span>
-						</p>
-						<p>8. walk around a place to see what is there
-						<span class="traloi-sai">Bạn đã trả lời sai<i class="fa fa-fw fa-ban float-right color-red"></i></span>
-						</p>
-						<button id="submit2" class="btn btn-danger float-right click-back">Làm lại</button>
+
+			<!--<button class="btn btn-primary float-right click">Qua trang</button>-->
 		</div>
-	 </div>
-	 <!-- -->
-     <div class="page-right id3">
-	     <div class="col-baitap">
-						<h3>b. Answer the following questions.</h3>
-						<p>1. Where are Nick, Mi, and Phong?<input type="text" class="ip-text"/></p>
-						<p>2. How old is the village?<input type="text" class="ip-text"/></p>
-						<p>3. Who started Phong’s family workshop?<input type="text" class="ip-text"/></p>
-						<p>4. Why is the village a place of interest in Ha Noi?<input type="text" class="ip-text"/></p>
-						<p>5. Where is the craft village that Mi visited?<input type="text" class="ip-text"/></p>
-						<p>6. Why do tourists like to buy handicrafts as
-						souvenirs?<input type="text" class="ip-text"/></p>
-						<button id="submit2" class="btn btn-danger float-right kiemtra2">
+	</div>
+	<!-- page kiem tra modal -->
+	<div class="page-right id2">
+		<div class="col-baitap">
+			<h3 id="numCorrect1"></h3>
+			<p>1. a thing which is skilfully made with your hands
+				<span class="ketqua1"></span>
+			</p>
+			<p>2. start something (a business, an organisation, etc.)
+				<span class="ketqua1"></span>
+			</p>
+			<p>3. take control of something (a business, an organisation, etc.)
+				<span class="ketqua1"></span>
+			</p>
+			<p>4. people who do skilled work, making things with their hands
+				<span class="ketqua1"></span>
+			</p>
+			<p>5. an interesting or enjoyable place to go or thing to do
+				<span class="ketqua1"></span>
+			</p>
+			<p>6. a particular place
+				<span class="ketqua1"></span>
+			</p>
+			<p>7. make someone remember or think about something
+				<span class="ketqua1"></span>
+			</p>
+			<p>8. walk around a place to see what is there
+				<span class="ketqua1"></span>
+			</p>
+			<button class="btn btn-danger float-right click-back">Làm lại</button>
+		</div>
+	</div>
+	<!-- -->
+	<div class="page-right id3">
+		<div class="col-baitap">
+			<h3>b. Answer the following questions.</h3>
+			<p>1. Where are Nick, Mi, and Phong?<input type="text" class="ip-text2" /></p>
+			<p>2. How old is the village?<input type="text" class="ip-text2" /></p>
+			<p>3. Who started Phong’s family workshop?<input type="text" class="ip-text2" /></p>
+			<p>4. Why is the village a place of interest in Ha Noi?<input type="text" class="ip-text2" /></p>
+			<p>5. Where is the craft village that Mi visited?<input type="text" class="ip-text2" /></p>
+			<p>6. Why do tourists like to buy handicrafts as souvenirs?<input type="text" class="ip-text2" /></p>
+			<button id="submit2" class="btn btn-danger float-right kiemtra2">
 							<i aria-hidden="true" class="fa fa-fw fa-random"></i>Kiểm tra
 						</button>
-						<!--<button class="btn btn-primary float-right click-back">Quay lại</button>-->
-				</div>
-	 </div>
-	  <!-- page kiem tra modal -->
-	 <div class="page-right id4">
-	     <div class="col-baitap xoay">
-						<h3>Bạn đã trả lời đúng 2/5 câu hỏi</h3>
-						<p>1. Where are Nick, Mi, and Phong?
-						 <span class="traloi-sai">Bạn đã trả lời sai<i class="fa fa-fw fa-ban float-right color-red"></i></span>
-						</p>
-						<p>2. How old is the village?<input type="text" class="ip-text"/></p>
-						<p>3. Who started Phong’s family workshop?<input type="text" class="ip-text"/></p>
-						<p>4. Why is the village a place of interest in Ha Noi?
-						<span class="traloi-sai">Bạn đã trả lời sai<i class="fa fa-fw fa-ban float-right color-red"></i></span>
-						</p>
-						<p>5. Where is the craft village that Mi visited?
-						<span class="traloi-sai">Bạn đã trả lời sai<i class="fa fa-fw fa-ban float-right color-red"></i></span>
-						</p>
-						<p>6. Why do tourists like to buy handicrafts as souvenirs?
-						<span class="traloi-sai">Bạn đã trả lời sai<i class="fa fa-fw fa-ban float-right color-red"></i></span>
-						</p>
-						<button id="submit2" class="btn btn-danger float-right click-back2">Làm lại</button>
+			<!--<button class="btn btn-primary float-right click-back">Quay lại</button>-->
 		</div>
-	 </div>
-	 <!-- -->
-	
-     <div class="book-right"></div>        			
+	</div>
+	<!-- page kiem tra modal -->
+	<div class="page-right id4">
+		<div class="col-baitap xoay">
+			<h3 id="numCorrect2"></h3>
+			<p>1. Where are Nick, Mi, and Phong?
+				<span class="ketqua2"></span>
+			</p>
+			<p>2. How old is the village?
+				<span class="ketqua2"></span>
+			</p>
+			<p>3. Who started Phong’s family workshop?
+				<span class="ketqua2"></span>
+			</p>
+			<p>4. Why is the village a place of interest in Ha Noi?
+				<span class="ketqua2"></span>
+			</p>
+			<p>5. Where is the craft village that Mi visited?
+				<span class="ketqua2"></span>
+			</p>
+			<p>6. Why do tourists like to buy handicrafts as souvenirs?
+				<span class="ketqua2"></i></span>
+			</p>
+			<button class="btn btn-danger float-right click-back2">Làm lại</button>
+		</div>
+	</div>
+	<!-- -->
+
+	<div class="book-right"></div>
 </div>
-      
-		 <script type="text/javascript" charset="utf-8" src="assets/js/jquery-3.1.1.min.js"></script>
-        <script type="text/javascript" charset="utf-8" src="assets/js/bootstrap.min.js"></script>
-        <script type="text/javascript" language="javascript">
-            $(document).ready(function(){
-                $('#submit1').on('click', function(){
-                    var inputArr = $('.c1');
-                    var ketquaArr = Array('A','B','C','D','E','F','G','H');
-                    var wrongArr = Array();
-                    var check, i;
-                    for(i = 0; i < 8; i++){
-                        if(inputArr[i].value !== ketquaArr[i]){
-                            check = false;
-                            wrongArr.push(i + 1);
-                        }
-                        else {
-                            check = true;
-                        }
-                    }
-                    if(check){
-                        alert('Làm tốt lắm!');
-                    }
-                    else{
-                        alert('Có gì đó sai sai ở các câu sau:' + JSON.stringify(wrongArr));
-                    }
-                });
-            });  
-        </script>
-		<!-- script lat trang -->
-       <script type="text/javascript" language="javascript">
-            jQuery(document).ready(function() {     
-                jQuery('.kiemtra1').click(function(){
-				     $('.id2').addClass('lattrang');
-					 $('.id2').removeClass('back-trang-zindex');
-					 $('.kiemtra1').addClass('display-none');
-					  $('.id1 .ip-text').addClass('disable-ip');
-					  $('.id1').removeClass('z-index');
-					  $('.id3').removeClass('z-index');
-					  $('.id4').removeClass('back-trang-zindex2');
-                });
-				jQuery('.click-back').click(function(){
-				      $('.id2').addClass('back-trang-zindex');
-					  $('.id2').removeClass('lattrang');
-					  $('.id1').addClass('z-index');
-					  $('.id1 .ip-text').removeClass('disable-ip');
-					   $('.kiemtra1').removeClass('display-none');
-					
-					 
-                });
-				jQuery('.kiemtra2').click(function(){
-				     $('.id4').addClass('lattrang2');
-					 $('.id4').removeClass('back-trang-zindex2');
-					 $('.id4').addClass('xoay-chu');
-					 $('.kiemtra2').addClass('display-none');
-					  $('.id3 .ip-text').addClass('disable-ip');
-					   $('.id3').removeClass('z-index');
-					  $('.id1').removeClass('z-index');
-					  $('.id2').removeClass('back-trang-zindex');
-                });
-				jQuery('.click-back2').click(function(){
-				      $('.id4').addClass('back-trang-zindex2');
-					  $('.id4').removeClass('lattrang2');
-					  $('.id3').addClass('z-index');
-					  $('.id3 .ip-text').removeClass('disable-ip');
-					   $('.kiemtra2').removeClass('display-none');
-					   $('.id4').removeClass('xoay-chu');
-					
-					 
-                });
-				
-			});
-        </script>
-        
+
+<script type="text/javascript" language="javascript">
+	$(document).ready(function () {
+		$('#submit1').on('click', function () {
+			var inputArr = $('.ip-text1');
+			var ketquaArr = Array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H');
+			var wrongArr = Array();
+			var correctArr = Array();
+			var check = true, i;
+			for (i = 0; i < 8; i++) {
+				if (inputArr[i].value !== ketquaArr[i]) {
+					check = false;
+					wrongArr.push(i);
+				}
+				else {
+					correctArr.push(i);
+				}
+			}
+			if (check) {
+				alert('Xuất xắc!');
+				$.each(correctArr, function (index, value) {
+					$($('.ketqua1')[value]).append(inputArr[value].value + '<i class="fa fa-fw fa-check-square-o float-right color-blue"></i>').attr('style', 'color:blue;');
+				});
+			}
+			else {
+				$.each(wrongArr, function (index, value) {
+					$($('.ketqua1')[value]).append(inputArr[value].value === '' ? '' : inputArr[value].value + '<i class="fa fa-fw fa-ban float-right color-red"></i>').attr('style', 'color:red;');
+				});
+				$.each(correctArr, function (index, value) {
+					$($('.ketqua1')[value]).append(inputArr[value].value + '<i class="fa fa-fw fa-check-square-o float-right color-blue"></i>').attr('style', 'color:blue;');
+				});
+			}
+			$('#numCorrect1').append('Bạn trả lời đúng ' + correctArr.length + '/8 câu hỏi')
+		});
+
+		$('#submit2').on('click', function () {
+			var inputArr = $('.ip-text2');
+			var ketquaArr = Array('A', 'B', 'C', 'D', 'E', 'F');
+			var wrongArr = Array();
+			var correctArr = Array();
+			var check, i;
+			for (i = 0; i < 6; i++) {
+				if (inputArr[i].value !== ketquaArr[i]) {
+					check = false;
+					wrongArr.push(i);
+				}
+				else {
+					check = true;
+					correctArr.push(i);
+				}
+			}
+			if (check) {
+				alert('Xuất xắc!');
+				$.each(correctArr, function (index, value) {
+					$($('.ketqua2')[value]).append(inputArr[value].value + '<i class="fa fa-fw fa-check-square-o float-right color-blue"></i>').attr('style', 'color:blue;');
+				});
+			}
+			else {
+				$.each(wrongArr, function (index, value) {
+					$($('.ketqua2')[value]).append(inputArr[value].value === '' ? '' : inputArr[value].value + '<i class="fa fa-fw fa-ban float-right color-red"></i>').attr('style', 'color:red;');
+				});
+				$.each(correctArr, function (index, value) {
+					$($('.ketqua2')[value]).append(inputArr[value].value + '<i class="fa fa-fw fa-check-square-o float-right color-blue"></i>').attr('style', 'color:blue;');
+				});
+			}
+			$('#numCorrect2').append('Bạn trả lời đúng ' + correctArr.length + '/6 câu hỏi')
+		});
+	});  
+</script>
+<!-- script lat trang -->
+<script type="text/javascript" language="javascript">
+	jQuery(document).ready(function () {
+		jQuery('.kiemtra1').click(function () {
+			$('.id2').addClass('lattrang');
+			$('.id2').removeClass('back-trang-zindex');
+			$('.kiemtra1').addClass('display-none');
+			$('.id1 .ip-text1').addClass('disable-ip');
+			$('.id1').removeClass('z-index');
+			$('.id3').removeClass('z-index');
+			$('.id4').removeClass('back-trang-zindex2');
+		});
+		jQuery('.click-back').click(function () {
+			$('.ketqua1, #numCorrect1').empty();
+			$('.id2').addClass('back-trang-zindex');
+			$('.id2').removeClass('lattrang');
+			$('.id1').addClass('z-index');
+			$('.id1 .ip-text1').removeClass('disable-ip');
+			$('.kiemtra1').removeClass('display-none');
+
+
+		});
+		jQuery('.kiemtra2').click(function () {
+			$('.id4').addClass('lattrang2');
+			$('.id4').removeClass('back-trang-zindex2');
+			$('.id4').addClass('xoay-chu');
+			$('.kiemtra2').addClass('display-none');
+			$('.id3 .ip-text2').addClass('disable-ip');
+			$('.id3').removeClass('z-index');
+			$('.id1').removeClass('z-index');
+			$('.id2').removeClass('back-trang-zindex');
+		});
+		jQuery('.click-back2').click(function () {
+			$('.ketqua2, #numCorrect2').empty();
+			$('.id4').addClass('back-trang-zindex2');
+			$('.id4').removeClass('lattrang2');
+			$('.id3').addClass('z-index');
+			$('.id3 .ip-text2').removeClass('disable-ip');
+			$('.kiemtra2').removeClass('display-none');
+			$('.id4').removeClass('xoay-chu');
+		});
+	});
+</script>

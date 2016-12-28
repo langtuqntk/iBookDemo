@@ -1,11 +1,7 @@
-	<style>
-      .drag { width: 100px; height: 100px; padding: 0.5em }
-      .droppable { padding-left:50px; }
-  </style>
-    <link href="data/view/Tiet1/GS/A2.1/assets/css/style1.css" rel="stylesheet">
-        <div class="frame">
-          <div class="row-bai2">
-                <div class="col-baitap">
+		<link href="data/view/Tiet1/LB/A2.2/assets/css/style.css" rel="stylesheet">
+    <div class="frame">
+      <div class="page-left id1">
+        <div class="col-baitap">
               <h3>2 Complete the second sentence in each pair by putting the correct form of a verb from the box into each blank. </h3>
               <div class="box">
                   <span id="attraction" class="drag ui-widget-content">
@@ -27,57 +23,107 @@
                       <b class="draggable">exercise</b>
                   </span>
               </div>
+
               <div class="fill">
                   <p>1. The artisan made this statue by pouring hot liquid bronze into a mould.</br>
-                  → The artisan <span class="droppable" class="droppable ui-widget-header"></span> this statue in bronze. 
+                  → The artisan <span class="ip-text1 droppable ui-widget-header"></span> this statue in bronze. 
                   </p>
                   <p>2. I’m decorating a cloth picture with a pattern of stitches, using coloured threads.</br>
-                  → I’m <span class="droppable" class="droppable ui-widget-header"></span> a picture
+                  → I’m <span class="ip-text1 droppable ui-widget-header"></span> a picture
                   </p>
                   <p>3. They made baskets by crossing strips of bamboo across, over, and under each other</br>
-                  → They <span class="droppable" class="droppable ui-widget-header"></span> baskets out of bamboo. 
+                  → They <span class="ip-text1 droppable ui-widget-header"></span> baskets out of bamboo. 
                   </p>
                   <p>4. My mum made this sweater for me from wool thread by using two bamboo needles.</br>
-                  → My mum <span class="droppable" class="droppable ui-widget-header"></span> a wool sweater for me.
+                  → My mum <span class="ip-text1 droppable ui-widget-header"></span> a wool sweater for me.
                   </p>
                   <p>5. He made this  ower by cutting into the surface of the wood.</br>
-                  → He <span class="droppable" class="droppable ui-widget-header"></span> this  ower from wood.
+                  → He <span class="ip-text1 droppable ui-widget-header"></span> this  ower from wood.
                   </p>
                   <p>6. I took some clay and used my hands to make it into a bowl shape.</br>
-                  → I <span class="droppable" class="droppable ui-widget-header"></span> the clay into the desired shape.
+                  → I <span class="ip-text1 droppable ui-widget-header"></span> the clay into the desired shape.
                   </p>
               </div>
-              <!--<button id="submit1">Submit</button>-->
-              <button id="submit1" data-toggle="modal" data-target="#myModal" class="btn btn-danger float-right" onclick="" id="">
+              
+              <button id="submit1" class="btn btn-danger float-right kiemtra1">
                 <i aria-hidden="true" class="fa fa-fw fa-random"></i>Kiểm tra
               </button>
-            </div>
-          </div>				
+              
+              <!--<button class="btn btn-primary float-right click">Qua trang</button>-->
+                  </div>
+    </div>
+      <!-- page kiem tra modal -->
+    <div class="page-right id2">
+        <div class="col-baitap">
+              <h3 id="numCorrect1"></h3>
+              <div class="fill">
+                  <p>1. The artisan made this statue by pouring hot liquid bronze into a mould.</br>
+                  → The artisan <span class="ketqua1"></span> this statue in bronze. 
+                  </p>
+                  <p>2. I’m decorating a cloth picture with a pattern of stitches, using coloured threads.</br>
+                  → I’m <span class="ketqua1"></span> a picture
+                  </p>
+                  <p>3. They made baskets by crossing strips of bamboo across, over, and under each other</br>
+                  → They <span class="ketqua1"></span> baskets out of bamboo. 
+                  </p>
+                  <p>4. My mum made this sweater for me from wool thread by using two bamboo needles.</br>
+                  → My mum <span class="ketqua1"></span> a wool sweater for me.
+                  </p>
+                  <p>5. He made this  ower by cutting into the surface of the wood.</br>
+                  → He <span class="ketqua1"></span> this  ower from wood.
+                  </p>
+                  <p>6. I took some clay and used my hands to make it into a bowl shape.</br>
+                  → I <span class="ketqua1"></span> the clay into the desired shape.
+                  </p>
+              </div>
+              <button class="btn btn-danger float-right click-back">Làm lại</button>
         </div>
-       <!-- modal dialog-->
-		 <div id="myModal" class="modal">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
-                    <h4 class="modal-title">Hướng dẫn</h4>
-                  </div>
-                  <div class="modal-body">
-				     <div class="noidung">
-							<img class="hinhdong" src="images/chim.gif" />
-							<p class="text">Em nghe giai điệu của bài hát để nhớ và điền đúng các từ còn thiếu vào chỗ có dấu chấm (…).</p>
-						
-                     </div>
-				  </div>
-                  <div class="modal-footer">
-                    <button data-dismiss="modal" class="btn btn-default" type="button">Đóng cửa sổ</button>
-                  </div>
-                </div><!-- /.modal-content -->
-              </div><!-- /.modal-dialog -->
-            </div>
-		
+     </div>
+	 <!-- -->
+	
+     <div class="book-right"></div> 
+</div>
+
         <script type="text/javascript" language="javascript">
             $(document).ready(function(){
+                $('#submit1').on('click', function(){
+                    var inputArr = $('.ip-text1');
+                    var ketquaArr = Array('attraction','historical','traditional','handicrafts','culture','exercise');
+                    var wrongArr = Array();
+                    var correctArr = Array();
+                    var check = true, i;
+                              for(i = 0; i < 6; i++){
+                                if(inputArr[i].children[0] !== undefined){
+                                  if(inputArr[i].children[0].innerText !== ketquaArr[i]){
+                                      check = false;
+                                      wrongArr.push(i);
+                                  }
+                                  else {
+                                      correctArr.push(i);
+                                  }
+                                }
+                                else{
+                                      check = false;
+                                      wrongArr.push(i);
+                                }
+                              }
+                              if(check){
+                                  alert('Xuất xắc!');
+                                  $.each(correctArr,function(index,value){
+                                    $($('.ketqua1')[value]).append(inputArr[value].children[0].innerText + '<i class="fa fa-fw fa-check-square-o float-right color-blue"></i>').attr('style','color:blue;');
+                                  });	
+                              }
+                              else{
+                                  $.each(wrongArr,function(index,value){
+                                    $($('.ketqua1')[value]).append(inputArr[value].children[0] === undefined ? '': inputArr[value].children[0].innerText + '<i class="fa fa-fw fa-ban float-right color-red"></i>').attr('style','color:red;');
+                                  });
+                                  $.each(correctArr,function(index,value){
+                                    $($('.ketqua1')[value]).append(inputArr[value].children[0].innerText + '<i class="fa fa-fw fa-check-square-o float-right color-blue"></i>').attr('style','color:blue;');
+                                  });	
+                              }
+                              $('#numCorrect1').append('Bạn trả lời đúng ' + correctArr.length + '/6 câu')
+                });
+
                 $( ".draggable" ).draggable({ 
                     revert: "invalid", // when not dropped, the item will revert back to its initial position
                     containment: "document",
@@ -106,5 +152,29 @@
                 });
             });  
         </script>
+		<!-- script lat trang -->
+       <script type="text/javascript" language="javascript">
+            jQuery(document).ready(function() {     
+                jQuery('.kiemtra1').click(function(){
+                  $('.id2').addClass('lattrang');
+                  $('.id2').removeClass('back-trang-zindex');
+                  $('.kiemtra1').addClass('display-none');
+                  $('.id1 .ip-text1').addClass('disable-ip');
+                  $('.id1').removeClass('z-index');
+                  $('.id3').removeClass('z-index');
+                  $('.id4').removeClass('back-trang-zindex2');
+                    });
+                jQuery('.click-back').click(function(){
+                  $('.ketqua1, #numCorrect1').empty();
+                  $('.id2').addClass('back-trang-zindex');
+                  $('.id2').removeClass('lattrang');
+                  $('.id1').addClass('z-index');
+                  $('.id1 .ip-text1').removeClass('disable-ip');
+                  $('.kiemtra1').removeClass('display-none');
+              });
+			      });
+        </script>
+
+
    
         

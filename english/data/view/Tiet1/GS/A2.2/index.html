@@ -1,81 +1,204 @@
+<link href="data/view/Tiet1/GS/A2.2/assets/css/style1.css" rel="stylesheet">
+<div class="frame">
+    <div class="page-left id1">
+        <div class="col-baitap">
+            <h3>2. Write the name of each traditional handicraft in the box under the picture.</h3>
+            <span id="paintings" class="drag ui-widget-content">
+                <b class="draggable">paintings</b>
+            </span>
+            <span id="pottery" class="drag ui-widget-content">
+                <b class="draggable">pottery</b>
+            </span>
+            <span id="drums" class="drag ui-widget-content">
+                <b class="draggable">drums</b>
+            </span>
+            <span id="silk" class="drag ui-widget-content">
+                <b class="draggable">silk</b>
+            </span>
+            <span id="lanterns" class="drag ui-widget-content">
+                <b class="draggable">lanterns</b>
+            </span>
+            <span id="conicalhats" class="drag ui-widget-content">
+                <b class="draggable">conical hats</b>
+            </span>
+            <span id="lacquerware" class="drag ui-widget-content">
+                <b class="draggable">lacquerware</b>
+            </span>
+            <span id="marblesculptures" class="drag ui-widget-content">
+                <b class="draggable">marble sculptures</b>
+            </span>
 
-
-
-  <style>
-  .drag { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
-  .droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
-  </style>
-  <link href="assets/css/style.css" rel="stylesheet">
-  <div class="frame">
-    <h3>2. Write the name of each traditional handicraft in the box under the picture.</h3>
-    <div class="box">
-        <span id="paintings" class="drag ui-widget-content">
-            <b class="draggable">paintings</b>
-        </span>
-        <span id="pottery" class="drag ui-widget-content">
-            <b class="draggable">pottery</b>
-        </span>
-        <span id="drums" class="drag ui-widget-content">
-            <b class="draggable">drums</b>
-        </span>
-        <span id="silk" class="drag ui-widget-content">
-            <b class="draggable">silk</b>
-        </span>
-        <span id="lanterns" class="drag ui-widget-content">
-            <b class="draggable">lanterns</b>
-        </span>
-        <span id="conicalhats" class="drag ui-widget-content">
-            <b class="draggable">conical hats</b>
-        </span>
-        <span id="lacquerware" class="drag ui-widget-content">
-            <b class="draggable">lacquerware</b>
-        </span>
-        <span id="marblesculptures" class="drag ui-widget-content">
-            <b class="draggable">marble sculptures</b>
-        </span>
+            <button id="submit1" class="btn btn-danger float-right kiemtra1">
+                <i aria-hidden="true" class="fa fa-fw fa-random"></i>Kiểm tra
+              </button>
+        </div>
     </div>
-    
-    <div class="fill">
-      <span id="droppable" class="droppable ui-widget-header"></span>
-      <span id="droppable" class="droppable ui-widget-header"></span>
-      <span id="droppable" class="droppable ui-widget-header"></span>
-      <span id="droppable" class="droppable ui-widget-header"></span>
-      <span id="droppable" class="droppable ui-widget-header"></span>
-      <span id="droppable" class="droppable ui-widget-header"></span>
-      <span id="droppable" class="droppable ui-widget-header"></span>
-      <span id="droppable" class="droppable ui-widget-header"></span>  
+    <div class="page-right id2">
+        <div class="col-baitap">
+            <h3 id="numCorrect1"></h3>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/01.jpg" />
+                <span class="ketqua1"></span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/02.jpg" />
+                <span class="ketqua1"></span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/03.jpg" />
+                <span class="ketqua1"></span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/04.jpg" />
+                <span class="ketqua1"></span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/05.jpg" />
+                <span class="ketqua1"></span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/06.jpg" />
+                <span class="ketqua1"></span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/07.jpg" />
+                <span class="ketqua1"></span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/08.jpg" />
+                <span class="ketqua1"></span>
+            </div>
+            <button class="btn btn-danger float-right click-back">Làm lại</button>
+        </div>
     </div>
-    
 
-    <button>Submit</button>
-  </div>
-  <script>
-  $(function() {
-    $( ".draggable" ).draggable({ 
-        revert: "invalid", // when not dropped, the item will revert back to its initial position
-        containment: "document",
-        helper: "clone",
-        cursor: "pointer"
+    <div class="page-right id3">
+		<div class="col-baitap">
+			<h3 id="numCorrect1"></h3>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/01.jpg" />
+                <span class="ip-text1 droppable">A.</span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/02.jpg" />
+                <span class="ip-text1 droppable">B.</span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/03.jpg" />
+                <span class="ip-text1 droppable">C.</span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/04.jpg" />
+                <span class="ip-text1 droppable">D.</span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/05.jpg" />
+                <span class="ip-text1 droppable">E.</span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/06.jpg" />
+                <span class="ip-text1 droppable">F.</span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/07.jpg" />
+                <span class="ip-text1 droppable">G.</span>
+            </div>
+            <div class="col-md-6 center">
+                <img class="images" src="data/view/Tiet1/GS/A2.2/images/08.jpg" />
+                <span class="ip-text1 droppable">H.</span>
+            </div>
+		</div>
+	</div>
+    <div class="book-right"></div>
+
+</div>
+<script>
+    $(function () {
+        $('#submit1').on('click', function () {
+            var inputArr = $('.ip-text1');
+            var ketquaArr = Array('paintings', 'pottery', 'drums', 'silk', 'lanterns', 'conical hats', 'lacquerware', 'marble sculptures');
+            var wrongArr = Array();
+            var correctArr = Array();
+            var check = true, i;
+            for (i = 0; i < 8; i++) {
+                if (inputArr[i].children[0] !== undefined) {
+                    if (inputArr[i].children[0].innerText !== ketquaArr[i]) {
+                        check = false;
+                        wrongArr.push(i);
+                    }
+                    else {
+                        correctArr.push(i);
+                    }
+                }
+                else {
+                    check = false;
+                    wrongArr.push(i);
+                }
+            }
+            if (check) {
+                alert('Xuất xắc!');
+                $.each(correctArr, function (index, value) {
+                    $($('.ketqua1')[value]).append(inputArr[value].children[0].innerText + '<i class="fa fa-fw fa-check-square-o float-right color-blue"></i>').attr('style', 'color:blue;');
+                });
+            }
+            else {
+                $.each(wrongArr, function (index, value) {
+                    $($('.ketqua1')[value]).append(inputArr[value].children[0] === undefined ? '' : inputArr[value].children[0].innerText + '<i class="fa fa-fw fa-ban float-right color-red"></i>').attr('style', 'color:red;');
+                });
+                $.each(correctArr, function (index, value) {
+                    $($('.ketqua1')[value]).append(inputArr[value].children[0].innerText + '<i class="fa fa-fw fa-check-square-o float-right color-blue"></i>').attr('style', 'color:blue;');
+                });
+            }
+            $('#numCorrect1').append('Bạn trả lời đúng ' + correctArr.length + '/8 câu')
+        });
+
+        $(".draggable").draggable({
+            revert: "invalid", // when not dropped, the item will revert back to its initial position
+            containment: "document",
+            helper: "clone",
+            cursor: "pointer"
+        });
+        $(".droppable").droppable({
+            classes: {
+                "ui-droppable-active": "ui-state-active",
+                "ui-droppable-hover": "ui-state-hover"
+            },
+            drop: function (event, ui) {
+                if ($(this).children(this).length == 0) {
+                    $(this).append($(ui.draggable));
+                }
+                else {
+                    var currentDrag = $(this).find('b').html().replace(/\s/g, '');
+                    $('#' + currentDrag).append($(this).children());
+                    $(this).append($(ui.draggable));
+                }
+            },
+            out: function (event, ui) {
+                var currentDrag = $(ui.draggable).html().replace(/\s/g, '');
+                $('#' + currentDrag).append($(ui.draggable));
+            }
+        });
     });
-    $( ".droppable" ).droppable({
-      classes: {
-        "ui-droppable-active": "ui-state-active",
-        "ui-droppable-hover": "ui-state-hover"
-      },
-      drop: function( event, ui ) {
-        if($(this).children(this).length == 0){
-          $(this).append($(ui.draggable));
-        }
-        else{
-          var currentDrag = $(this).find('b').html().replace(/\s/g,'');
-          $('#'+currentDrag).append($(this).children());
-          $(this).append($(ui.draggable));
-        }
-      },
-      out: function( event, ui ){
-        var currentDrag = $(ui.draggable).html().replace(/\s/g,'');
-        $('#'+currentDrag).append($(ui.draggable));
-      }
+</script>
+
+<script type="text/javascript" language="javascript">
+    jQuery(document).ready(function () {
+        jQuery('.kiemtra1').click(function () {
+            $('.id2').addClass('lattrang');
+            $('.id2').removeClass('back-trang-zindex');
+            $('.kiemtra1').addClass('display-none');
+            $('.id1 .ip-text1').addClass('disable-ip');
+            $('.id1').removeClass('z-index');
+            $('.id3').removeClass('z-index');
+            $('.id4').removeClass('back-trang-zindex2');
+        });
+        jQuery('.click-back').click(function () {
+            $('.ketqua1, #numCorrect1').empty();
+            $('.id2').addClass('back-trang-zindex');
+            $('.id2').removeClass('lattrang');
+            $('.id1').addClass('z-index');
+            $('.id1 .ip-text1').removeClass('disable-ip');
+            $('.kiemtra1').removeClass('display-none');
+        });
     });
-  });
-  </script>
+</script>

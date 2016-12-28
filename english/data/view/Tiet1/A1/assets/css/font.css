@@ -1,0 +1,9 @@
+
+/* Font downloaded from FontsForWeb.com */
+@font-face {
+font-family: 'UTMAvoBold';
+font-style: normal;
+font-weight: normal;
+src: url('../fonts/utm-avobold.eot');
+src: local('UTMAvoBold'), url('../fonts/utm-avobold.woff') format('woff'), url('../fonts/utm-avobold.ttf') format('truetype');
+}

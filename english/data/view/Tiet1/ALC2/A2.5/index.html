@@ -1,18 +1,95 @@
-  <link href="assets/css/style.css" rel="stylesheet">
-  <div class="frame">
-    <h3>5 Complete each sentence using the correct form of a phrasal verb in 4. You don’t need to use all the verbs.</h3>
-    <div class="fill">
-        <p>1. We must<input type="text" class="c1"/>the reality that our handicrafts are in competition with those of other villages</p>
-        <p>I invited her to join our trip to Trang An, but she <input type="text" class="c1"/>my invitation.</p>
-        <p>3. The craft of basket weaving is usually<input type="text" class="c1"/>from generation to generation.</p>
-        <p>4. Do you think we can<input type="text" class="c1"/>selling silk scarves as souvenirs?</p>
-        <p>5. They had to<input type="text" class="c1"/>the museum because it’s no longer a place of interest.</p>
-        <p>6. What time<input type="text" class="c1"/>you<input type="text" class="c1"/> from the trip last night?</p>
+	<link href="data/view/Tiet1/ALC2/A2.5/assets/css/style.css" rel="stylesheet">
+
+    <div class="frame">
+      <div class="page-left id1">
+        <div class="col-baitap">
+              <h3>5 Complete each sentence using the correct form of a phrasal verb in 4. You don’t need to use all the verbs.</h3>
+              <p>1. We must<input type="text" class="ip-text1"/>the reality that our handicrafts are in competition with those of other villages</p>
+              <p>I invited her to join our trip to Trang An, but she <input type="text" class="ip-text1"/>my invitation.</p>
+              <p>3. The craft of basket weaving is usually<input type="text" class="ip-text1"/>from generation to generation.</p>
+              <p>4. Do you think we can<input type="text" class="ip-text1"/>selling silk scarves as souvenirs?</p>
+              <p>5. They had to<input type="text" class="ip-text1"/>the museum because it’s no longer a place of interest.</p>
+              <p>6. What time<input type="text" class="ip-text1"/>you<input type="text" class="ip-text1"/> from the trip last night?</p>
+              
+              <button id="submit1" class="btn btn-danger float-right kiemtra1">
+                <i aria-hidden="true" class="fa fa-fw fa-random"></i>Kiểm tra
+              </button>
+              
+              <!--<button class="btn btn-primary float-right click">Qua trang</button>-->
+                  </div>
     </div>
-    <button>Submit</button>
-  </div>
-  <script>
-    $(function() {
-        
-    });
-  </script>
+      <!-- page kiem tra modal -->
+    <div class="page-right id2">
+        <div class="col-baitap">
+              <h3 id="numCorrect1"></h3>
+              <p>1. We must<span class="ketqua1"></span>the reality that our handicrafts are in competition with those of other villages</p>
+              <p>I invited her to join our trip to Trang An, but she <span class="ketqua1"></span>my invitation.</p>
+              <p>3. The craft of basket weaving is usually<span class="ketqua1"></span>from generation to generation.</p>
+              <p>4. Do you think we can<span class="ketqua1"></span>selling silk scarves as souvenirs?</p>
+              <p>5. They had to<span class="ketqua1"></span>the museum because it’s no longer a place of interest.</p>
+              <p>6. What time<span class="ketqua1"></span>you<span class="ketqua1"></span> from the trip last night?</p>
+              <button class="btn btn-danger float-right click-back">Làm lại</button>
+        </div>
+     </div>
+	 <!-- -->
+	
+     <div class="book-right"></div> 
+</div>
+
+        <script type="text/javascript" language="javascript">
+            $(document).ready(function(){
+                $('#submit1').on('click', function(){
+                    var inputArr = $('.ip-text1');
+                    var ketquaArr = Array('A','B','C','D','E','F','G');
+                    var wrongArr = Array();
+                    var correctArr = Array();
+                              var check = true, i;
+                              for(i = 0; i < 7; i++){
+                                  if(inputArr[i].value !== ketquaArr[i]){
+                                      check = false;
+                                      wrongArr.push(i);
+                                  }
+                                  else {
+                                      correctArr.push(i);
+                                  }
+                              }
+                              if(check){
+                                  alert('Xuất xắc!');
+                                  $.each(correctArr,function(index,value){
+                                    $($('.ketqua1')[value]).append(inputArr[value].value + '<i class="fa fa-fw fa-check-square-o float-right color-blue"></i>').attr('style','color:blue;');
+                                  });	
+                              }
+                              else{
+                                  $.each(wrongArr,function(index,value){
+                                    $($('.ketqua1')[value]).append(inputArr[value].value === '' ? '': inputArr[value].value + '<i class="fa fa-fw fa-ban float-right color-red"></i>').attr('style','color:red;');
+                                  });
+                                  $.each(correctArr,function(index,value){
+                                    $($('.ketqua1')[value]).append(inputArr[value].value + '<i class="fa fa-fw fa-check-square-o float-right color-blue"></i>').attr('style','color:blue;');
+                                  });	
+                              }
+                              $('#numCorrect1').append('Bạn trả lời đúng ' + correctArr.length + '/7 câu')
+                });
+            });  
+        </script>
+		<!-- script lat trang -->
+       <script type="text/javascript" language="javascript">
+            jQuery(document).ready(function() {     
+                jQuery('.kiemtra1').click(function(){
+                  $('.id2').addClass('lattrang');
+                  $('.id2').removeClass('back-trang-zindex');
+                  $('.kiemtra1').addClass('display-none');
+                  $('.id1 .ip-text1').addClass('disable-ip');
+                  $('.id1').removeClass('z-index');
+                  $('.id3').removeClass('z-index');
+                  $('.id4').removeClass('back-trang-zindex2');
+                    });
+                jQuery('.click-back').click(function(){
+                  $('.ketqua1, #numCorrect1').empty();
+                  $('.id2').addClass('back-trang-zindex');
+                  $('.id2').removeClass('lattrang');
+                  $('.id1').addClass('z-index');
+                  $('.id1 .ip-text1').removeClass('disable-ip');
+                  $('.kiemtra1').removeClass('display-none');
+              });
+			      });
+        </script>

@@ -5,7 +5,7 @@ function selectUnit(unit, menuBaiTap, hocHat){
         }
         $('.next-prev').attr('style','display:none;');
         menuBaiTap.find('li').attr("style","display:none;");
-        var soBaiTap = 16;                    
+        var soBaiTap = 36;                    
         var loadBaiTap = "";
         for(i = 0; i < soBaiTap; i++){
             menuBaiTap.children()[i].setAttribute("style","display:block;");
@@ -18,6 +18,11 @@ function selectUnit(unit, menuBaiTap, hocHat){
             Tiet1_index: [{
                     selector: ".content",
                     templateUrl: 'data/view/default.html'
+                },
+            ],
+            Tiet1_HocHat: [{
+                    selector: ".content",
+                    templateUrl: 'data/view/Tiet1/A1/index.html'
                 },
             ],
             Tiet1_BaiTap1: [{
